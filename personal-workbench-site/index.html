@@ -1,0 +1,2145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人工作台</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --panel-2: #f8fafc;
+      --text: #1f2933;
+      --muted: #667085;
+      --line: #d8dee7;
+      --primary: #1f6feb;
+      --primary-soft: #e7f0ff;
+      --green: #0f7b5f;
+      --green-soft: #e6f6f1;
+      --amber: #a15c00;
+      --amber-soft: #fff3dc;
+      --red: #b42318;
+      --red-soft: #ffebe8;
+      --purple: #6b46c1;
+      --purple-soft: #f0eafd;
+      --shadow: 0 10px 28px rgba(31, 41, 55, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(130deg, rgba(31, 111, 235, 0.10), transparent 34%),
+        linear-gradient(40deg, rgba(15, 123, 95, 0.08), transparent 42%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 38px;
+    }
+
+    button:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    button.primary {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    button.primary:hover {
+      color: #fff;
+      filter: brightness(0.96);
+    }
+
+    input,
+    select,
+    textarea {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+      padding: 8px 10px;
+      min-height: 38px;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 84px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .app {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 248px 1fr;
+      gap: 18px;
+    }
+
+    .sidebar {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(216, 222, 231, 0.88);
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 18px;
+      align-self: start;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 14px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--green));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+    }
+
+    .brand strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .nav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .nav button {
+      justify-content: flex-start;
+      width: 100%;
+      background: transparent;
+      border-color: transparent;
+    }
+
+    .nav button.active {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: rgba(31, 111, 235, 0.16);
+    }
+
+    .side-tools {
+      display: grid;
+      gap: 8px;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .side-note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 10px 0 0;
+    }
+
+    .main {
+      display: grid;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .topbar {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(216, 222, 231, 0.88);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .topbar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .topbar p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    .stat,
+    .panel,
+    .modal-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(216, 222, 231, 0.9);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      padding: 14px;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .stat strong {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .panel {
+      padding: 16px;
+      min-width: 0;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .panel-header h2,
+    .panel-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .panel-header p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .toolbar label {
+      display: grid;
+      gap: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      min-width: 92px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      gap: 18px;
+    }
+
+    .calendar-weekdays,
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .calendar-weekdays {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .day,
+    .blank-day {
+      min-height: 104px;
+      border-radius: 8px;
+    }
+
+    .day {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      transition: transform 0.12s ease, border-color 0.12s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-1px);
+      border-color: var(--primary);
+    }
+
+    .day.today {
+      outline: 2px solid rgba(31, 111, 235, 0.35);
+      outline-offset: 1px;
+    }
+
+    .day-num {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .day-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 12px;
+      background: var(--panel-2);
+      color: var(--muted);
+      border: 1px solid var(--line);
+      max-width: 100%;
+    }
+
+    .badge.special {
+      background: var(--red-soft);
+      color: var(--red);
+      border-color: rgba(180, 35, 24, 0.18);
+    }
+
+    .badge.port {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: rgba(31, 111, 235, 0.18);
+    }
+
+    .badge.office {
+      background: var(--green-soft);
+      color: var(--green);
+      border-color: rgba(15, 123, 95, 0.18);
+    }
+
+    .badge.weather {
+      background: var(--amber-soft);
+      color: var(--amber);
+      border-color: rgba(161, 92, 0, 0.18);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .form-grid .full {
+      grid-column: 1 / -1;
+    }
+
+    .radio-row,
+    .check-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .choice {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 7px 9px;
+      cursor: pointer;
+      min-height: 36px;
+    }
+
+    .choice input {
+      width: auto;
+      min-height: auto;
+    }
+
+    .task-list,
+    .item-list,
+    .link-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .task {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .task input {
+      width: auto;
+      min-height: auto;
+    }
+
+    .task.done span {
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .task.past {
+      background: #eef0f2;
+      color: #606a76;
+    }
+
+    .task.current {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .task.current .badge,
+    .task.current button {
+      color: var(--text);
+      background: #fff;
+    }
+
+    .task.important {
+      border-left: 5px solid var(--red);
+    }
+
+    .task-time {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+
+    .mini-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .mini-actions button {
+      min-height: 30px;
+      padding: 4px 8px;
+      font-size: 13px;
+    }
+
+    .empty {
+      color: var(--muted);
+      background: var(--panel-2);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .item-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .item-title strong {
+      font-weight: 600;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .item p {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .link-list {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .paper-grid,
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+
+    .link-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      display: grid;
+      gap: 5px;
+    }
+
+    .link-card span {
+      color: var(--muted);
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    .link-card button {
+      width: max-content;
+      margin-top: 4px;
+    }
+
+    .paper-card,
+    .journal-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .paper-card strong,
+    .journal-card strong {
+      font-weight: 600;
+    }
+
+    .paper-card p,
+    .journal-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .paper-card .toolbar,
+    .journal-card .toolbar {
+      gap: 6px;
+    }
+
+    .paper-card a,
+    .journal-card a {
+      color: var(--primary);
+      word-break: break-word;
+    }
+
+    .topic-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .topic-row button.active {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: rgba(31, 111, 235, 0.24);
+    }
+
+    .notice {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.36);
+      display: none;
+      place-items: center;
+      padding: 18px;
+      z-index: 50;
+    }
+
+    .modal.open {
+      display: grid;
+    }
+
+    .modal-card {
+      width: min(900px, 100%);
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+      padding: 16px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th,
+    td {
+      padding: 9px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      background: var(--panel-2);
+    }
+
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #172033;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 12px;
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 80;
+    }
+
+    @media (max-width: 980px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .nav {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .side-tools {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .quick-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .app {
+        padding: 10px;
+      }
+
+      .topbar h1 {
+        font-size: 21px;
+      }
+
+      .quick-stats,
+      .form-grid,
+      .nav,
+      .side-tools {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar-weekdays,
+      .calendar {
+        gap: 4px;
+      }
+
+      .day,
+      .blank-day {
+        min-height: 82px;
+      }
+
+      .day {
+        padding: 6px;
+      }
+
+      .badge {
+        font-size: 11px;
+        padding: 1px 5px;
+      }
+
+      .task {
+        grid-template-columns: auto 1fr;
+      }
+
+      .mini-actions {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">工</div>
+        <div>
+          <strong>个人工作台</strong>
+          <span id="todayLabel">今日</span>
+        </div>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <button type="button" class="active" data-section="workflow">工作流程</button>
+        <button type="button" data-section="hotspots">科研资讯</button>
+        <button type="button" data-section="research">科研进展</button>
+      </nav>
+      <div class="side-tools">
+        <button type="button" id="exportDataBtn">导出数据</button>
+        <button type="button" id="importDataBtn">导入数据</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+        <p class="side-note">导出/导入用于在手机和电脑之间手动搬运本地记录，不是自动同步。</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">工作流程</h1>
+          <p id="pageSubtitle">排班、天气关注和当日流程集中管理。</p>
+        </div>
+        <div class="toolbar">
+          <button type="button" class="primary" id="todayBtn">回到今天</button>
+        </div>
+      </header>
+
+      <section class="quick-stats" aria-label="概览">
+        <div class="stat">
+          <span>本月值班</span>
+          <strong id="statDuty">0</strong>
+        </div>
+        <div class="stat">
+          <span>今日流程</span>
+          <strong id="statTasks">0</strong>
+        </div>
+        <div class="stat">
+          <span>关注热点</span>
+          <strong id="statHotspots">0</strong>
+        </div>
+        <div class="stat">
+          <span>科研事项</span>
+          <strong id="statResearch">0</strong>
+        </div>
+      </section>
+
+      <section id="workflow" class="section active">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>月度排班</h2>
+              <p>点击日期选择班次；已排班日期可打开当日流程。</p>
+            </div>
+            <div class="toolbar">
+              <label>年份
+                <select id="yearSelect"></select>
+              </label>
+              <label>月份
+                <select id="monthSelect"></select>
+              </label>
+              <button type="button" id="monthStatBtn">统计</button>
+            </div>
+          </div>
+          <div class="calendar-weekdays" aria-hidden="true">
+            <div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div><div>日</div>
+          </div>
+          <div id="calendar" class="calendar"></div>
+        </div>
+
+        <div class="split">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2 id="workflowTitle">当日流程</h2>
+                <p id="workflowHint">选择一个排班日期后显示流程。</p>
+              </div>
+              <div class="toolbar">
+                <button type="button" id="addNormalTaskBtn">新增流程</button>
+                <button type="button" id="addImportantTaskBtn">新增重要流程</button>
+              </div>
+            </div>
+            <div id="tasks" class="task-list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>天气情况</h2>
+                <p id="weatherHint">选择当日需要重点关注的天气。</p>
+              </div>
+              <button type="button" id="saveWeatherBtn">保存天气</button>
+            </div>
+            <div id="weatherBox" class="check-grid"></div>
+            <div id="weatherTips" class="empty" style="margin-top: 12px;">暂无天气关注项</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>常用入口</h2>
+              <p>业务高频入口直接展示，其他资料收进收藏夹。</p>
+            </div>
+          </div>
+          <div class="link-list">
+            <a class="link-card" href="https://www.zs121.com.cn/forecast/publicWeather" target="_blank" rel="noreferrer">
+              <strong>舟山天气</strong>
+              <span>zs121.com.cn/forecast/publicWeather</span>
+            </a>
+            <a class="link-card" href="https://www.zs121.com.cn/Portarea/Portarea" target="_blank" rel="noreferrer">
+              <strong>港航气象</strong>
+              <span>zs121.com.cn/Portarea/Portarea</span>
+            </a>
+            <a class="link-card" href="https://www.nmc.cn/publish/bulletin/swpc.html" target="_blank" rel="noreferrer">
+              <strong>强对流预报</strong>
+              <span>nmc.cn/publish/bulletin/swpc.html</span>
+            </a>
+            <a class="link-card" href="https://www.windy.com/29.871/122.398?clouds,29.323,122.398,8" target="_blank" rel="noreferrer">
+              <strong>Windy</strong>
+              <span>windy.com</span>
+            </a>
+            <div class="link-card">
+              <strong>收藏夹</strong>
+              <span>参考资料、气象数据、雷达资料等</span>
+              <button type="button" id="favoritesBtn">打开收藏夹</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hotspots" class="section">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>科研资讯站点</h2>
+              <p>适合每天刷的气象科研动态、预印本、学会新闻和专业讨论入口。</p>
+            </div>
+          </div>
+          <div id="scienceSourceList" class="journal-grid"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>今日阅读记录</h2>
+              <p>看到值得跟进的消息，可记录成自己的每日关注。</p>
+            </div>
+            <button type="button" class="primary" id="addHotspotBtn">添加记录</button>
+          </div>
+          <div class="form-grid">
+            <label>日期
+              <input type="date" id="hotspotDate">
+            </label>
+            <label>类型
+              <select id="hotspotType">
+                <option>科研新闻</option>
+                <option>论文线索</option>
+                <option>会议论坛</option>
+                <option>业务技术</option>
+                <option>资料数据</option>
+              </select>
+            </label>
+            <label class="full">标题
+              <input id="hotspotTitle" placeholder="例如：AMS 发布极端降水研究进展">
+            </label>
+            <label class="full">要点
+              <textarea id="hotspotNote" placeholder="记录来源、核心观点、是否需要继续跟进"></textarea>
+            </label>
+            <label>状态
+              <select id="hotspotStatus">
+                <option>待阅读</option>
+                <option>已阅读</option>
+                <option>需跟进</option>
+              </select>
+            </label>
+            <label>优先级
+              <select id="hotspotPriority">
+                <option>普通</option>
+                <option>重要</option>
+                <option>紧急</option>
+              </select>
+            </label>
+          </div>
+          <div class="panel-header" style="margin-top: 16px;">
+            <div>
+              <h3>记录列表</h3>
+              <p>默认显示今天，也可查看全部历史。</p>
+            </div>
+            <button type="button" id="showAllHotspotsBtn">全部/今日</button>
+          </div>
+          <div id="hotspotList" class="item-list"></div>
+        </div>
+      </section>
+
+      <section id="research" class="section">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>热门气象论文</h2>
+              <p id="paperUpdateStatus">打开页面会尝试拉取近 30 天最新气象论文，网络失败时显示精选清单。</p>
+            </div>
+            <button type="button" class="primary" id="refreshPapersBtn">更新今日论文</button>
+          </div>
+          <div id="paperTopics" class="topic-row"></div>
+          <div id="hotPaperList" class="paper-grid"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>中文核心气象类期刊官网</h2>
+              <p>优先收录气象与大气科学方向常用核心、CSCD 或科技核心期刊官网入口。</p>
+            </div>
+          </div>
+          <div id="journalList" class="journal-grid"></div>
+        </div>
+
+        <div class="split">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>科研进展</h2>
+                <p>把论文、项目、资料整理和下一步动作放在同一个节奏里。</p>
+              </div>
+              <button type="button" class="primary" id="addResearchBtn">添加进展</button>
+            </div>
+            <div class="form-grid">
+              <label>项目
+                <input id="researchProject" placeholder="例如：舟山强对流个例分析">
+              </label>
+              <label>阶段
+                <select id="researchStage">
+                  <option>资料收集</option>
+                  <option>数据处理</option>
+                  <option>图表制作</option>
+                  <option>文字撰写</option>
+                  <option>修改完善</option>
+                  <option>投稿归档</option>
+                </select>
+              </label>
+              <label>日期
+                <input type="date" id="researchDate">
+              </label>
+              <label>进度
+                <select id="researchProgress">
+                  <option>未开始</option>
+                  <option>进行中</option>
+                  <option>待审核</option>
+                  <option>已完成</option>
+                </select>
+              </label>
+              <label class="full">进展说明
+                <textarea id="researchNote" placeholder="记录已经完成什么、卡点是什么、下一步做什么"></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>项目列表</h2>
+                <p>按更新时间倒序排列。</p>
+              </div>
+            </div>
+            <div id="researchList" class="item-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="dutyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dutyModalTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="dutyModalTitle">选择班次</h2>
+          <p id="dutyModalDate"></p>
+        </div>
+        <button type="button" id="closeDutyModalBtn">关闭</button>
+      </div>
+      <div class="radio-row">
+        <label class="choice"><input type="radio" name="dutyType" value="none">无</label>
+        <label class="choice"><input type="radio" name="dutyType" value="专项班">专项班</label>
+        <label class="choice"><input type="radio" name="dutyType" value="港航班">港航班</label>
+        <label class="choice"><input type="radio" name="dutyType" value="办公班">办公班</label>
+      </div>
+      <div class="toolbar" style="margin-top: 14px;">
+        <button type="button" class="primary" id="saveDutyBtn">保存</button>
+        <button type="button" id="openSelectedTasksBtn">打开流程</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="favoritesModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="favoritesTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="favoritesTitle">收藏夹</h2>
+          <p>低频但有用的资料入口和业务参考表。</p>
+        </div>
+        <button type="button" id="closeFavoritesBtn">关闭</button>
+      </div>
+      <div class="link-list" style="margin-bottom: 16px;">
+        <a class="link-card" href="https://mp.weixin.qq.com/s/VwEGJ8d-sXXvXBxIrxdoxg" target="_blank" rel="noreferrer">
+          <strong>气象数据</strong>
+          <span>微信公众号资料</span>
+        </a>
+        <a class="link-card" href="https://www.cnblogs.com/Mount256/p/18353230#%E9%9B%B7%E8%BE%BE%E8%B5%84%E6%96%99" target="_blank" rel="noreferrer">
+          <strong>雷达资料</strong>
+          <span>cnblogs.com/Mount256</span>
+        </a>
+      </div>
+      <h3>资料 1：分区等级认定表</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>区域</th>
+              <th>3% 至 10% 认定半级</th>
+              <th>10% 及以上认定该等级</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>北部</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>中西</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>中东</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>东南</td><td>2 或 3 站</td><td>4 站及以上</td></tr>
+            <tr><td>内港</td><td>2 站</td><td>3 站及以上</td></tr>
+            <tr><td>东部</td><td>无半级</td><td>1 站及以上</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="referenceModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="referenceTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="referenceTitle">参考资料</h2>
+          <p>旧版内置资料保留在这里，后续可继续补充。</p>
+        </div>
+        <button type="button" id="closeReferenceBtn">关闭</button>
+      </div>
+      <h3>资料 1：分区等级认定表</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>区域</th>
+              <th>3% 至 10% 认定半级</th>
+              <th>10% 及以上认定该等级</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>北部</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>中西</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>中东</td><td>1 站</td><td>2 站及以上</td></tr>
+            <tr><td>东南</td><td>2 或 3 站</td><td>4 站及以上</td></tr>
+            <tr><td>内港</td><td>2 站</td><td>3 站及以上</td></tr>
+            <tr><td>东部</td><td>无半级</td><td>1 站及以上</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="statModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="statTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="statTitle">月度统计</h2>
+          <p id="statMonthLabel"></p>
+        </div>
+        <button type="button" id="closeStatBtn">关闭</button>
+      </div>
+      <div id="monthStats" class="quick-stats"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script>
+    const storageKey = "personal-workbench-v1";
+    const today = new Date();
+    let selectedDate = toDateKey(today);
+    let currentYear = today.getFullYear();
+    let currentMonth = today.getMonth() + 1;
+    let showAllHotspots = false;
+
+    const dutyTypes = {
+      "专项班": { className: "special", label: "专项班" },
+      "港航班": { className: "port", label: "港航班" },
+      "办公班": { className: "office", label: "办公班" }
+    };
+
+    const weatherTypes = ["8级大风", "10级及以上大风", "雷暴大风", "雷暴", "台风", "极端降水", "雪", "高温"];
+
+    const defaultTasks = {
+      "专项班": [
+        "05:40 马迹山预报",
+        "05:50 航线预报",
+        "06:00 燕窝山预报",
+        "06:40 除中能煤、岙山外预报",
+        "07:00 中能煤、岙山预报",
+        "10:00 更新预报",
+        "10:50 发布预报",
+        "11:00 航线短信",
+        "14:20 更新预报",
+        "14:50 发布预报",
+        "15:00 燕窝山预报",
+        "15:20 航线预报",
+        "15:30 交接班日记、考勤",
+        "16:00 内部预报",
+        "19:20 锚地",
+        "19:30 港航预报",
+        "19:50 专项预报"
+      ],
+      "港航班": [
+        "06:50 港区预报",
+        "07:00 锚地预报",
+        "07:30 电力公司四县区预报",
+        "09:30 电力公司日报",
+        "10:30 锚地预报更新",
+        "10:40 港区预报更新",
+        "14:10 锚地预报更新",
+        "15:30 港区预报更新",
+        "16:00 交接班",
+        "16:20 内部预报"
+      ],
+      "办公班": [
+        "08:30 查看业务通知与重点服务需求",
+        "09:00 整理每日关注热点",
+        "10:30 跟进项目、材料或服务产品",
+        "14:30 更新科研进展和资料清单",
+        "16:30 复盘当日事项并记录明日待办"
+      ]
+    };
+
+    const hotPapers = [
+      {
+        topic: "AI气象",
+        title: "中国气象科学研究院人工智能气象应用研究进展",
+        journal: "应用气象学报",
+        year: "2026",
+        note: "适合跟进 AI 在天气预报、气候预测和业务服务中的应用框架。",
+        url: "https://qikan.camscma.cn/ch/reader/view_abstract.aspx?flag=1&file_no=20260401&journal_id=jams"
+      },
+      {
+        topic: "强对流",
+        title: "北京“25·7”极端暴雨时空特征及形成机制分析",
+        journal: "气象",
+        year: "2026",
+        note: "关注极端暴雨时空演变、环流背景和形成机制分析。",
+        url: "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?flag=1&file_no=20260601&journal_id=qx"
+      },
+      {
+        topic: "强对流",
+        title: "一次锋前暖区强对流的触发及双偏振雷达特征分析",
+        journal: "热带气象学报",
+        year: "2026",
+        note: "适合跟进暖区强对流触发机制和双偏振雷达诊断方法。",
+        url: "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2026.026"
+      },
+      {
+        topic: "暴雨过程",
+        title: "2018年北京“7.16”暖区特大暴雨特征及形成机制研究",
+        journal: "气象学报",
+        year: "2020",
+        note: "经典暖区暴雨个例，适合作为强降水成因分析写作参考。",
+        url: "https://pubs.cstam.org.cn/article/doi/10.11676/qxxb2020.001"
+      },
+      {
+        topic: "雷达识别",
+        title: "六种机器学习模型在双偏振天气雷达冰雹识别中的性能分析与评估",
+        journal: "热带气象学报",
+        year: "最新录用",
+        note: "对雷达资料机器学习识别、灾害天气监测算法有参考价值。",
+        url: "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2026.058"
+      },
+      {
+        topic: "海洋气象",
+        title: "基于志愿观测船数据对ERA5海面气温气压的适用性分析",
+        journal: "热带气象学报",
+        year: "最新录用",
+        note: "适合海上观测资料质量评估、再分析资料适用性研究参考。",
+        url: "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2026.036"
+      }
+    ];
+
+    const journalSites = [
+      {
+        name: "气象学报",
+        publisher: "中国气象学会",
+        tags: "大气科学综合、天气气候",
+        url: "http://qxxb.ijournals.cn/qxxb_cn/ch/index.aspx"
+      },
+      {
+        name: "大气科学",
+        publisher: "中国科学院大气物理研究所",
+        tags: "大气科学、气候动力、数值模拟",
+        url: "https://www.iapjournals.ac.cn/dqkx/"
+      },
+      {
+        name: "气象",
+        publisher: "国家气象中心",
+        tags: "天气预报、业务技术、气象服务",
+        url: "http://qxqk.nmc.cn/qx/ch/index.aspx"
+      },
+      {
+        name: "应用气象学报",
+        publisher: "中国气象科学研究院",
+        tags: "应用气象、业务技术、AI气象",
+        url: "https://qikan.camscma.cn/ch/index.aspx"
+      },
+      {
+        name: "高原气象",
+        publisher: "中国科学院西北生态环境资源研究院",
+        tags: "高原天气气候、青藏高原",
+        url: "http://www.gyqx.ac.cn/"
+      },
+      {
+        name: "气候与环境研究",
+        publisher: "中国科学院大气物理研究所",
+        tags: "气候变化、环境气象",
+        url: "https://www.iapjournals.ac.cn/qhhj/"
+      },
+      {
+        name: "热带气象学报",
+        publisher: "中国气象局广州热带海洋气象研究所",
+        tags: "台风、热带天气、季风",
+        url: "https://rdqxxb.itmm.org.cn/"
+      },
+      {
+        name: "暴雨灾害",
+        publisher: "中国气象局武汉暴雨研究所",
+        tags: "暴雨、强降水、灾害天气",
+        url: "http://byzh.org.cn/"
+      },
+      {
+        name: "气象科技",
+        publisher: "中国气象局气象探测中心等",
+        tags: "探测技术、预报技术、业务系统",
+        url: "http://www.qxkj.net.cn/"
+      },
+      {
+        name: "中国农业气象",
+        publisher: "中国农业科学院农业环境与可持续发展研究所",
+        tags: "农业气象、生态气象、灾害影响",
+        url: "https://zgnyqx.ieda.org.cn/"
+      }
+    ];
+
+    const scienceSources = [
+      {
+        name: "中国气象局科技动态",
+        type: "国内科研动态",
+        desc: "气象科技、业务技术、重点工程和部门动态。",
+        url: "https://www.cma.gov.cn/"
+      },
+      {
+        name: "中国气象科学研究院",
+        type: "国内科研机构",
+        desc: "气象科研项目、学术活动和应用气象研究动态。",
+        url: "https://www.camscma.cn/"
+      },
+      {
+        name: "中国科学院大气物理研究所",
+        type: "国内科研机构",
+        desc: "大气科学、气候变化、数值模式和学术报告。",
+        url: "http://www.iap.cas.cn/"
+      },
+      {
+        name: "中国气象学会",
+        type: "学会会议",
+        desc: "学术年会、会议通知、气象科技奖励和学会资讯。",
+        url: "https://www.cms1924.org/"
+      },
+      {
+        name: "NCAR & UCAR News",
+        type: "国际科研动态",
+        desc: "大气科学、天气气候、模式和观测研究新闻。",
+        url: "https://news.ucar.edu/"
+      },
+      {
+        name: "EGU Atmospheric Sciences Blog",
+        type: "国际学会",
+        desc: "欧洲地球科学联盟大气科学分会博客和研究讨论。",
+        url: "https://blogs.egu.eu/divisions/as/"
+      },
+      {
+        name: "arXiv Atmospheric and Oceanic Physics",
+        type: "预印本",
+        desc: "大气、海洋与行星物理方向的最新预印本。",
+        url: "https://arxiv.org/list/physics.ao-ph/recent"
+      },
+      {
+        name: "EarthArXiv",
+        type: "预印本",
+        desc: "地球科学开放预印本，适合跟踪未正式发表的新研究。",
+        url: "https://eartharxiv.org/"
+      },
+      {
+        name: "NOAA NSSL News",
+        type: "强对流研究",
+        desc: "美国国家强风暴实验室新闻，适合跟踪强对流研究。",
+        url: "https://www.nssl.noaa.gov/news/"
+      },
+      {
+        name: "ECMWF News",
+        type: "数值预报",
+        desc: "欧洲中期天气预报中心模式、再分析和业务系统动态。",
+        url: "https://www.ecmwf.int/en/about/media-centre/news"
+      },
+      {
+        name: "中国气象爱好者社区资料",
+        type: "论坛资料",
+        desc: "气象资料、雷达资料和工具导航，适合补充业务资料线索。",
+        url: "https://www.cnblogs.com/Mount256/p/18353230#%E9%9B%B7%E8%BE%BE%E8%B5%84%E6%96%99"
+      }
+    ];
+
+    let activePaperTopic = "全部";
+    let displayedPapers = [...hotPapers];
+
+    const data = loadData();
+
+    const sectionInfo = {
+      workflow: ["工作流程", "排班、天气关注和当日流程集中管理。"],
+      hotspots: ["科研资讯", "每天刷科研网站、论坛、预印本和气象界最新消息。"],
+      research: ["科研进展", "论文、项目、图表、资料整理和下一步计划。"]
+    };
+
+    const els = {
+      todayLabel: document.getElementById("todayLabel"),
+      pageTitle: document.getElementById("pageTitle"),
+      pageSubtitle: document.getElementById("pageSubtitle"),
+      calendar: document.getElementById("calendar"),
+      yearSelect: document.getElementById("yearSelect"),
+      monthSelect: document.getElementById("monthSelect"),
+      workflowTitle: document.getElementById("workflowTitle"),
+      workflowHint: document.getElementById("workflowHint"),
+      tasks: document.getElementById("tasks"),
+      weatherBox: document.getElementById("weatherBox"),
+      weatherTips: document.getElementById("weatherTips"),
+      dutyModal: document.getElementById("dutyModal"),
+      dutyModalDate: document.getElementById("dutyModalDate"),
+      referenceModal: document.getElementById("referenceModal"),
+      favoritesModal: document.getElementById("favoritesModal"),
+      statModal: document.getElementById("statModal"),
+      monthStats: document.getElementById("monthStats"),
+      statMonthLabel: document.getElementById("statMonthLabel"),
+      toast: document.getElementById("toast"),
+      statDuty: document.getElementById("statDuty"),
+      statTasks: document.getElementById("statTasks"),
+      statHotspots: document.getElementById("statHotspots"),
+      statResearch: document.getElementById("statResearch"),
+      hotspotDate: document.getElementById("hotspotDate"),
+      hotspotType: document.getElementById("hotspotType"),
+      hotspotTitle: document.getElementById("hotspotTitle"),
+      hotspotNote: document.getElementById("hotspotNote"),
+      hotspotStatus: document.getElementById("hotspotStatus"),
+      hotspotPriority: document.getElementById("hotspotPriority"),
+      hotspotList: document.getElementById("hotspotList"),
+      researchProject: document.getElementById("researchProject"),
+      researchStage: document.getElementById("researchStage"),
+      researchDate: document.getElementById("researchDate"),
+      researchProgress: document.getElementById("researchProgress"),
+      researchNote: document.getElementById("researchNote"),
+      researchList: document.getElementById("researchList"),
+      paperTopics: document.getElementById("paperTopics"),
+      hotPaperList: document.getElementById("hotPaperList"),
+      journalList: document.getElementById("journalList"),
+      scienceSourceList: document.getElementById("scienceSourceList"),
+      paperUpdateStatus: document.getElementById("paperUpdateStatus")
+    };
+
+    init();
+
+    function init() {
+      els.todayLabel.textContent = formatDate(today);
+      els.hotspotDate.value = selectedDate;
+      els.researchDate.value = selectedDate;
+      fillYearMonth();
+      bindEvents();
+      renderAll();
+      updateDailyPapers(false);
+    }
+
+    function bindEvents() {
+      document.querySelectorAll(".nav button").forEach((button) => {
+        button.addEventListener("click", () => switchSection(button.dataset.section));
+      });
+
+      els.yearSelect.addEventListener("change", () => {
+        currentYear = Number(els.yearSelect.value);
+        renderCalendar();
+      });
+
+      els.monthSelect.addEventListener("change", () => {
+        currentMonth = Number(els.monthSelect.value);
+        renderCalendar();
+      });
+
+      document.getElementById("todayBtn").addEventListener("click", () => {
+        currentYear = today.getFullYear();
+        currentMonth = today.getMonth() + 1;
+        selectedDate = toDateKey(today);
+        els.yearSelect.value = String(currentYear);
+        els.monthSelect.value = String(currentMonth);
+        switchSection("workflow");
+        renderAll();
+      });
+
+      document.getElementById("favoritesBtn").addEventListener("click", () => openModal(els.favoritesModal));
+      document.getElementById("closeFavoritesBtn").addEventListener("click", () => closeModal(els.favoritesModal));
+      document.getElementById("closeReferenceBtn").addEventListener("click", () => closeModal(els.referenceModal));
+      document.getElementById("closeDutyModalBtn").addEventListener("click", () => closeModal(els.dutyModal));
+      document.getElementById("saveDutyBtn").addEventListener("click", saveDuty);
+      document.getElementById("openSelectedTasksBtn").addEventListener("click", () => {
+        closeModal(els.dutyModal);
+        renderWorkflowDay();
+      });
+      document.getElementById("saveWeatherBtn").addEventListener("click", saveWeather);
+      document.getElementById("addNormalTaskBtn").addEventListener("click", () => addTask(false));
+      document.getElementById("addImportantTaskBtn").addEventListener("click", () => addTask(true));
+      document.getElementById("monthStatBtn").addEventListener("click", openMonthStats);
+      document.getElementById("closeStatBtn").addEventListener("click", () => closeModal(els.statModal));
+      document.getElementById("addHotspotBtn").addEventListener("click", addHotspot);
+      document.getElementById("showAllHotspotsBtn").addEventListener("click", () => {
+        showAllHotspots = !showAllHotspots;
+        renderHotspots();
+      });
+      document.getElementById("addResearchBtn").addEventListener("click", addResearch);
+      document.getElementById("refreshPapersBtn").addEventListener("click", () => updateDailyPapers(true));
+      document.getElementById("exportDataBtn").addEventListener("click", exportData);
+      document.getElementById("importDataBtn").addEventListener("click", () => document.getElementById("importFile").click());
+      document.getElementById("importFile").addEventListener("change", importData);
+
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) closeModal(modal);
+        });
+      });
+    }
+
+    function fillYearMonth() {
+      for (let y = 2024; y <= 2035; y += 1) {
+        const option = document.createElement("option");
+        option.value = String(y);
+        option.textContent = String(y);
+        els.yearSelect.appendChild(option);
+      }
+      for (let m = 1; m <= 12; m += 1) {
+        const option = document.createElement("option");
+        option.value = String(m);
+        option.textContent = String(m);
+        els.monthSelect.appendChild(option);
+      }
+      els.yearSelect.value = String(currentYear);
+      els.monthSelect.value = String(currentMonth);
+    }
+
+    function switchSection(sectionId) {
+      document.querySelectorAll(".section").forEach((section) => {
+        section.classList.toggle("active", section.id === sectionId);
+      });
+      document.querySelectorAll(".nav button").forEach((button) => {
+        button.classList.toggle("active", button.dataset.section === sectionId);
+      });
+      els.pageTitle.textContent = sectionInfo[sectionId][0];
+      els.pageSubtitle.textContent = sectionInfo[sectionId][1];
+    }
+
+    function renderAll() {
+      renderCalendar();
+      renderWorkflowDay();
+      renderWeather();
+      renderHotPapers();
+      renderJournals();
+      renderScienceSources();
+      renderHotspots();
+      renderResearch();
+      renderStats();
+    }
+
+    function renderCalendar() {
+      els.calendar.innerHTML = "";
+      const firstDay = new Date(currentYear, currentMonth - 1, 1).getDay() || 7;
+      const daysInMonth = new Date(currentYear, currentMonth, 0).getDate();
+
+      for (let i = 1; i < firstDay; i += 1) {
+        const blank = document.createElement("div");
+        blank.className = "blank-day";
+        els.calendar.appendChild(blank);
+      }
+
+      for (let day = 1; day <= daysInMonth; day += 1) {
+        const dateKey = `${currentYear}-${String(currentMonth).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+        const dayData = ensureDay(dateKey);
+        const cell = document.createElement("button");
+        cell.type = "button";
+        cell.className = "day";
+        if (dateKey === toDateKey(today)) cell.classList.add("today");
+        cell.setAttribute("aria-label", `${dateKey} ${dayData.duty || "未排班"}`);
+        cell.innerHTML = "";
+
+        const num = document.createElement("div");
+        num.className = "day-num";
+        num.innerHTML = `<span>${day}</span>${dateKey === selectedDate ? "<span class=\"badge\">已选</span>" : ""}`;
+        cell.appendChild(num);
+
+        const tags = document.createElement("div");
+        tags.className = "day-tags";
+        if (dayData.duty) {
+          const tag = document.createElement("span");
+          tag.className = `badge ${dutyTypes[dayData.duty]?.className || ""}`;
+          tag.textContent = dayData.duty;
+          tags.appendChild(tag);
+        }
+        if (dayData.weather.length) {
+          const weather = document.createElement("span");
+          weather.className = "badge weather";
+          weather.textContent = `${dayData.weather.length} 项天气`;
+          tags.appendChild(weather);
+        }
+        if (dayData.extraTasks.length) {
+          const extra = document.createElement("span");
+          extra.className = "badge";
+          extra.textContent = `加 ${dayData.extraTasks.length}`;
+          tags.appendChild(extra);
+        }
+        cell.appendChild(tags);
+
+        cell.addEventListener("click", () => {
+          selectedDate = dateKey;
+          openDutyPicker(dateKey);
+          renderAll();
+        });
+
+        cell.addEventListener("dblclick", () => {
+          selectedDate = dateKey;
+          renderAll();
+        });
+
+        els.calendar.appendChild(cell);
+      }
+    }
+
+    function openDutyPicker(dateKey) {
+      const dayData = ensureDay(dateKey);
+      els.dutyModalDate.textContent = formatDate(new Date(`${dateKey}T00:00:00`));
+      document.querySelectorAll("[name='dutyType']").forEach((input) => {
+        input.checked = (input.value === (dayData.duty || "none"));
+      });
+      openModal(els.dutyModal);
+    }
+
+    function saveDuty() {
+      const checked = document.querySelector("[name='dutyType']:checked");
+      if (!checked) return;
+      const dayData = ensureDay(selectedDate);
+      dayData.duty = checked.value === "none" ? "" : checked.value;
+      saveData();
+      closeModal(els.dutyModal);
+      renderAll();
+      showToast("班次已保存");
+    }
+
+    function renderWorkflowDay() {
+      const dayData = ensureDay(selectedDate);
+      const duty = dayData.duty;
+      els.workflowTitle.textContent = `${selectedDate} ${duty || "未排班"}`;
+      els.workflowHint.textContent = duty ? "流程会按当前时间标记已过和下一项。" : "先在月历中为当天选择班次。";
+
+      const base = duty ? (defaultTasks[duty] || []) : [];
+      const merged = [
+        ...base.map((name) => ({ name, type: "base" })),
+        ...dayData.extraTasks
+      ];
+
+      els.tasks.innerHTML = "";
+      if (!merged.length) {
+        els.tasks.innerHTML = "<div class=\"empty\">暂无流程</div>";
+        return;
+      }
+
+      const nowMinutes = todayKey(selectedDate) ? new Date().getHours() * 60 + new Date().getMinutes() : -1;
+      let currentMarked = false;
+
+      merged.forEach((task, index) => {
+        const row = document.createElement("div");
+        row.className = "task";
+        const taskId = `${selectedDate}-${index}-${task.name}`;
+        const done = dayData.doneTasks.includes(taskId);
+        if (done) row.classList.add("done");
+        if (task.type === "important") row.classList.add("important");
+
+        const minutes = extractMinutes(task.name);
+        if (todayKey(selectedDate) && minutes !== null && minutes < nowMinutes) row.classList.add("past");
+        if (todayKey(selectedDate) && minutes !== null && minutes >= nowMinutes && !currentMarked) {
+          row.classList.add("current");
+          currentMarked = true;
+        }
+
+        const check = document.createElement("input");
+        check.type = "checkbox";
+        check.checked = done;
+        check.addEventListener("change", () => toggleTaskDone(taskId, check.checked));
+
+        const name = document.createElement("span");
+        name.innerHTML = `<span class="task-time">${formatTaskPrefix(task.name)}</span>${escapeHtml(stripTaskPrefix(task.name))}`;
+
+        const actions = document.createElement("div");
+        actions.className = "mini-actions";
+        if (task.type !== "base") {
+          const del = document.createElement("button");
+          del.type = "button";
+          del.textContent = "删除";
+          del.addEventListener("click", () => deleteExtraTask(task));
+          actions.appendChild(del);
+        } else {
+          const badge = document.createElement("span");
+          badge.className = "badge";
+          badge.textContent = "固定";
+          actions.appendChild(badge);
+        }
+
+        row.append(check, name, actions);
+        els.tasks.appendChild(row);
+      });
+    }
+
+    function renderWeather() {
+      const dayData = ensureDay(selectedDate);
+      els.weatherBox.innerHTML = "";
+      weatherTypes.forEach((type, index) => {
+        const id = `weather-${index}`;
+        const label = document.createElement("label");
+        label.className = "choice";
+        label.innerHTML = `<input id="${id}" type="checkbox" value="${type}" ${dayData.weather.includes(type) ? "checked" : ""}>${type}`;
+        els.weatherBox.appendChild(label);
+      });
+      els.weatherTips.textContent = dayData.weather.length ? `重点关注：${dayData.weather.join("、")}` : "暂无天气关注项";
+    }
+
+    function saveWeather() {
+      const dayData = ensureDay(selectedDate);
+      dayData.weather = Array.from(els.weatherBox.querySelectorAll("input:checked")).map((input) => input.value);
+      saveData();
+      renderAll();
+      showToast("天气情况已保存");
+    }
+
+    function addTask(important) {
+      const content = prompt(important ? "请输入重要流程内容" : "请输入流程内容");
+      if (!content) return;
+      const dayData = ensureDay(selectedDate);
+      dayData.extraTasks.push({ name: content.trim(), type: important ? "important" : "normal" });
+      saveData();
+      renderAll();
+      showToast("流程已添加");
+    }
+
+    function deleteExtraTask(task) {
+      const dayData = ensureDay(selectedDate);
+      dayData.extraTasks = dayData.extraTasks.filter((item) => item !== task);
+      saveData();
+      renderAll();
+      showToast("流程已删除");
+    }
+
+    function toggleTaskDone(taskId, checked) {
+      const dayData = ensureDay(selectedDate);
+      if (checked && !dayData.doneTasks.includes(taskId)) dayData.doneTasks.push(taskId);
+      if (!checked) dayData.doneTasks = dayData.doneTasks.filter((id) => id !== taskId);
+      saveData();
+      renderWorkflowDay();
+      renderStats();
+    }
+
+    function addHotspot() {
+      const title = els.hotspotTitle.value.trim();
+      if (!title) {
+        showToast("请先填写热点标题");
+        return;
+      }
+      data.hotspots.push({
+        id: cryptoId(),
+        date: els.hotspotDate.value || selectedDate,
+        type: els.hotspotType.value,
+        title,
+        note: els.hotspotNote.value.trim(),
+        status: els.hotspotStatus.value,
+        priority: els.hotspotPriority.value,
+        createdAt: Date.now()
+      });
+      els.hotspotTitle.value = "";
+      els.hotspotNote.value = "";
+      saveData();
+      renderHotspots();
+      renderStats();
+      showToast("热点已添加");
+    }
+
+    function renderHotspots() {
+      const list = [...data.hotspots]
+        .filter((item) => showAllHotspots || item.date === toDateKey(today))
+        .sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
+      els.hotspotList.innerHTML = "";
+      if (!list.length) {
+        els.hotspotList.innerHTML = "<div class=\"empty\">暂无热点记录</div>";
+        return;
+      }
+      list.forEach((item) => {
+        els.hotspotList.appendChild(renderItem(item, "hotspot"));
+      });
+    }
+
+    function addResearch() {
+      const project = els.researchProject.value.trim();
+      if (!project) {
+        showToast("请先填写项目名称");
+        return;
+      }
+      data.research.push({
+        id: cryptoId(),
+        project,
+        stage: els.researchStage.value,
+        date: els.researchDate.value || selectedDate,
+        progress: els.researchProgress.value,
+        note: els.researchNote.value.trim(),
+        createdAt: Date.now()
+      });
+      els.researchNote.value = "";
+      saveData();
+      renderResearch();
+      renderStats();
+      showToast("科研进展已添加");
+    }
+
+    function renderResearch() {
+      const list = [...data.research].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
+      els.researchList.innerHTML = "";
+      if (!list.length) {
+        els.researchList.innerHTML = "<div class=\"empty\">暂无科研进展</div>";
+        return;
+      }
+      list.forEach((item) => {
+        els.researchList.appendChild(renderItem(item, "research"));
+      });
+    }
+
+    function renderHotPapers() {
+      const topics = ["全部", ...Array.from(new Set(displayedPapers.map((paper) => paper.topic)))];
+      els.paperTopics.innerHTML = "";
+      topics.forEach((topic) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = topic;
+        button.classList.toggle("active", topic === activePaperTopic);
+        button.addEventListener("click", () => {
+          activePaperTopic = topic;
+          renderHotPapers();
+        });
+        els.paperTopics.appendChild(button);
+      });
+
+      const papers = activePaperTopic === "全部"
+        ? displayedPapers
+        : displayedPapers.filter((paper) => paper.topic === activePaperTopic);
+      els.hotPaperList.innerHTML = "";
+      papers.forEach((paper) => {
+        const card = document.createElement("article");
+        card.className = "paper-card";
+        card.innerHTML = `
+          <span class="badge">${escapeHtml(paper.topic)}</span>
+          <strong>${escapeHtml(paper.title)}</strong>
+          <p>${escapeHtml(paper.journal)} · ${escapeHtml(paper.year)}</p>
+          <p>${escapeHtml(paper.note)}</p>
+          <div class="toolbar">
+            <a href="${paper.url}" target="_blank" rel="noreferrer">查看论文</a>
+            <button type="button">加入进展</button>
+          </div>
+        `;
+        card.querySelector("button").addEventListener("click", () => usePaperAsResearch(paper));
+        els.hotPaperList.appendChild(card);
+      });
+    }
+
+    async function updateDailyPapers(manual) {
+      if (manual) {
+        els.paperUpdateStatus.textContent = "正在读取中文期刊每日更新数据...";
+      }
+
+      const chineseLoaded = await loadChineseDailyPapers();
+      if (chineseLoaded) {
+        return;
+      }
+
+      const todayDate = new Date();
+      const end = toDateKey(todayDate);
+      const startDate = new Date(todayDate);
+      startDate.setDate(startDate.getDate() - 30);
+      const start = toDateKey(startDate);
+      const query = encodeURIComponent("meteorology OR atmospheric science OR weather forecast OR severe convective storm OR tropical cyclone");
+      const url = `https://api.openalex.org/works?search=${query}&filter=from_publication_date:${start},to_publication_date:${end}&sort=publication_date:desc&per-page=12`;
+
+      if (manual) {
+        els.paperUpdateStatus.textContent = "正在从 OpenAlex 拉取近 30 天最新论文...";
+      }
+
+      try {
+        const response = await fetch(url, { headers: { "Accept": "application/json" } });
+        if (!response.ok) throw new Error(`OpenAlex ${response.status}`);
+        const payload = await response.json();
+        const papers = (payload.results || [])
+          .map(normalizeOpenAlexPaper)
+          .filter(Boolean)
+          .slice(0, 8);
+        if (!papers.length) throw new Error("暂无结果");
+        displayedPapers = [...papers, ...hotPapers];
+        activePaperTopic = "全部";
+        els.paperUpdateStatus.textContent = `已更新：显示 OpenAlex 近 30 天最新论文 ${papers.length} 条，并保留中文精选清单。`;
+        renderHotPapers();
+      } catch (error) {
+        displayedPapers = [...hotPapers];
+        els.paperUpdateStatus.textContent = "自动更新暂不可用，当前显示已核验的中文精选论文。";
+        renderHotPapers();
+        if (manual) showToast("论文自动更新失败，已显示精选清单");
+      }
+    }
+
+    async function loadChineseDailyPapers() {
+      try {
+        const response = await fetch(`data/chinese-weather-papers.json?t=${Date.now()}`, {
+          cache: "no-store",
+          headers: { "Accept": "application/json" }
+        });
+        if (!response.ok) throw new Error(`中文期刊数据 ${response.status}`);
+        const payload = await response.json();
+        const papers = Array.isArray(payload.papers) ? payload.papers.filter((paper) => paper.title && paper.url) : [];
+        if (!papers.length) throw new Error("中文期刊数据为空");
+        displayedPapers = [...papers.slice(0, 20), ...hotPapers];
+        activePaperTopic = "全部";
+        const updated = payload.updatedAt ? payload.updatedAt.replace("T", " ").replace("Z", " UTC") : "未知时间";
+        els.paperUpdateStatus.textContent = `中文期刊每日更新已加载：${papers.length} 条，更新时间 ${updated}。`;
+        renderHotPapers();
+        return true;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function normalizeOpenAlexPaper(work) {
+      const title = work.title || "";
+      const landing = work.doi || work.primary_location?.landing_page_url || work.id;
+      if (!title || !landing) return null;
+      const source = work.primary_location?.source?.display_name || "OpenAlex";
+      const date = work.publication_date || work.publication_year || "最新";
+      return {
+        topic: "今日更新",
+        title,
+        journal: source,
+        year: String(date),
+        note: "来自 OpenAlex 的近 30 天气象与大气科学相关论文，按发表日期排序。",
+        url: landing
+      };
+    }
+
+    function renderJournals() {
+      els.journalList.innerHTML = "";
+      journalSites.forEach((journal) => {
+        const card = document.createElement("article");
+        card.className = "journal-card";
+        card.innerHTML = `
+          <strong>${escapeHtml(journal.name)}</strong>
+          <p>${escapeHtml(journal.publisher)}</p>
+          <p>${escapeHtml(journal.tags)}</p>
+          <a href="${journal.url}" target="_blank" rel="noreferrer">进入官网</a>
+        `;
+        els.journalList.appendChild(card);
+      });
+    }
+
+    function renderScienceSources() {
+      els.scienceSourceList.innerHTML = "";
+      scienceSources.forEach((source) => {
+        const card = document.createElement("article");
+        card.className = "journal-card";
+        card.innerHTML = `
+          <span class="badge">${escapeHtml(source.type)}</span>
+          <strong>${escapeHtml(source.name)}</strong>
+          <p>${escapeHtml(source.desc)}</p>
+          <a href="${source.url}" target="_blank" rel="noreferrer">打开网站</a>
+        `;
+        els.scienceSourceList.appendChild(card);
+      });
+    }
+
+    function usePaperAsResearch(paper) {
+      els.researchProject.value = paper.title;
+      els.researchStage.value = "资料收集";
+      els.researchProgress.value = "进行中";
+      els.researchDate.value = toDateKey(new Date());
+      els.researchNote.value = `${paper.journal}（${paper.year}）：${paper.note}\n链接：${paper.url}`;
+      showToast("已填入科研进展表单");
+      document.getElementById("researchProject").scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+
+    function renderItem(item, type) {
+      const div = document.createElement("div");
+      div.className = "item";
+      const title = type === "hotspot" ? item.title : item.project;
+      const meta = type === "hotspot"
+        ? [item.date, item.type, item.status, item.priority]
+        : [item.date, item.stage, item.progress];
+      div.innerHTML = `
+        <div class="item-title">
+          <strong>${escapeHtml(title)}</strong>
+          <div class="mini-actions"><button type="button">删除</button></div>
+        </div>
+        <div class="item-meta">${meta.map((part) => `<span>${escapeHtml(part)}</span>`).join("")}</div>
+        <p>${escapeHtml(item.note || "未填写说明")}</p>
+      `;
+      div.querySelector("button").addEventListener("click", () => {
+        if (type === "hotspot") data.hotspots = data.hotspots.filter((entry) => entry.id !== item.id);
+        if (type === "research") data.research = data.research.filter((entry) => entry.id !== item.id);
+        saveData();
+        renderHotspots();
+        renderResearch();
+        renderStats();
+        showToast("记录已删除");
+      });
+      return div;
+    }
+
+    function openMonthStats() {
+      const prefix = `${currentYear}-${String(currentMonth).padStart(2, "0")}`;
+      const counts = { "专项班": 0, "港航班": 0, "办公班": 0, "天气关注日": 0 };
+      Object.entries(data.days).forEach(([dateKey, dayData]) => {
+        if (!dateKey.startsWith(prefix)) return;
+        if (dayData.duty && counts[dayData.duty] !== undefined) counts[dayData.duty] += 1;
+        if (dayData.weather.length) counts["天气关注日"] += 1;
+      });
+      els.statMonthLabel.textContent = `${currentYear} 年 ${currentMonth} 月`;
+      els.monthStats.innerHTML = Object.entries(counts).map(([label, value]) => `
+        <div class="stat"><span>${label}</span><strong>${value}</strong></div>
+      `).join("");
+      openModal(els.statModal);
+    }
+
+    function renderStats() {
+      const prefix = `${currentYear}-${String(currentMonth).padStart(2, "0")}`;
+      const monthDuty = Object.entries(data.days).filter(([dateKey, dayData]) => dateKey.startsWith(prefix) && dayData.duty).length;
+      const todayData = ensureDay(toDateKey(today));
+      const todayTasks = todayData.duty ? (defaultTasks[todayData.duty] || []).length + todayData.extraTasks.length : 0;
+      els.statDuty.textContent = String(monthDuty);
+      els.statTasks.textContent = String(todayTasks);
+      els.statHotspots.textContent = String(data.hotspots.filter((item) => item.date === toDateKey(today)).length);
+      els.statResearch.textContent = String(data.research.length);
+    }
+
+    function exportData() {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `personal-workbench-${toDateKey(new Date())}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importData(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const imported = JSON.parse(reader.result);
+          data.days = imported.days || {};
+          data.hotspots = imported.hotspots || [];
+          data.research = imported.research || [];
+          saveData();
+          renderAll();
+          showToast("数据已导入");
+        } catch (error) {
+          showToast("导入失败，请检查 JSON 文件");
+        }
+      };
+      reader.readAsText(file, "utf-8");
+      event.target.value = "";
+    }
+
+    function loadData() {
+      const fallback = { days: {}, hotspots: [], research: [] };
+      try {
+        return { ...fallback, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    function saveData() {
+      localStorage.setItem(storageKey, JSON.stringify(data));
+    }
+
+    function ensureDay(dateKey) {
+      if (!data.days[dateKey]) {
+        data.days[dateKey] = { duty: "", weather: [], extraTasks: [], doneTasks: [] };
+      }
+      data.days[dateKey].weather ||= [];
+      data.days[dateKey].extraTasks ||= [];
+      data.days[dateKey].doneTasks ||= [];
+      return data.days[dateKey];
+    }
+
+    function openModal(modal) {
+      modal.classList.add("open");
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove("open");
+    }
+
+    function showToast(message) {
+      els.toast.textContent = message;
+      els.toast.style.display = "block";
+      clearTimeout(showToast.timer);
+      showToast.timer = setTimeout(() => {
+        els.toast.style.display = "none";
+      }, 1800);
+    }
+
+    function toDateKey(date) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, "0");
+      const d = String(date.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
+    }
+
+    function todayKey(dateKey) {
+      return dateKey === toDateKey(new Date());
+    }
+
+    function formatDate(date) {
+      const week = "日一二三四五六"[date.getDay()];
+      return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 星期${week}`;
+    }
+
+    function extractMinutes(text) {
+      const match = text.match(/^(\d{1,2}):(\d{2})/);
+      if (!match) return null;
+      return Number(match[1]) * 60 + Number(match[2]);
+    }
+
+    function formatTaskPrefix(text) {
+      const match = text.match(/^(\d{1,2}:\d{2})\s*/);
+      return match ? `${match[1]} ` : "";
+    }
+
+    function stripTaskPrefix(text) {
+      return text.replace(/^(\d{1,2}:\d{2})\s*/, "");
+    }
+
+    function cryptoId() {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+  </script>
+</body>
+</html>

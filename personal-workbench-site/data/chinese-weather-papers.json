@@ -1,0 +1,333 @@
+{
+  "updatedAt": "2026-07-30T14:15:11Z",
+  "source": "GitHub Actions: public Chinese meteorology journal pages",
+  "count": 40,
+  "papers": [
+    {
+      "topic": "中文期刊",
+      "title": "青藏高原大气科学试验回顾",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260401"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院大气成分研究及业务应用进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260402"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院极端天气气候事件研究进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260403"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院气象雷达技术及应用进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260404"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院近20年台风研究进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260405"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年第52卷7期目录",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070101&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年第52卷7期封面",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070102&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2024年西北太平洋夏季和秋季台风活动异常特征的差异对比",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260701&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "云南冬春连旱事件的识别标准及环流特征分析",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260702&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于分钟级降水数据的山东汛期滑动和整点小时强降水差异研究",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260703&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "雷暴与强对流临近天气预报技术进展",
+      "journal": "气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120301&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "苏北地区超级单体风暴环境条件与雷达回波特征",
+      "journal": "气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20200134&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "区域暴雨过程中两次龙卷风事件分析",
+      "journal": "气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120505&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国东北龙卷研究:环境特征分析",
+      "journal": "气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=2015031&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "冬季北大西洋涛动与中国西南地区降水的不对称关系",
+      "journal": "气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120609&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "库布齐沙漠植被恢复对局地对流活动的影响研究",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25085"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "一次对流触发过程垂直运动分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25148"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "雷暴云降水粒子电荷测量及初步分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2602.25181"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于CRA大气再分析资料的中国云水资源评估及结果对比",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25184"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于复合气象特征和代价敏感学习的道路结冰预警模型研究",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26025"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "沿叶笃正先生开辟的路——从青藏高原气象学到青藏高原气候动力学",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26073"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "东亚夏季风气候系统变异及其对我国夏季气候灾害影响:研究进展与需进一步研究的问题",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26069"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "上世纪80年代以来云南秋季降水的年代际变化及其成因",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25098"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于多个排放源清单模拟京津冀冬季和夏季典型月份的二次无机气溶胶",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26014"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "南方电网区域春季太阳辐射时空变化及其跨季节预测信号研究",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.25136"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于风云三号F星被动微波观测的水凝物反演",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "武汉X波段双偏振相控阵雷达定量降水估测产品质量评估",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-227"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "湘中地区夏季极端小时降水和极端降水事件的时空分布及其环流特征",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-220"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "光流融合方法在复杂地形区分钟级降水临近预报中的应用",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-197"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于WRF-Fire的山地林火气象-火场耦合数值模拟研究",
+      "journal": "气象科技",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260311"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于机器学习的中国未来极端高温预测",
+      "journal": "气象科技",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260304"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "融合多源信息的龙卷爆发事件灾情调查方法研究",
+      "journal": "气象科技",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260109"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "多参量云体追踪识别技术在人工增雨作业效果评估中的应用",
+      "journal": "气象科技",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260108"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "高空大型无人机机载下投探空资料与加密探空资料对比分析",
+      "journal": "气象科技",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260103"
+    }
+  ],
+  "errors": [
+    {
+      "source": "中国农业气象",
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+    }
+  ]
+}
