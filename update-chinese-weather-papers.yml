@@ -1,0 +1,31 @@
+name: Update Chinese weather papers
+
+on:
+  schedule:
+    - cron: "10 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Chinese meteorology papers
+        run: python scripts/fetch_chinese_weather_papers.py
+
+      - name: Commit updated paper data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Chinese weather papers"
+          file_pattern: personal-workbench-site/data/chinese-weather-papers.json data/chinese-weather-papers.json
