@@ -1127,7 +1127,7 @@
         <button type="button" id="closeGistBtn">关闭</button>
       </div>
       <div class="notice">
-        需要在 GitHub 创建一个 Fine-grained token，仅授权 Gists。Token 只保存在当前浏览器本地。
+        需要在 GitHub 创建一个 Fine-grained token，仅授权 Gists。保存设置后，本机修改会自动上传，打开页面会自动下载云端数据。
       </div>
       <div class="form-grid" style="margin-top: 12px;">
         <label class="full">GitHub token
@@ -1136,12 +1136,17 @@
         <label class="full">Gist ID
           <input id="gistId" placeholder="第一次可留空，点击上传会自动创建">
         </label>
+        <label class="choice full">
+          <input id="gistAutoSync" type="checkbox">
+          自动同步排班、任务、天气和项目列表
+        </label>
       </div>
       <div class="toolbar" style="margin-top: 12px;">
         <button type="button" class="primary" id="saveGistSettingsBtn">保存设置</button>
         <button type="button" id="uploadGistBtn">上传本机数据</button>
         <button type="button" id="downloadGistBtn">下载云端数据</button>
       </div>
+      <div id="syncStatus" class="notice" style="margin-top: 12px;">未启用自动同步</div>
     </div>
   </div>
 
@@ -1341,6 +1346,9 @@
     let activePaperTopic = "全部";
     let displayedPapers = [...hotPapers];
     let dashboardData = null;
+    let syncSettings = { token: "", gistId: "", autoSync: false };
+    let isApplyingRemoteData = false;
+    let syncTimer = null;
 
     const data = loadData();
 
@@ -1384,7 +1392,9 @@
       journalStatusList: document.getElementById("journalStatusList"),
       gistModal: document.getElementById("gistModal"),
       gistToken: document.getElementById("gistToken"),
-      gistId: document.getElementById("gistId")
+      gistId: document.getElementById("gistId"),
+      gistAutoSync: document.getElementById("gistAutoSync"),
+      syncStatus: document.getElementById("syncStatus")
     };
 
     init();
@@ -1403,6 +1413,7 @@
       renderAll();
       loadResearchDashboard();
       updateDailyPapers(false);
+      autoDownloadGistData();
     }
 
     function bindEvents() {
@@ -1980,7 +1991,7 @@
       }
       div.querySelector("button").addEventListener("click", () => {
         if (type === "research") data.research = data.research.filter((entry) => entry.id !== item.id);
-        saveData();
+        saveData({ preserveMeta: true });
         renderResearch();
         renderStats();
         showToast("记录已删除");
@@ -2046,31 +2057,49 @@
 
     function loadGistSettings() {
       const settings = JSON.parse(localStorage.getItem(`${storageKey}-gist`) || "{}");
-      els.gistToken.value = settings.token || "";
-      els.gistId.value = settings.gistId || "";
+      syncSettings = {
+        token: settings.token || "",
+        gistId: settings.gistId || "",
+        autoSync: Boolean(settings.autoSync)
+      };
+      els.gistToken.value = syncSettings.token;
+      els.gistId.value = syncSettings.gistId;
+      els.gistAutoSync.checked = syncSettings.autoSync;
+      updateSyncStatus(syncSettings.autoSync ? "自动同步已启用" : "未启用自动同步");
     }
 
     function saveGistSettings() {
-      localStorage.setItem(`${storageKey}-gist`, JSON.stringify({
+      syncSettings = {
         token: els.gistToken.value.trim(),
-        gistId: els.gistId.value.trim()
-      }));
+        gistId: els.gistId.value.trim(),
+        autoSync: els.gistAutoSync.checked
+      };
+      localStorage.setItem(`${storageKey}-gist`, JSON.stringify(syncSettings));
       showToast("云同步设置已保存");
+      updateSyncStatus(syncSettings.autoSync ? "自动同步已启用，正在检查云端数据..." : "未启用自动同步");
+      if (syncSettings.autoSync) autoDownloadGistData();
     }
 
-    async function uploadGistData() {
-      const token = els.gistToken.value.trim();
-      let gistId = els.gistId.value.trim();
+    async function uploadGistData(options = {}) {
+      const token = syncSettings.token || els.gistToken.value.trim();
+      let gistId = syncSettings.gistId || els.gistId.value.trim();
       if (!token) {
         showToast("请先填写 GitHub token");
         return;
       }
+      const payloadData = {
+        ...data,
+        _meta: {
+          updatedAt: new Date().toISOString(),
+          source: "personal-workbench"
+        }
+      };
       const body = {
         description: "Personal weather workbench data",
         public: false,
         files: {
           "personal-workbench-data.json": {
-            content: JSON.stringify(data, null, 2)
+            content: JSON.stringify(payloadData, null, 2)
           }
         }
       };
@@ -2089,18 +2118,21 @@
         if (!response.ok) throw new Error(`Gist ${response.status}`);
         const payload = await response.json();
         els.gistId.value = payload.id || gistId;
+        syncSettings.gistId = els.gistId.value;
         saveGistSettings();
-        showToast("本机数据已上传到 Gist");
+        updateSyncStatus(`已上传：${new Date().toLocaleString()}`);
+        if (!options.silent) showToast("本机数据已上传到 Gist");
       } catch (error) {
-        showToast("上传失败，请检查 token/Gist 权限");
+        updateSyncStatus("上传失败，请检查 token/Gist 权限");
+        if (!options.silent) showToast("上传失败，请检查 token/Gist 权限");
       }
     }
 
-    async function downloadGistData() {
-      const token = els.gistToken.value.trim();
-      const gistId = els.gistId.value.trim();
+    async function downloadGistData(options = {}) {
+      const token = syncSettings.token || els.gistToken.value.trim();
+      const gistId = syncSettings.gistId || els.gistId.value.trim();
       if (!token || !gistId) {
-        showToast("请先填写 token 和 Gist ID");
+        if (!options.silent) showToast("请先填写 token 和 Gist ID");
         return;
       }
       try {
@@ -2115,15 +2147,46 @@
         const file = payload.files?.["personal-workbench-data.json"];
         if (!file?.content) throw new Error("no data");
         const imported = JSON.parse(file.content);
+        const remoteUpdated = Date.parse(imported._meta?.updatedAt || 0);
+        const localUpdated = Date.parse(data._meta?.updatedAt || 0);
+        if (options.onlyIfNewer && localUpdated && remoteUpdated && remoteUpdated <= localUpdated) {
+          updateSyncStatus("本机数据已是最新");
+          return;
+        }
+        isApplyingRemoteData = true;
         data.days = imported.days || {};
         data.hotspots = imported.hotspots || [];
         data.research = imported.research || [];
+        data._meta = imported._meta || { updatedAt: new Date().toISOString() };
         saveData();
+        isApplyingRemoteData = false;
         renderAll();
-        showToast("云端数据已下载到本机");
+        updateSyncStatus(`已下载：${new Date().toLocaleString()}`);
+        if (!options.silent) showToast("云端数据已下载到本机");
       } catch (error) {
-        showToast("下载失败，请检查 Gist ID 或 token");
+        isApplyingRemoteData = false;
+        updateSyncStatus("下载失败，请检查 Gist ID 或 token");
+        if (!options.silent) showToast("下载失败，请检查 Gist ID 或 token");
       }
+    }
+
+    function autoDownloadGistData() {
+      if (!syncSettings.autoSync || !syncSettings.token || !syncSettings.gistId) return;
+      updateSyncStatus("正在同步云端数据...");
+      downloadGistData({ silent: true, onlyIfNewer: true });
+    }
+
+    function scheduleGistUpload() {
+      if (isApplyingRemoteData || !syncSettings.autoSync || !syncSettings.token) return;
+      clearTimeout(syncTimer);
+      updateSyncStatus("本机有修改，准备上传...");
+      syncTimer = setTimeout(() => {
+        uploadGistData({ silent: true });
+      }, 1200);
+    }
+
+    function updateSyncStatus(message) {
+      if (els.syncStatus) els.syncStatus.textContent = message;
     }
 
     function loadData() {
@@ -2135,8 +2198,16 @@
       }
     }
 
-    function saveData() {
+    function saveData(options = {}) {
+      if (!options.preserveMeta) {
+        data._meta = {
+          ...(data._meta || {}),
+          updatedAt: new Date().toISOString(),
+          source: "personal-workbench"
+        };
+      }
       localStorage.setItem(storageKey, JSON.stringify(data));
+      scheduleGistUpload();
     }
 
     function ensureDay(dateKey) {
