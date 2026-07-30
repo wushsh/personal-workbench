@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>个人工作台</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1f6feb">
   <style>
     :root {
       --bg: #f4f6f8;
@@ -60,6 +62,24 @@
       justify-content: center;
       gap: 6px;
       min-height: 38px;
+    }
+
+    .btn-like {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 12px;
+      min-height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-like:hover {
+      border-color: var(--primary);
+      color: var(--primary);
     }
 
     button:hover {
@@ -217,7 +237,7 @@
 
     .quick-stats {
       display: grid;
-      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      grid-template-columns: repeat(3, minmax(140px, 1fr));
       gap: 12px;
     }
 
@@ -520,6 +540,11 @@
       align-items: flex-start;
     }
 
+    summary.item-title {
+      cursor: pointer;
+      list-style-position: inside;
+    }
+
     .item-title strong {
       font-weight: 600;
     }
@@ -625,6 +650,25 @@
       line-height: 1.6;
     }
 
+    .compact-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .compact-row {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: grid;
+      gap: 5px;
+    }
+
+    .compact-row a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
     .modal {
       position: fixed;
       inset: 0;
@@ -644,6 +688,10 @@
       max-height: calc(100vh - 36px);
       overflow: auto;
       padding: 16px;
+    }
+
+    .modal-card.small {
+      width: min(560px, 100%);
     }
 
     .table-wrap {
@@ -767,7 +815,6 @@
       </div>
       <nav class="nav" aria-label="主导航">
         <button type="button" class="active" data-section="workflow">工作流程</button>
-        <button type="button" data-section="hotspots">科研资讯</button>
         <button type="button" data-section="research">科研进展</button>
       </nav>
       <div class="side-tools">
@@ -797,10 +844,6 @@
         <div class="stat">
           <span>今日流程</span>
           <strong id="statTasks">0</strong>
-        </div>
-        <div class="stat">
-          <span>关注热点</span>
-          <strong id="statHotspots">0</strong>
         </div>
         <div class="stat">
           <span>科研事项</span>
@@ -892,71 +935,22 @@
         </div>
       </section>
 
-      <section id="hotspots" class="section">
-        <div class="panel">
-          <div class="panel-header">
-            <div>
-              <h2>科研资讯站点</h2>
-              <p>适合每天刷的气象科研动态、预印本、学会新闻和专业讨论入口。</p>
-            </div>
-          </div>
-          <div id="scienceSourceList" class="journal-grid"></div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-header">
-            <div>
-              <h2>今日阅读记录</h2>
-              <p>看到值得跟进的消息，可记录成自己的每日关注。</p>
-            </div>
-            <button type="button" class="primary" id="addHotspotBtn">添加记录</button>
-          </div>
-          <div class="form-grid">
-            <label>日期
-              <input type="date" id="hotspotDate">
-            </label>
-            <label>类型
-              <select id="hotspotType">
-                <option>科研新闻</option>
-                <option>论文线索</option>
-                <option>会议论坛</option>
-                <option>业务技术</option>
-                <option>资料数据</option>
-              </select>
-            </label>
-            <label class="full">标题
-              <input id="hotspotTitle" placeholder="例如：AMS 发布极端降水研究进展">
-            </label>
-            <label class="full">要点
-              <textarea id="hotspotNote" placeholder="记录来源、核心观点、是否需要继续跟进"></textarea>
-            </label>
-            <label>状态
-              <select id="hotspotStatus">
-                <option>待阅读</option>
-                <option>已阅读</option>
-                <option>需跟进</option>
-              </select>
-            </label>
-            <label>优先级
-              <select id="hotspotPriority">
-                <option>普通</option>
-                <option>重要</option>
-                <option>紧急</option>
-              </select>
-            </label>
-          </div>
-          <div class="panel-header" style="margin-top: 16px;">
-            <div>
-              <h3>记录列表</h3>
-              <p>默认显示今天，也可查看全部历史。</p>
-            </div>
-            <button type="button" id="showAllHotspotsBtn">全部/今日</button>
-          </div>
-          <div id="hotspotList" class="item-list"></div>
-        </div>
-      </section>
-
       <section id="research" class="section">
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>推荐</h2>
+              <p id="recommendStatus">日常刷 GitHub 趋势和气象家园论坛。</p>
+            </div>
+            <div class="toolbar">
+              <button type="button" id="gistSyncBtn">云同步设置</button>
+              <a class="btn-like" href="reading-list.html" target="_blank" rel="noreferrer">阅读清单</a>
+              <a class="btn-like" href="weekly-research-report.md" target="_blank" rel="noreferrer">周报</a>
+            </div>
+          </div>
+          <div id="recommendList" class="journal-grid"></div>
+        </div>
+
         <div class="panel">
           <div class="panel-header">
             <div>
@@ -969,6 +963,28 @@
           <div id="hotPaperList" class="paper-grid"></div>
         </div>
 
+        <div class="split">
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>关键词监测</h2>
+                <p id="keywordStatus">自动筛选强对流、台风、雷达、AI天气预报等相关内容。</p>
+              </div>
+            </div>
+            <div id="keywordList" class="compact-list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>期刊更新状态</h2>
+                <p>显示每天中文期刊抓取是否成功。</p>
+              </div>
+            </div>
+            <div id="journalStatusList" class="compact-list"></div>
+          </div>
+        </div>
+
         <div class="panel">
           <div class="panel-header">
             <div>
@@ -979,55 +995,14 @@
           <div id="journalList" class="journal-grid"></div>
         </div>
 
-        <div class="split">
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <h2>科研进展</h2>
-                <p>把论文、项目、资料整理和下一步动作放在同一个节奏里。</p>
-              </div>
-              <button type="button" class="primary" id="addResearchBtn">添加进展</button>
-            </div>
-            <div class="form-grid">
-              <label>项目
-                <input id="researchProject" placeholder="例如：舟山强对流个例分析">
-              </label>
-              <label>阶段
-                <select id="researchStage">
-                  <option>资料收集</option>
-                  <option>数据处理</option>
-                  <option>图表制作</option>
-                  <option>文字撰写</option>
-                  <option>修改完善</option>
-                  <option>投稿归档</option>
-                </select>
-              </label>
-              <label>日期
-                <input type="date" id="researchDate">
-              </label>
-              <label>进度
-                <select id="researchProgress">
-                  <option>未开始</option>
-                  <option>进行中</option>
-                  <option>待审核</option>
-                  <option>已完成</option>
-                </select>
-              </label>
-              <label class="full">进展说明
-                <textarea id="researchNote" placeholder="记录已经完成什么、卡点是什么、下一步做什么"></textarea>
-              </label>
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>项目列表</h2>
+              <p>默认只显示题目，点开查看详情。</p>
             </div>
           </div>
-
-          <div class="panel">
-            <div class="panel-header">
-              <div>
-                <h2>项目列表</h2>
-                <p>按更新时间倒序排列。</p>
-              </div>
-            </div>
-            <div id="researchList" class="item-list"></div>
-          </div>
+          <div id="researchList" class="item-list"></div>
         </div>
       </section>
     </main>
@@ -1142,6 +1117,34 @@
     </div>
   </div>
 
+  <div id="gistModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="gistTitle">
+    <div class="modal-card small">
+      <div class="panel-header">
+        <div>
+          <h2 id="gistTitle">云同步设置</h2>
+          <p>可选功能：使用 GitHub Gist 手动同步本地工作台数据。</p>
+        </div>
+        <button type="button" id="closeGistBtn">关闭</button>
+      </div>
+      <div class="notice">
+        需要在 GitHub 创建一个 Fine-grained token，仅授权 Gists。Token 只保存在当前浏览器本地。
+      </div>
+      <div class="form-grid" style="margin-top: 12px;">
+        <label class="full">GitHub token
+          <input id="gistToken" type="password" placeholder="ghp_ 或 github_pat_...">
+        </label>
+        <label class="full">Gist ID
+          <input id="gistId" placeholder="第一次可留空，点击上传会自动创建">
+        </label>
+      </div>
+      <div class="toolbar" style="margin-top: 12px;">
+        <button type="button" class="primary" id="saveGistSettingsBtn">保存设置</button>
+        <button type="button" id="uploadGistBtn">上传本机数据</button>
+        <button type="button" id="downloadGistBtn">下载云端数据</button>
+      </div>
+    </div>
+  </div>
+
   <div id="toast" class="toast" role="status"></div>
 
   <script>
@@ -1150,7 +1153,6 @@
     let selectedDate = toDateKey(today);
     let currentYear = today.getFullYear();
     let currentMonth = today.getMonth() + 1;
-    let showAllHotspots = false;
 
     const dutyTypes = {
       "专项班": { className: "special", label: "专项班" },
@@ -1315,83 +1317,35 @@
       }
     ];
 
-    const scienceSources = [
+    const recommendations = [
       {
-        name: "中国气象局科技动态",
-        type: "国内科研动态",
-        desc: "气象科技、业务技术、重点工程和部门动态。",
-        url: "https://www.cma.gov.cn/"
+        name: "GitHub Trending",
+        type: "开源趋势",
+        desc: "每天查看 GitHub 热门项目，可用搜索词关注 weather、meteorology、climate、radar。",
+        url: "https://github.com/trending"
       },
       {
-        name: "中国气象科学研究院",
-        type: "国内科研机构",
-        desc: "气象科研项目、学术活动和应用气象研究动态。",
-        url: "https://www.camscma.cn/"
+        name: "GitHub 气象项目搜索",
+        type: "开源检索",
+        desc: "直接搜索 meteorology 相关仓库，适合发现数据处理、雷达、卫星、AI 预报工具。",
+        url: "https://github.com/search?q=meteorology&type=repositories&s=updated&o=desc"
       },
       {
-        name: "中国科学院大气物理研究所",
-        type: "国内科研机构",
-        desc: "大气科学、气候变化、数值模式和学术报告。",
-        url: "http://www.iap.cas.cn/"
-      },
-      {
-        name: "中国气象学会",
-        type: "学会会议",
-        desc: "学术年会、会议通知、气象科技奖励和学会资讯。",
-        url: "https://www.cms1924.org/"
-      },
-      {
-        name: "NCAR & UCAR News",
-        type: "国际科研动态",
-        desc: "大气科学、天气气候、模式和观测研究新闻。",
-        url: "https://news.ucar.edu/"
-      },
-      {
-        name: "EGU Atmospheric Sciences Blog",
-        type: "国际学会",
-        desc: "欧洲地球科学联盟大气科学分会博客和研究讨论。",
-        url: "https://blogs.egu.eu/divisions/as/"
-      },
-      {
-        name: "arXiv Atmospheric and Oceanic Physics",
-        type: "预印本",
-        desc: "大气、海洋与行星物理方向的最新预印本。",
-        url: "https://arxiv.org/list/physics.ao-ph/recent"
-      },
-      {
-        name: "EarthArXiv",
-        type: "预印本",
-        desc: "地球科学开放预印本，适合跟踪未正式发表的新研究。",
-        url: "https://eartharxiv.org/"
-      },
-      {
-        name: "NOAA NSSL News",
-        type: "强对流研究",
-        desc: "美国国家强风暴实验室新闻，适合跟踪强对流研究。",
-        url: "https://www.nssl.noaa.gov/news/"
-      },
-      {
-        name: "ECMWF News",
-        type: "数值预报",
-        desc: "欧洲中期天气预报中心模式、再分析和业务系统动态。",
-        url: "https://www.ecmwf.int/en/about/media-centre/news"
-      },
-      {
-        name: "中国气象爱好者社区资料",
-        type: "论坛资料",
-        desc: "气象资料、雷达资料和工具导航，适合补充业务资料线索。",
-        url: "https://www.cnblogs.com/Mount256/p/18353230#%E9%9B%B7%E8%BE%BE%E8%B5%84%E6%96%99"
+        name: "气象家园",
+        type: "中文论坛",
+        desc: "中文气象论坛，适合浏览业务讨论、资料线索和气象爱好者社区动态。",
+        url: "http://bbs.06climate.com/"
       }
     ];
 
     let activePaperTopic = "全部";
     let displayedPapers = [...hotPapers];
+    let dashboardData = null;
 
     const data = loadData();
 
     const sectionInfo = {
       workflow: ["工作流程", "排班、天气关注和当日流程集中管理。"],
-      hotspots: ["科研资讯", "每天刷科研网站、论坛、预印本和气象界最新消息。"],
       research: ["科研进展", "论文、项目、图表、资料整理和下一步计划。"]
     };
 
@@ -1417,37 +1371,37 @@
       toast: document.getElementById("toast"),
       statDuty: document.getElementById("statDuty"),
       statTasks: document.getElementById("statTasks"),
-      statHotspots: document.getElementById("statHotspots"),
       statResearch: document.getElementById("statResearch"),
-      hotspotDate: document.getElementById("hotspotDate"),
-      hotspotType: document.getElementById("hotspotType"),
-      hotspotTitle: document.getElementById("hotspotTitle"),
-      hotspotNote: document.getElementById("hotspotNote"),
-      hotspotStatus: document.getElementById("hotspotStatus"),
-      hotspotPriority: document.getElementById("hotspotPriority"),
-      hotspotList: document.getElementById("hotspotList"),
-      researchProject: document.getElementById("researchProject"),
-      researchStage: document.getElementById("researchStage"),
-      researchDate: document.getElementById("researchDate"),
-      researchProgress: document.getElementById("researchProgress"),
-      researchNote: document.getElementById("researchNote"),
       researchList: document.getElementById("researchList"),
       paperTopics: document.getElementById("paperTopics"),
       hotPaperList: document.getElementById("hotPaperList"),
       journalList: document.getElementById("journalList"),
-      scienceSourceList: document.getElementById("scienceSourceList"),
-      paperUpdateStatus: document.getElementById("paperUpdateStatus")
+      recommendList: document.getElementById("recommendList"),
+      paperUpdateStatus: document.getElementById("paperUpdateStatus"),
+      recommendStatus: document.getElementById("recommendStatus"),
+      keywordStatus: document.getElementById("keywordStatus"),
+      keywordList: document.getElementById("keywordList"),
+      journalStatusList: document.getElementById("journalStatusList"),
+      gistModal: document.getElementById("gistModal"),
+      gistToken: document.getElementById("gistToken"),
+      gistId: document.getElementById("gistId")
     };
 
     init();
 
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+
     function init() {
       els.todayLabel.textContent = formatDate(today);
-      els.hotspotDate.value = selectedDate;
-      els.researchDate.value = selectedDate;
       fillYearMonth();
       bindEvents();
+      loadGistSettings();
       renderAll();
+      loadResearchDashboard();
       updateDailyPapers(false);
     }
 
@@ -1490,13 +1444,12 @@
       document.getElementById("addImportantTaskBtn").addEventListener("click", () => addTask(true));
       document.getElementById("monthStatBtn").addEventListener("click", openMonthStats);
       document.getElementById("closeStatBtn").addEventListener("click", () => closeModal(els.statModal));
-      document.getElementById("addHotspotBtn").addEventListener("click", addHotspot);
-      document.getElementById("showAllHotspotsBtn").addEventListener("click", () => {
-        showAllHotspots = !showAllHotspots;
-        renderHotspots();
-      });
-      document.getElementById("addResearchBtn").addEventListener("click", addResearch);
       document.getElementById("refreshPapersBtn").addEventListener("click", () => updateDailyPapers(true));
+      document.getElementById("gistSyncBtn").addEventListener("click", () => openModal(els.gistModal));
+      document.getElementById("closeGistBtn").addEventListener("click", () => closeModal(els.gistModal));
+      document.getElementById("saveGistSettingsBtn").addEventListener("click", saveGistSettings);
+      document.getElementById("uploadGistBtn").addEventListener("click", uploadGistData);
+      document.getElementById("downloadGistBtn").addEventListener("click", downloadGistData);
       document.getElementById("exportDataBtn").addEventListener("click", exportData);
       document.getElementById("importDataBtn").addEventListener("click", () => document.getElementById("importFile").click());
       document.getElementById("importFile").addEventListener("change", importData);
@@ -1540,10 +1493,11 @@
       renderCalendar();
       renderWorkflowDay();
       renderWeather();
+      renderRecommendations();
       renderHotPapers();
       renderJournals();
-      renderScienceSources();
-      renderHotspots();
+      renderKeywordHits();
+      renderJournalStatuses();
       renderResearch();
       renderStats();
     }
@@ -1743,66 +1697,6 @@
       renderStats();
     }
 
-    function addHotspot() {
-      const title = els.hotspotTitle.value.trim();
-      if (!title) {
-        showToast("请先填写热点标题");
-        return;
-      }
-      data.hotspots.push({
-        id: cryptoId(),
-        date: els.hotspotDate.value || selectedDate,
-        type: els.hotspotType.value,
-        title,
-        note: els.hotspotNote.value.trim(),
-        status: els.hotspotStatus.value,
-        priority: els.hotspotPriority.value,
-        createdAt: Date.now()
-      });
-      els.hotspotTitle.value = "";
-      els.hotspotNote.value = "";
-      saveData();
-      renderHotspots();
-      renderStats();
-      showToast("热点已添加");
-    }
-
-    function renderHotspots() {
-      const list = [...data.hotspots]
-        .filter((item) => showAllHotspots || item.date === toDateKey(today))
-        .sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
-      els.hotspotList.innerHTML = "";
-      if (!list.length) {
-        els.hotspotList.innerHTML = "<div class=\"empty\">暂无热点记录</div>";
-        return;
-      }
-      list.forEach((item) => {
-        els.hotspotList.appendChild(renderItem(item, "hotspot"));
-      });
-    }
-
-    function addResearch() {
-      const project = els.researchProject.value.trim();
-      if (!project) {
-        showToast("请先填写项目名称");
-        return;
-      }
-      data.research.push({
-        id: cryptoId(),
-        project,
-        stage: els.researchStage.value,
-        date: els.researchDate.value || selectedDate,
-        progress: els.researchProgress.value,
-        note: els.researchNote.value.trim(),
-        createdAt: Date.now()
-      });
-      els.researchNote.value = "";
-      saveData();
-      renderResearch();
-      renderStats();
-      showToast("科研进展已添加");
-    }
-
     function renderResearch() {
       const list = [...data.research].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
       els.researchList.innerHTML = "";
@@ -1813,6 +1707,118 @@
       list.forEach((item) => {
         els.researchList.appendChild(renderItem(item, "research"));
       });
+    }
+
+    function renderRecommendations() {
+      els.recommendList.innerHTML = "";
+      const dynamicRepos = dashboardData?.githubTrending || [];
+      if (dynamicRepos.length) {
+        els.recommendStatus.textContent = `GitHub 气象开源榜已更新：${dynamicRepos.length} 个项目。`;
+        dynamicRepos.slice(0, 9).forEach((repo) => {
+          const card = document.createElement("article");
+          card.className = "journal-card";
+          card.innerHTML = `
+            <span class="badge">${escapeHtml(repo.language || "GitHub")}</span>
+            <strong>${escapeHtml(repo.name)}</strong>
+            <p>${escapeHtml(repo.description || "暂无说明")}</p>
+            <p>${Number(repo.stars || 0).toLocaleString()} stars · ${escapeHtml(repo.query || "weather")}</p>
+            <a href="${repo.url}" target="_blank" rel="noreferrer">打开</a>
+          `;
+          els.recommendList.appendChild(card);
+        });
+      }
+      recommendations.forEach((item) => {
+        const card = document.createElement("article");
+        card.className = "journal-card";
+        card.innerHTML = `
+          <span class="badge">${escapeHtml(item.type)}</span>
+          <strong>${escapeHtml(item.name)}</strong>
+          <p>${escapeHtml(item.desc)}</p>
+          <a href="${item.url}" target="_blank" rel="noreferrer">打开</a>
+        `;
+        els.recommendList.appendChild(card);
+      });
+    }
+
+    async function loadResearchDashboard() {
+      try {
+        const response = await fetch(`data/research-dashboard.json?t=${Date.now()}`, {
+          cache: "no-store",
+          headers: { "Accept": "application/json" }
+        });
+        if (!response.ok) throw new Error(`dashboard ${response.status}`);
+        dashboardData = await response.json();
+        renderRecommendations();
+        renderKeywordHits();
+        if (dashboardData.internationalPapers?.length) {
+          displayedPapers = [
+            ...(dashboardData.internationalPapers || []).map((paper) => ({
+              topic: paper.topic || "国际论文",
+              title: paper.title,
+              journal: paper.journal || "OpenAlex",
+              year: paper.date || "最新",
+              note: "科研仪表盘自动筛选的近 30 天国际论文。",
+              url: paper.url
+            })),
+            ...displayedPapers
+          ];
+          renderHotPapers();
+        }
+      } catch (error) {
+        els.recommendStatus.textContent = "GitHub 自动榜单暂不可用，显示固定推荐入口。";
+      }
+    }
+
+    function renderKeywordHits() {
+      const hits = dashboardData?.keywordHits || [];
+      els.keywordList.innerHTML = "";
+      if (!hits.length) {
+        els.keywordList.innerHTML = "<div class=\"empty\">暂无关键词命中数据</div>";
+        return;
+      }
+      els.keywordStatus.textContent = `已命中 ${hits.length} 条，关键词：${(dashboardData.keywords || []).join("、")}`;
+      hits.slice(0, 12).forEach((hit) => {
+        const row = document.createElement("div");
+        row.className = "compact-row";
+        row.innerHTML = `
+          <a href="${hit.url}" target="_blank" rel="noreferrer">${escapeHtml(hit.title)}</a>
+          <div class="item-meta">
+            <span>${escapeHtml(hit.type || "")}</span>
+            <span>${escapeHtml(hit.source || "")}</span>
+            <span>${(hit.keywords || []).map(escapeHtml).join("、")}</span>
+          </div>
+        `;
+        els.keywordList.appendChild(row);
+      });
+    }
+
+    async function renderJournalStatuses() {
+      els.journalStatusList.innerHTML = "";
+      try {
+        const response = await fetch(`data/chinese-weather-papers.json?t=${Date.now()}`, {
+          cache: "no-store",
+          headers: { "Accept": "application/json" }
+        });
+        if (!response.ok) throw new Error(`status ${response.status}`);
+        const payload = await response.json();
+        const statuses = payload.statuses || [];
+        if (!statuses.length) throw new Error("no statuses");
+        statuses.forEach((status) => {
+          const row = document.createElement("div");
+          row.className = "compact-row";
+          row.innerHTML = `
+            <strong>${escapeHtml(status.source)}</strong>
+            <div class="item-meta">
+              <span>${status.ok ? "成功" : "失败"}</span>
+              <span>${Number(status.count || 0)} 条</span>
+              <span>${escapeHtml(status.message || "")}</span>
+            </div>
+          `;
+          els.journalStatusList.appendChild(row);
+        });
+      } catch (error) {
+        els.journalStatusList.innerHTML = "<div class=\"empty\">暂无期刊状态数据</div>";
+      }
     }
 
     function renderHotPapers() {
@@ -1844,10 +1850,8 @@
           <p>${escapeHtml(paper.note)}</p>
           <div class="toolbar">
             <a href="${paper.url}" target="_blank" rel="noreferrer">查看论文</a>
-            <button type="button">加入进展</button>
           </div>
         `;
-        card.querySelector("button").addEventListener("click", () => usePaperAsResearch(paper));
         els.hotPaperList.appendChild(card);
       });
     }
@@ -1947,51 +1951,36 @@
       });
     }
 
-    function renderScienceSources() {
-      els.scienceSourceList.innerHTML = "";
-      scienceSources.forEach((source) => {
-        const card = document.createElement("article");
-        card.className = "journal-card";
-        card.innerHTML = `
-          <span class="badge">${escapeHtml(source.type)}</span>
-          <strong>${escapeHtml(source.name)}</strong>
-          <p>${escapeHtml(source.desc)}</p>
-          <a href="${source.url}" target="_blank" rel="noreferrer">打开网站</a>
-        `;
-        els.scienceSourceList.appendChild(card);
-      });
-    }
-
-    function usePaperAsResearch(paper) {
-      els.researchProject.value = paper.title;
-      els.researchStage.value = "资料收集";
-      els.researchProgress.value = "进行中";
-      els.researchDate.value = toDateKey(new Date());
-      els.researchNote.value = `${paper.journal}（${paper.year}）：${paper.note}\n链接：${paper.url}`;
-      showToast("已填入科研进展表单");
-      document.getElementById("researchProject").scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-
     function renderItem(item, type) {
-      const div = document.createElement("div");
+      const div = document.createElement(type === "research" ? "details" : "div");
       div.className = "item";
-      const title = type === "hotspot" ? item.title : item.project;
-      const meta = type === "hotspot"
-        ? [item.date, item.type, item.status, item.priority]
-        : [item.date, item.stage, item.progress];
-      div.innerHTML = `
-        <div class="item-title">
-          <strong>${escapeHtml(title)}</strong>
+      const title = type === "research" ? item.project : item.title;
+      const meta = type === "research"
+        ? [item.date, item.stage, item.progress]
+        : [item.date, item.type, item.status, item.priority];
+      if (type === "research") {
+        div.innerHTML = `
+          <summary class="item-title">
+            <strong>${escapeHtml(title)}</strong>
+            <span class="badge">${escapeHtml(item.progress)}</span>
+          </summary>
+          <div class="item-meta">${meta.map((part) => `<span>${escapeHtml(part)}</span>`).join("")}</div>
+          <p>${escapeHtml(item.note || "未填写说明")}</p>
           <div class="mini-actions"><button type="button">删除</button></div>
-        </div>
-        <div class="item-meta">${meta.map((part) => `<span>${escapeHtml(part)}</span>`).join("")}</div>
-        <p>${escapeHtml(item.note || "未填写说明")}</p>
-      `;
+        `;
+      } else {
+        div.innerHTML = `
+          <div class="item-title">
+            <strong>${escapeHtml(title)}</strong>
+            <div class="mini-actions"><button type="button">删除</button></div>
+          </div>
+          <div class="item-meta">${meta.map((part) => `<span>${escapeHtml(part)}</span>`).join("")}</div>
+          <p>${escapeHtml(item.note || "未填写说明")}</p>
+        `;
+      }
       div.querySelector("button").addEventListener("click", () => {
-        if (type === "hotspot") data.hotspots = data.hotspots.filter((entry) => entry.id !== item.id);
         if (type === "research") data.research = data.research.filter((entry) => entry.id !== item.id);
         saveData();
-        renderHotspots();
         renderResearch();
         renderStats();
         showToast("记录已删除");
@@ -2021,7 +2010,6 @@
       const todayTasks = todayData.duty ? (defaultTasks[todayData.duty] || []).length + todayData.extraTasks.length : 0;
       els.statDuty.textContent = String(monthDuty);
       els.statTasks.textContent = String(todayTasks);
-      els.statHotspots.textContent = String(data.hotspots.filter((item) => item.date === toDateKey(today)).length);
       els.statResearch.textContent = String(data.research.length);
     }
 
@@ -2054,6 +2042,88 @@
       };
       reader.readAsText(file, "utf-8");
       event.target.value = "";
+    }
+
+    function loadGistSettings() {
+      const settings = JSON.parse(localStorage.getItem(`${storageKey}-gist`) || "{}");
+      els.gistToken.value = settings.token || "";
+      els.gistId.value = settings.gistId || "";
+    }
+
+    function saveGistSettings() {
+      localStorage.setItem(`${storageKey}-gist`, JSON.stringify({
+        token: els.gistToken.value.trim(),
+        gistId: els.gistId.value.trim()
+      }));
+      showToast("云同步设置已保存");
+    }
+
+    async function uploadGistData() {
+      const token = els.gistToken.value.trim();
+      let gistId = els.gistId.value.trim();
+      if (!token) {
+        showToast("请先填写 GitHub token");
+        return;
+      }
+      const body = {
+        description: "Personal weather workbench data",
+        public: false,
+        files: {
+          "personal-workbench-data.json": {
+            content: JSON.stringify(data, null, 2)
+          }
+        }
+      };
+      const url = gistId ? `https://api.github.com/gists/${gistId}` : "https://api.github.com/gists";
+      const method = gistId ? "PATCH" : "POST";
+      try {
+        const response = await fetch(url, {
+          method,
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(body)
+        });
+        if (!response.ok) throw new Error(`Gist ${response.status}`);
+        const payload = await response.json();
+        els.gistId.value = payload.id || gistId;
+        saveGistSettings();
+        showToast("本机数据已上传到 Gist");
+      } catch (error) {
+        showToast("上传失败，请检查 token/Gist 权限");
+      }
+    }
+
+    async function downloadGistData() {
+      const token = els.gistToken.value.trim();
+      const gistId = els.gistId.value.trim();
+      if (!token || !gistId) {
+        showToast("请先填写 token 和 Gist ID");
+        return;
+      }
+      try {
+        const response = await fetch(`https://api.github.com/gists/${gistId}`, {
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Accept": "application/vnd.github+json"
+          }
+        });
+        if (!response.ok) throw new Error(`Gist ${response.status}`);
+        const payload = await response.json();
+        const file = payload.files?.["personal-workbench-data.json"];
+        if (!file?.content) throw new Error("no data");
+        const imported = JSON.parse(file.content);
+        data.days = imported.days || {};
+        data.hotspots = imported.hotspots || [];
+        data.research = imported.research || [];
+        saveData();
+        renderAll();
+        showToast("云端数据已下载到本机");
+      } catch (error) {
+        showToast("下载失败，请检查 Gist ID 或 token");
+      }
     }
 
     function loadData() {

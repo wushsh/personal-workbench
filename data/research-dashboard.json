@@ -1,0 +1,936 @@
+{
+  "updatedAt": "2026-07-30T17:28:35Z",
+  "keywords": [
+    "雷暴大风",
+    "海上大风",
+    "台风",
+    "强对流",
+    "双偏振雷达",
+    "AI天气预报",
+    "极端降水",
+    "暴雨",
+    "卫星",
+    "数值预报"
+  ],
+  "githubTrending": [
+    {
+      "name": "chubin/wttr.in",
+      "description": ":partly_sunny: The right way to check the weather",
+      "url": "https://github.com/chubin/wttr.in",
+      "stars": 30202,
+      "language": "Go",
+      "updatedAt": "2026-07-18T09:28:27Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "breezy-weather/breezy-weather",
+      "description": "A feature-rich weather app with good visualizations and more than 50 sources.",
+      "url": "https://github.com/breezy-weather/breezy-weather",
+      "stars": 10864,
+      "language": "Kotlin",
+      "updatedAt": "2026-07-26T10:15:19Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "schachmat/wego",
+      "description": "weather app for the terminal",
+      "url": "https://github.com/schachmat/wego",
+      "stars": 8516,
+      "language": "Go",
+      "updatedAt": "2026-07-01T14:54:07Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "google-deepmind/weathernext",
+      "description": "暂无说明",
+      "url": "https://github.com/google-deepmind/weathernext",
+      "stars": 6710,
+      "language": "Python",
+      "updatedAt": "2026-03-30T18:02:13Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "lmarzen/esp32-weather-epd",
+      "description": "A low-power E-Paper weather display powered by an ESP32 microcontroller. Utilizes the OpenWeatherMap API.",
+      "url": "https://github.com/lmarzen/esp32-weather-epd",
+      "stars": 6199,
+      "language": "C",
+      "updatedAt": "2026-07-22T21:44:48Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "open-meteo/open-meteo",
+      "description": "Free Weather Forecast API for non-commercial use",
+      "url": "https://github.com/open-meteo/open-meteo",
+      "stars": 5947,
+      "language": "Swift",
+      "updatedAt": "2026-07-30T15:46:58Z",
+      "source": "GitHub",
+      "query": "weather"
+    },
+    {
+      "name": "poseidon/typhoon",
+      "description": "Minimal and free Kubernetes distribution with Terraform",
+      "url": "https://github.com/poseidon/typhoon",
+      "stars": 2048,
+      "language": "HCL",
+      "updatedAt": "2026-07-23T05:00:19Z",
+      "source": "GitHub",
+      "query": "typhoon"
+    },
+    {
+      "name": "Unidata/MetPy",
+      "description": "MetPy is a collection of tools in Python for reading, visualizing and performing calculations with weather data.",
+      "url": "https://github.com/Unidata/MetPy",
+      "stars": 1431,
+      "language": "Python",
+      "updatedAt": "2026-07-27T22:56:27Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "SciTools/iris",
+      "description": "A powerful, format-agnostic, and community-driven Python package for analysing and visualising Earth science data",
+      "url": "https://github.com/SciTools/iris",
+      "stars": 721,
+      "language": "Python",
+      "updatedAt": "2026-07-30T16:05:07Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "ARM-DOE/pyart",
+      "description": "The Python-ARM Radar Toolkit. A data model driven interactive toolkit for working with weather radar data.",
+      "url": "https://github.com/ARM-DOE/pyart",
+      "stars": 595,
+      "language": "Python",
+      "updatedAt": "2026-07-30T16:31:35Z",
+      "source": "GitHub",
+      "query": "radar weather"
+    },
+    {
+      "name": "vbguyny/ws4kp",
+      "description": "WeatherStar 4000+",
+      "url": "https://github.com/vbguyny/ws4kp",
+      "stars": 593,
+      "language": "JavaScript",
+      "updatedAt": "2025-12-17T01:25:17Z",
+      "source": "GitHub",
+      "query": "radar weather"
+    },
+    {
+      "name": "kaist-avelab/K-Radar",
+      "description": "4D Radar Object Detection for Autonomous Driving in Various Weather Conditions",
+      "url": "https://github.com/kaist-avelab/K-Radar",
+      "stars": 581,
+      "language": "Python",
+      "updatedAt": "2026-06-26T07:02:20Z",
+      "source": "GitHub",
+      "query": "radar weather"
+    },
+    {
+      "name": "pySTEPS/pysteps",
+      "description": "Python framework for short-term ensemble prediction systems.",
+      "url": "https://github.com/pySTEPS/pysteps",
+      "stars": 573,
+      "language": "Python",
+      "updatedAt": "2026-07-30T11:11:18Z",
+      "source": "GitHub",
+      "query": "nowcasting"
+    },
+    {
+      "name": "NCAR/wrf-python",
+      "description": "A collection of diagnostic and interpolation routines for use with output from the Weather Research and Forecasting (WRF-ARW) Model.",
+      "url": "https://github.com/NCAR/wrf-python",
+      "stars": 497,
+      "language": "Python",
+      "updatedAt": "2026-07-20T21:57:30Z",
+      "source": "GitHub",
+      "query": "wrf python"
+    },
+    {
+      "name": "ecmwf/cfgrib",
+      "description": "A Python interface to map GRIB files to the NetCDF Common Data Model following the CF Convention using ecCodes",
+      "url": "https://github.com/ecmwf/cfgrib",
+      "stars": 458,
+      "language": "Python",
+      "updatedAt": "2026-07-08T14:11:36Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "dpaulat/supercell-wx",
+      "description": "Supercell Wx is a free, open source advanced weather radar viewer.",
+      "url": "https://github.com/dpaulat/supercell-wx",
+      "stars": 455,
+      "language": "C++",
+      "updatedAt": "2026-07-26T16:14:09Z",
+      "source": "GitHub",
+      "query": "radar weather"
+    },
+    {
+      "name": "earthobservations/wetterdienst",
+      "description": "Open weather data for humans.",
+      "url": "https://github.com/earthobservations/wetterdienst",
+      "stars": 449,
+      "language": "Python",
+      "updatedAt": "2026-07-29T23:01:21Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "CyanideCN/PyCINRAD",
+      "description": "Decode CINRAD (China New Generation Weather Radar) data and visualize.",
+      "url": "https://github.com/CyanideCN/PyCINRAD",
+      "stars": 431,
+      "language": "Python",
+      "updatedAt": "2026-06-26T10:45:59Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "jpettitt/weather-radar-card",
+      "description": "A rain radar card using the tiled images from RainViewer",
+      "url": "https://github.com/jpettitt/weather-radar-card",
+      "stars": 422,
+      "language": "TypeScript",
+      "updatedAt": "2026-07-18T01:11:15Z",
+      "source": "GitHub",
+      "query": "meteorology"
+    },
+    {
+      "name": "Ouranosinc/xclim",
+      "description": "Library of derived climate variables, ie climate indicators, based on xarray.",
+      "url": "https://github.com/Ouranosinc/xclim",
+      "stars": 401,
+      "language": "Python",
+      "updatedAt": "2026-07-29T20:49:18Z",
+      "source": "GitHub",
+      "query": "climate xarray"
+    }
+  ],
+  "internationalPapers": [
+    {
+      "title": "Towards COLREGs-aware ship collision avoidance with multi-agent PPO-LSTM in maritime IoT",
+      "topic": "海上大风",
+      "journal": "Lancaster EPrints (Lancaster University)",
+      "date": "2026-07-31",
+      "url": "https://openalex.org/W7169746535"
+    },
+    {
+      "title": "A Ground-Based Multi-Doppler Wind Retrieval Algorithm for Turbulent Convection: An LES-Based Radar Wind Retrieval Framework",
+      "topic": "强对流",
+      "journal": "Remote Sensing",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.3390/rs18152468"
+    },
+    {
+      "title": "Warn-on-Forecast System: Concept of Operations Demonstration with the Storm Prediction Center in the 2023–2024 Cool Season",
+      "topic": "强对流",
+      "journal": "Journal of Operational Meteorology",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.15191/nwajom.2026.1415"
+    },
+    {
+      "title": "Comment on egusphere-2026-2758",
+      "topic": "台风",
+      "journal": "OpenAlex",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5194/egusphere-2026-2758-rc2"
+    },
+    {
+      "title": "Bayesian Decision Theory for Multi-Sector Early Warning Systems: A Reanalysis of Tropical Cyclone Ditwah",
+      "topic": "台风",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5281/zenodo.21642189"
+    },
+    {
+      "title": "Mangrove Forests as Emerging Ecotourism Destinations: Present Status, Challenges, and Future Prospects of Bhitarkanika",
+      "topic": "台风",
+      "journal": "International Journal of Academic Research & Development",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.70381/23951737.v12.naj2.2026.12"
+    },
+    {
+      "title": "Rapid Outer‐Size Expansion of Typhoon Hinnamnor (2022): Role of Merger With a Tropical Depression",
+      "topic": "台风",
+      "journal": "Journal of Geophysical Research Atmospheres",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1029/2026jd046468"
+    },
+    {
+      "title": "How does assimilating a large commercial GNSS RO dataset impact HAFS hurricane forecasts? An evaluation in support of the ROMEX experiment",
+      "topic": "台风",
+      "journal": "Atmospheric measurement techniques",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5194/amt-19-4833-2026"
+    },
+    {
+      "title": "0-Lag Phase Locking: Detecting Tropical Cyclone Genesis via 850 hPa Helicity on Edge Hardware",
+      "topic": "台风",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5281/zenodo.21650649"
+    },
+    {
+      "title": "Predictability of European summer climate: the influence of competing mechanisms related to Atlantic Multidecadal Variability",
+      "topic": "台风",
+      "journal": "KITopen",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5445/ir/1000195706"
+    },
+    {
+      "title": "Seasonal variations in niche partitioning between two sympatric sandgrouse",
+      "topic": "双偏振雷达",
+      "journal": "Ecological Processes",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1186/s13717-026-00731-3"
+    },
+    {
+      "title": "Impact of soil temperature and moisture in autumn on the following spring extreme precipitation in the arid area of Northwest China",
+      "topic": "极端降水",
+      "journal": "Climate Dynamics",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1007/s00382-026-08314-w"
+    },
+    {
+      "title": "Spatiotemporal Analysis of Climate–Forest Fire Correlation in Peninsular Malaysia Using SARIMAX and Ensemble Models",
+      "topic": "极端降水",
+      "journal": "Journal of Data Science and Intelligent Systems",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.47852/bonviewjdsis62028499"
+    },
+    {
+      "title": "Spatial and seasonal patterns of taxonomic, functional, and phylogenetic diversity of fish assemblages in island waters of Zhejiang, China: associations with environmental, climatic, and socioeconomic factors",
+      "topic": "极端降水",
+      "journal": "Frontiers in Marine Science",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.3389/fmars.2026.1781633"
+    },
+    {
+      "title": "A Universal Multifractals perspective into the link between rainfall variability and temperature",
+      "topic": "极端降水",
+      "journal": "Hydrology and earth system sciences",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5194/hess-30-4741-2026"
+    },
+    {
+      "title": "The Nonlinear Impact of Climate Physical Risk on Bank Non-Performing Loan Ratios: Evidence from Chinese Listed Banks",
+      "topic": "极端降水",
+      "journal": "Exploring Science Academic Conference Series",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.70267/icfmb.202619239247"
+    },
+    {
+      "title": "Extreme Weather Impacts and Interventions for Childhood Asthma",
+      "topic": "极端降水",
+      "journal": "California Digital Library",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.48321/d1fb6b88d7"
+    },
+    {
+      "title": "VALIDAÇÃO DOS DADOS DE PRECIPITAÇÃO ESTIMADOS PELO CHIRPS PARA A REGIÃO SUL DE ANGOLA",
+      "topic": "极端降水",
+      "journal": "Revista Tópicos.",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.70773/revistatopicos/784954477"
+    },
+    {
+      "title": "A Multi-model Perspective of Droughts in Future Climate and Implications for Irrigation in Malawi",
+      "topic": "极端降水",
+      "journal": "Journal of Hydrometeorology",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1175/jhm-d-25-0060.1"
+    },
+    {
+      "title": "Editorial",
+      "topic": "AI天气预报",
+      "journal": "Datenbank-Spektrum",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1007/s13222-026-00552-w"
+    },
+    {
+      "title": "Stepwise guidance for tackling multifunctionality challenges in prospective life cycle assessment",
+      "topic": "AI天气预报",
+      "journal": "Journal of Industrial Ecology",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1007/s44498-026-00128-7"
+    },
+    {
+      "title": "An Integrated AI-geospatial Framework for Predicting Overcrowding in Tourism Destinations",
+      "topic": "AI天气预报",
+      "journal": "International journal of intelligent engineering and systems",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.22266/ijies2026.0831.10"
+    },
+    {
+      "title": "Measurement report: A multi-year, high-resolution, county-scale atmospheric NH <sub>3</sub> dataset from the North China Plain",
+      "topic": "AI天气预报",
+      "journal": "OpenAlex",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.5194/egusphere-2026-2742"
+    },
+    {
+      "title": "User-centric renewable energy framework for self-sufficient zero-carbon infrastructure in high-altitude regions",
+      "topic": "AI天气预报",
+      "journal": "Communications Earth & Environment",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1038/s43247-026-03867-4"
+    },
+    {
+      "title": "Analytical and AI-based approaches to weather events in business: a survey",
+      "topic": "AI天气预报",
+      "journal": "Future Business Journal",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1186/s43093-026-00933-3"
+    },
+    {
+      "title": "From climate data to regulatory decisions: integrating climate AI into marine EIAs",
+      "topic": "AI天气预报",
+      "journal": "Frontiers in Marine Science",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.3389/fmars.2026.1870082"
+    },
+    {
+      "title": "Precipitation governs structural uncertainty and physical attribution of drought trends",
+      "topic": "AI天气预报",
+      "journal": "Research Square",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.21203/rs.3.rs-10359563/v1"
+    },
+    {
+      "title": "Water-Level Rise and Nonmonotonic Salinity Change Across Louisiana Coastal Wetlands Over Fifteen Years",
+      "topic": "海上大风",
+      "journal": "Estuaries and Coasts",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1007/s12237-026-01735-0"
+    },
+    {
+      "title": "Canada’s 2023 wildfire smoke caused a 2.8 percent drop in solar power generation, costing two billion dollars",
+      "topic": "海上大风",
+      "journal": "Communications Earth & Environment",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.1038/s43247-026-03860-x"
+    },
+    {
+      "title": "Distribution Characteristics and SourceApportionment of Polycyclic AromaticHydrocarbons and Sterols in CentennialSediments of Haizhou Bay",
+      "topic": "海上大风",
+      "journal": "Polish Journal of Environmental Studies",
+      "date": "2026-07-28",
+      "url": "https://doi.org/10.15244/pjoes/220218"
+    }
+  ],
+  "keywordHits": [
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "中国气象科学研究院近20年台风研究进展",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260405"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "2024年西北太平洋夏季和秋季台风活动异常特征的差异对比",
+      "source": "气象",
+      "type": "中文论文",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260701&flag=1"
+    },
+    {
+      "keywords": [
+        "强对流"
+      ],
+      "title": "雷暴与强对流临近天气预报技术进展",
+      "source": "气象学报",
+      "type": "中文论文",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120301&flag=1"
+    },
+    {
+      "keywords": [
+        "暴雨"
+      ],
+      "title": "区域暴雨过程中两次龙卷风事件分析",
+      "source": "气象学报",
+      "type": "中文论文",
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120505&flag=1"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
+      "source": "热带气象学报",
+      "type": "中文论文",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
+      "source": "热带气象学报",
+      "type": "中文论文",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
+    },
+    {
+      "keywords": [
+        "暴雨"
+      ],
+      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
+      "source": "热带气象学报",
+      "type": "中文论文",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
+    },
+    {
+      "keywords": [
+        "暴雨"
+      ],
+      "title": "基于风云三号F星被动微波观测的水凝物反演",
+      "source": "暴雨灾害",
+      "type": "中文论文",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
+    },
+    {
+      "keywords": [
+        "双偏振雷达",
+        "暴雨"
+      ],
+      "title": "武汉X波段双偏振相控阵雷达定量降水估测产品质量评估",
+      "source": "暴雨灾害",
+      "type": "中文论文",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-227"
+    },
+    {
+      "keywords": [
+        "极端降水",
+        "暴雨"
+      ],
+      "title": "湘中地区夏季极端小时降水和极端降水事件的时空分布及其环流特征",
+      "source": "暴雨灾害",
+      "type": "中文论文",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-220"
+    },
+    {
+      "keywords": [
+        "暴雨"
+      ],
+      "title": "光流融合方法在复杂地形区分钟级降水临近预报中的应用",
+      "source": "暴雨灾害",
+      "type": "中文论文",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-197"
+    },
+    {
+      "keywords": [
+        "暴雨"
+      ],
+      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
+      "source": "暴雨灾害",
+      "type": "中文论文",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
+    },
+    {
+      "keywords": [
+        "数值预报"
+      ],
+      "title": "基于WRF-Fire的山地林火气象-火场耦合数值模拟研究",
+      "source": "气象科技",
+      "type": "中文论文",
+      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260311"
+    },
+    {
+      "keywords": [
+        "海上大风"
+      ],
+      "title": "Towards COLREGs-aware ship collision avoidance with multi-agent PPO-LSTM in maritime IoT",
+      "source": "Lancaster EPrints (Lancaster University)",
+      "type": "国际论文",
+      "url": "https://openalex.org/W7169746535"
+    },
+    {
+      "keywords": [
+        "强对流"
+      ],
+      "title": "A Ground-Based Multi-Doppler Wind Retrieval Algorithm for Turbulent Convection: An LES-Based Radar Wind Retrieval Framework",
+      "source": "Remote Sensing",
+      "type": "国际论文",
+      "url": "https://doi.org/10.3390/rs18152468"
+    },
+    {
+      "keywords": [
+        "强对流"
+      ],
+      "title": "Warn-on-Forecast System: Concept of Operations Demonstration with the Storm Prediction Center in the 2023–2024 Cool Season",
+      "source": "Journal of Operational Meteorology",
+      "type": "国际论文",
+      "url": "https://doi.org/10.15191/nwajom.2026.1415"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "Comment on egusphere-2026-2758",
+      "source": "OpenAlex",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5194/egusphere-2026-2758-rc2"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "Bayesian Decision Theory for Multi-Sector Early Warning Systems: A Reanalysis of Tropical Cyclone Ditwah",
+      "source": "Zenodo (CERN European Organization for Nuclear Research)",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5281/zenodo.21642189"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "Mangrove Forests as Emerging Ecotourism Destinations: Present Status, Challenges, and Future Prospects of Bhitarkanika",
+      "source": "International Journal of Academic Research & Development",
+      "type": "国际论文",
+      "url": "https://doi.org/10.70381/23951737.v12.naj2.2026.12"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "Rapid Outer‐Size Expansion of Typhoon Hinnamnor (2022): Role of Merger With a Tropical Depression",
+      "source": "Journal of Geophysical Research Atmospheres",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1029/2026jd046468"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "How does assimilating a large commercial GNSS RO dataset impact HAFS hurricane forecasts? An evaluation in support of the ROMEX experiment",
+      "source": "Atmospheric measurement techniques",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5194/amt-19-4833-2026"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "0-Lag Phase Locking: Detecting Tropical Cyclone Genesis via 850 hPa Helicity on Edge Hardware",
+      "source": "Zenodo (CERN European Organization for Nuclear Research)",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5281/zenodo.21650649"
+    },
+    {
+      "keywords": [
+        "台风"
+      ],
+      "title": "Predictability of European summer climate: the influence of competing mechanisms related to Atlantic Multidecadal Variability",
+      "source": "KITopen",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5445/ir/1000195706"
+    },
+    {
+      "keywords": [
+        "双偏振雷达"
+      ],
+      "title": "Seasonal variations in niche partitioning between two sympatric sandgrouse",
+      "source": "Ecological Processes",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1186/s13717-026-00731-3"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "Impact of soil temperature and moisture in autumn on the following spring extreme precipitation in the arid area of Northwest China",
+      "source": "Climate Dynamics",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1007/s00382-026-08314-w"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "Spatiotemporal Analysis of Climate–Forest Fire Correlation in Peninsular Malaysia Using SARIMAX and Ensemble Models",
+      "source": "Journal of Data Science and Intelligent Systems",
+      "type": "国际论文",
+      "url": "https://doi.org/10.47852/bonviewjdsis62028499"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "Spatial and seasonal patterns of taxonomic, functional, and phylogenetic diversity of fish assemblages in island waters of Zhejiang, China: associations with environmental, climatic, and socioeconomic factors",
+      "source": "Frontiers in Marine Science",
+      "type": "国际论文",
+      "url": "https://doi.org/10.3389/fmars.2026.1781633"
+    },
+    {
+      "keywords": [
+        "AI天气预报",
+        "极端降水"
+      ],
+      "title": "A Universal Multifractals perspective into the link between rainfall variability and temperature",
+      "source": "Hydrology and earth system sciences",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5194/hess-30-4741-2026"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "The Nonlinear Impact of Climate Physical Risk on Bank Non-Performing Loan Ratios: Evidence from Chinese Listed Banks",
+      "source": "Exploring Science Academic Conference Series",
+      "type": "国际论文",
+      "url": "https://doi.org/10.70267/icfmb.202619239247"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "Extreme Weather Impacts and Interventions for Childhood Asthma",
+      "source": "California Digital Library",
+      "type": "国际论文",
+      "url": "https://doi.org/10.48321/d1fb6b88d7"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "VALIDAÇÃO DOS DADOS DE PRECIPITAÇÃO ESTIMADOS PELO CHIRPS PARA A REGIÃO SUL DE ANGOLA",
+      "source": "Revista Tópicos.",
+      "type": "国际论文",
+      "url": "https://doi.org/10.70773/revistatopicos/784954477"
+    },
+    {
+      "keywords": [
+        "极端降水"
+      ],
+      "title": "A Multi-model Perspective of Droughts in Future Climate and Implications for Irrigation in Malawi",
+      "source": "Journal of Hydrometeorology",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1175/jhm-d-25-0060.1"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "Editorial",
+      "source": "Datenbank-Spektrum",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1007/s13222-026-00552-w"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "Stepwise guidance for tackling multifunctionality challenges in prospective life cycle assessment",
+      "source": "Journal of Industrial Ecology",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1007/s44498-026-00128-7"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "An Integrated AI-geospatial Framework for Predicting Overcrowding in Tourism Destinations",
+      "source": "International journal of intelligent engineering and systems",
+      "type": "国际论文",
+      "url": "https://doi.org/10.22266/ijies2026.0831.10"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "Measurement report: A multi-year, high-resolution, county-scale atmospheric NH <sub>3</sub> dataset from the North China Plain",
+      "source": "OpenAlex",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5194/egusphere-2026-2742"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "User-centric renewable energy framework for self-sufficient zero-carbon infrastructure in high-altitude regions",
+      "source": "Communications Earth & Environment",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1038/s43247-026-03867-4"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "Analytical and AI-based approaches to weather events in business: a survey",
+      "source": "Future Business Journal",
+      "type": "国际论文",
+      "url": "https://doi.org/10.1186/s43093-026-00933-3"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "From climate data to regulatory decisions: integrating climate AI into marine EIAs",
+      "source": "Frontiers in Marine Science",
+      "type": "国际论文",
+      "url": "https://doi.org/10.3389/fmars.2026.1870082"
+    },
+    {
+      "keywords": [
+        "AI天气预报"
+      ],
+      "title": "Precipitation governs structural uncertainty and physical attribution of drought trends",
+      "source": "Research Square",
+      "type": "国际论文",
+      "url": "https://doi.org/10.21203/rs.3.rs-10359563/v1"
+    }
+  ],
+  "readingList": [
+    {
+      "title": "青藏高原大气科学试验回顾",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260401",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "中国气象科学研究院大气成分研究及业务应用进展",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260402",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "中国气象科学研究院极端天气气候事件研究进展",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260403",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "中国气象科学研究院气象雷达技术及应用进展",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260404",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "中国气象科学研究院近20年台风研究进展",
+      "source": "应用气象学报",
+      "type": "中文论文",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260405",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "2026年第52卷7期目录",
+      "source": "气象",
+      "type": "中文论文",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070101&flag=1",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "2026年第52卷7期封面",
+      "source": "气象",
+      "type": "中文论文",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070102&flag=1",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "2024年西北太平洋夏季和秋季台风活动异常特征的差异对比",
+      "source": "气象",
+      "type": "中文论文",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260701&flag=1",
+      "reason": "中文气象期刊最新目录"
+    },
+    {
+      "title": "Towards COLREGs-aware ship collision avoidance with multi-agent PPO-LSTM in maritime IoT",
+      "source": "Lancaster EPrints (Lancaster University)",
+      "type": "国际论文",
+      "url": "https://openalex.org/W7169746535",
+      "reason": "OpenAlex 近 30 天：海上大风"
+    },
+    {
+      "title": "A Ground-Based Multi-Doppler Wind Retrieval Algorithm for Turbulent Convection: An LES-Based Radar Wind Retrieval Framework",
+      "source": "Remote Sensing",
+      "type": "国际论文",
+      "url": "https://doi.org/10.3390/rs18152468",
+      "reason": "OpenAlex 近 30 天：强对流"
+    },
+    {
+      "title": "Warn-on-Forecast System: Concept of Operations Demonstration with the Storm Prediction Center in the 2023–2024 Cool Season",
+      "source": "Journal of Operational Meteorology",
+      "type": "国际论文",
+      "url": "https://doi.org/10.15191/nwajom.2026.1415",
+      "reason": "OpenAlex 近 30 天：强对流"
+    },
+    {
+      "title": "Comment on egusphere-2026-2758",
+      "source": "OpenAlex",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5194/egusphere-2026-2758-rc2",
+      "reason": "OpenAlex 近 30 天：台风"
+    },
+    {
+      "title": "Bayesian Decision Theory for Multi-Sector Early Warning Systems: A Reanalysis of Tropical Cyclone Ditwah",
+      "source": "Zenodo (CERN European Organization for Nuclear Research)",
+      "type": "国际论文",
+      "url": "https://doi.org/10.5281/zenodo.21642189",
+      "reason": "OpenAlex 近 30 天：台风"
+    },
+    {
+      "title": "Mangrove Forests as Emerging Ecotourism Destinations: Present Status, Challenges, and Future Prospects of Bhitarkanika",
+      "source": "International Journal of Academic Research & Development",
+      "type": "国际论文",
+      "url": "https://doi.org/10.70381/23951737.v12.naj2.2026.12",
+      "reason": "OpenAlex 近 30 天：台风"
+    },
+    {
+      "title": "chubin/wttr.in",
+      "source": "GitHub · 30202 stars",
+      "type": "开源项目",
+      "url": "https://github.com/chubin/wttr.in",
+      "reason": ":partly_sunny: The right way to check the weather"
+    },
+    {
+      "title": "breezy-weather/breezy-weather",
+      "source": "GitHub · 10864 stars",
+      "type": "开源项目",
+      "url": "https://github.com/breezy-weather/breezy-weather",
+      "reason": "A feature-rich weather app with good visualizations and more than 50 sources."
+    },
+    {
+      "title": "schachmat/wego",
+      "source": "GitHub · 8516 stars",
+      "type": "开源项目",
+      "url": "https://github.com/schachmat/wego",
+      "reason": "weather app for the terminal"
+    },
+    {
+      "title": "google-deepmind/weathernext",
+      "source": "GitHub · 6710 stars",
+      "type": "开源项目",
+      "url": "https://github.com/google-deepmind/weathernext",
+      "reason": "暂无说明"
+    },
+    {
+      "title": "lmarzen/esp32-weather-epd",
+      "source": "GitHub · 6199 stars",
+      "type": "开源项目",
+      "url": "https://github.com/lmarzen/esp32-weather-epd",
+      "reason": "A low-power E-Paper weather display powered by an ESP32 microcontroller. Utilizes the OpenWeatherMap API."
+    },
+    {
+      "title": "open-meteo/open-meteo",
+      "source": "GitHub · 5947 stars",
+      "type": "开源项目",
+      "url": "https://github.com/open-meteo/open-meteo",
+      "reason": "Free Weather Forecast API for non-commercial use"
+    }
+  ]
+}

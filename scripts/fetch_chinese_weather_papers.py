@@ -222,11 +222,21 @@ def scrape_source(source: dict[str, str]) -> list[dict[str, str]]:
 def main() -> int:
     all_papers: list[dict[str, str]] = []
     errors: list[dict[str, str]] = []
+    statuses: list[dict[str, str | int | bool]] = []
     seen_titles: set[str] = set()
 
     for source in SOURCES:
         try:
             papers = scrape_source(source)
+            statuses.append(
+                {
+                    "source": source["name"],
+                    "ok": bool(papers),
+                    "count": len(papers),
+                    "url": source["url"],
+                    "message": "成功" if papers else "未采集到论文",
+                }
+            )
             for paper in papers:
                 key = clean_text(paper["title"]).lower()
                 if key in seen_titles:
@@ -234,7 +244,17 @@ def main() -> int:
                 seen_titles.add(key)
                 all_papers.append(paper)
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
-            errors.append({"source": source["name"], "error": str(exc)[:180]})
+            message = str(exc)[:180]
+            errors.append({"source": source["name"], "error": message})
+            statuses.append(
+                {
+                    "source": source["name"],
+                    "ok": False,
+                    "count": 0,
+                    "url": source["url"],
+                    "message": message,
+                }
+            )
         time.sleep(0.4)
 
     payload = {
@@ -242,6 +262,7 @@ def main() -> int:
         "source": "GitHub Actions: public Chinese meteorology journal pages",
         "count": len(all_papers),
         "papers": all_papers[:40],
+        "statuses": statuses,
         "errors": errors,
     }
 

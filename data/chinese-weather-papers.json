@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T15:14:49Z",
+  "updatedAt": "2026-07-30T14:15:11Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -327,7 +327,7 @@
   "errors": [
     {
       "source": "中国农业气象",
-      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
     }
   ]
 }
