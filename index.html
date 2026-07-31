@@ -310,6 +310,43 @@
         linear-gradient(180deg, rgba(255, 246, 217, 0.98), rgba(255, 251, 234, 0.94));
     }
 
+    details.panel {
+      display: block;
+    }
+
+    details.panel > summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    details.panel > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.research-panel > summary::before {
+      content: "展开";
+      flex: 0 0 auto;
+      order: 3;
+      border: 2px solid var(--line-dark);
+      border-radius: 999px;
+      background: #fff8df;
+      color: var(--purple);
+      padding: 5px 10px;
+      font-size: 13px;
+      box-shadow: 0 2px 0 rgba(91, 111, 82, 0.16);
+    }
+
+    details.research-panel[open] > summary::before {
+      content: "收起";
+      background: var(--purple-soft);
+    }
+
+    details.research-panel:not([open]) > summary {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
     .panel-header {
       display: flex;
       align-items: center;
@@ -881,12 +918,6 @@
         <button type="button" class="active" data-section="workflow">工作流程</button>
         <button type="button" data-section="research">科研进展</button>
       </nav>
-      <div class="side-tools">
-        <button type="button" id="exportDataBtn">导出数据</button>
-        <button type="button" id="importDataBtn">导入数据</button>
-        <input type="file" id="importFile" accept="application/json" hidden>
-        <p class="side-note">导出/导入用于在手机和电脑之间手动搬运本地记录，不是自动同步。</p>
-      </div>
     </aside>
 
     <main class="main">
@@ -1000,8 +1031,8 @@
       </section>
 
       <section id="research" class="section">
-        <div class="panel">
-          <div class="panel-header">
+        <details class="panel research-panel" open>
+          <summary class="panel-header">
             <div>
               <h2>推荐</h2>
               <p id="recommendStatus">日常刷 GitHub 趋势和气象家园论坛。</p>
@@ -1011,63 +1042,63 @@
               <a class="btn-like" href="reading-list.html" target="_blank" rel="noreferrer">阅读清单</a>
               <a class="btn-like" href="weekly-research-report.md" target="_blank" rel="noreferrer">周报</a>
             </div>
-          </div>
+          </summary>
           <div id="recommendList" class="journal-grid"></div>
-        </div>
+        </details>
 
-        <div class="panel">
-          <div class="panel-header">
+        <details class="panel research-panel" open>
+          <summary class="panel-header">
             <div>
               <h2>热门气象论文</h2>
               <p id="paperUpdateStatus">打开页面会尝试拉取近 30 天最新气象论文，网络失败时显示精选清单。</p>
             </div>
             <button type="button" class="primary" id="refreshPapersBtn">更新今日论文</button>
-          </div>
+          </summary>
           <div id="paperTopics" class="topic-row"></div>
           <div id="hotPaperList" class="paper-grid"></div>
-        </div>
+        </details>
 
         <div class="split">
-          <div class="panel">
-            <div class="panel-header">
+          <details class="panel research-panel">
+            <summary class="panel-header">
               <div>
                 <h2>关键词监测</h2>
                 <p id="keywordStatus">自动筛选强对流、台风、雷达、AI天气预报等相关内容。</p>
               </div>
-            </div>
+            </summary>
             <div id="keywordList" class="compact-list"></div>
-          </div>
+          </details>
 
-          <div class="panel">
-            <div class="panel-header">
+          <details class="panel research-panel">
+            <summary class="panel-header">
               <div>
                 <h2>期刊更新状态</h2>
                 <p>显示每天中文期刊抓取是否成功。</p>
               </div>
-            </div>
+            </summary>
             <div id="journalStatusList" class="compact-list"></div>
-          </div>
+          </details>
         </div>
 
-        <div class="panel">
-          <div class="panel-header">
+        <details class="panel research-panel">
+          <summary class="panel-header">
             <div>
               <h2>中文核心气象类期刊官网</h2>
-              <p>优先收录气象与大气科学方向常用核心、CSCD 或科技核心期刊官网入口。</p>
+              <p>按地球科学领域分级目录中的大气科学、海洋科学分类展示，并标注 T1/T2/T3。</p>
             </div>
-          </div>
+          </summary>
           <div id="journalList" class="journal-grid"></div>
-        </div>
+        </details>
 
-        <div class="panel">
-          <div class="panel-header">
+        <details class="panel research-panel" open>
+          <summary class="panel-header">
             <div>
               <h2>项目列表</h2>
-              <p>默认只显示题目，点开查看详情。</p>
+              <p>集中查看已读论文和收藏论文，随排班、任务一起云同步。</p>
             </div>
-          </div>
+          </summary>
           <div id="researchList" class="item-list"></div>
-        </div>
+        </details>
       </section>
     </main>
   </div>
@@ -1324,66 +1355,88 @@
     ];
 
     const journalSites = [
-      {
-        name: "气象学报",
-        publisher: "中国气象学会",
-        tags: "大气科学综合、天气气候",
-        url: "http://qxxb.ijournals.cn/qxxb_cn/ch/index.aspx"
-      },
-      {
-        name: "大气科学",
-        publisher: "中国科学院大气物理研究所",
-        tags: "大气科学、气候动力、数值模拟",
-        url: "https://www.iapjournals.ac.cn/dqkx/"
-      },
-      {
-        name: "气象",
-        publisher: "国家气象中心",
-        tags: "天气预报、业务技术、气象服务",
-        url: "http://qxqk.nmc.cn/qx/ch/index.aspx"
-      },
-      {
-        name: "应用气象学报",
-        publisher: "中国气象科学研究院",
-        tags: "应用气象、业务技术、AI气象",
-        url: "https://qikan.camscma.cn/ch/index.aspx"
-      },
-      {
-        name: "高原气象",
-        publisher: "中国科学院西北生态环境资源研究院",
-        tags: "高原天气气候、青藏高原",
-        url: "http://www.gyqx.ac.cn/"
-      },
-      {
-        name: "气候与环境研究",
-        publisher: "中国科学院大气物理研究所",
-        tags: "气候变化、环境气象",
-        url: "https://www.iapjournals.ac.cn/qhhj/"
-      },
-      {
-        name: "热带气象学报",
-        publisher: "中国气象局广州热带海洋气象研究所",
-        tags: "台风、热带天气、季风",
-        url: "https://rdqxxb.itmm.org.cn/"
-      },
-      {
-        name: "暴雨灾害",
-        publisher: "中国气象局武汉暴雨研究所",
-        tags: "暴雨、强降水、灾害天气",
-        url: "http://byzh.org.cn/"
-      },
-      {
-        name: "气象科技",
-        publisher: "中国气象局气象探测中心等",
-        tags: "探测技术、预报技术、业务系统",
-        url: "http://www.qxkj.net.cn/"
-      },
-      {
-        name: "中国农业气象",
-        publisher: "中国农业科学院农业环境与可持续发展研究所",
-        tags: "农业气象、生态气象、灾害影响",
-        url: "https://zgnyqx.ieda.org.cn/"
-      }
+      { category: "大气科学", tier: "T1", name: "Advances in Atmospheric Sciences 大气科学进展(英文版)", issn: "0256-1530", cn: "11-1925/O4", field: "大气科学", url: "https://www.iapjournals.ac.cn/aas/" },
+      { category: "大气科学", tier: "T1", name: "Advances in Climate Change Research 气候变化研究进展(英文版)", issn: "1674-9278", cn: "11-5918/P", field: "大气科学", url: "https://www.sciencedirect.com/journal/advances-in-climate-change-research" },
+      { category: "大气科学", tier: "T1", name: "Journal of Meteorological Research 气象学报(英文版)", issn: "2095-6037", cn: "11-2277/P", field: "大气科学", url: "https://jmr.cmsjournal.net/" },
+      { category: "大气科学", tier: "T1", name: "大气科学", issn: "1006-9895", cn: "11-1768/O4", field: "大气科学", url: "https://www.iapjournals.ac.cn/dqkx/" },
+      { category: "大气科学", tier: "T1", name: "干旱区研究", issn: "1001-4675", cn: "65-1095/X", field: "大气科学", url: "http://azr.xjegi.com/" },
+      { category: "大气科学", tier: "T1", name: "高原气象", issn: "1000-0534", cn: "62-1061/P", field: "大气科学", url: "http://www.gyqx.ac.cn/" },
+      { category: "大气科学", tier: "T1", name: "气象学报", issn: "0577-6619", cn: "11-2006/P", field: "大气科学", url: "http://qxxb.ijournals.cn/qxxb_cn/ch/index.aspx" },
+      { category: "大气科学", tier: "T2", name: "Atmospheric and Oceanic Science Letters 大气和海洋科学快报(英文版)", issn: "1674-2834", cn: "11-5693/P", field: "大气科学", url: "https://www.tandfonline.com/journals/taos20" },
+      { category: "大气科学", tier: "T2", name: "Journal of Tropical Meteorology 热带气象学报(英文版)", issn: "1006-8775", cn: "44-1409/P", field: "大气科学", url: "https://jtm.itmm.org.cn/" },
+      { category: "大气科学", tier: "T2", name: "暴雨灾害", issn: "2097-2164", cn: "42-1771/P", field: "大气科学", url: "http://byzh.org.cn/" },
+      { category: "大气科学", tier: "T2", name: "大气科学学报", issn: "1674-7097", cn: "32-1803/P", field: "大气科学", url: "http://dqkxxb.cnjournals.org/" },
+      { category: "大气科学", tier: "T2", name: "大气与环境光学学报", issn: "1673-6141", cn: "34-1298/O4", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T2", name: "干旱气象", issn: "1006-7639", cn: "62-1175/P", field: "大气科学", url: "http://www.ghqx.org.cn/" },
+      { category: "大气科学", tier: "T2", name: "高原山地气象研究", issn: "1674-2184", cn: "51-1706/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T2", name: "气候变化研究进展", issn: "1673-1719", cn: "11-5368/P", field: "大气科学", url: "http://www.climatechange.cn/" },
+      { category: "大气科学", tier: "T2", name: "气候与环境研究", issn: "1006-9585", cn: "11-3693/P", field: "大气科学", url: "https://www.iapjournals.ac.cn/qhhj/" },
+      { category: "大气科学", tier: "T2", name: "气象", issn: "1000-0526", cn: "11-2282/P", field: "大气科学", url: "http://qxqk.nmc.cn/qx/ch/index.aspx" },
+      { category: "大气科学", tier: "T2", name: "气象科技", issn: "1671-6345", cn: "11-2374/P", field: "大气科学", url: "http://www.qxkj.net.cn/" },
+      { category: "大气科学", tier: "T2", name: "气象科学", issn: "1009-0827", cn: "32-1243/P", field: "大气科学", url: "http://www.qxkx.net.cn/" },
+      { category: "大气科学", tier: "T2", name: "气象与环境科学", issn: "1673-7148", cn: "41-1386/P", field: "大气科学", url: "http://qxyhjkx.cnjournals.com/" },
+      { category: "大气科学", tier: "T2", name: "气象与环境学报", issn: "1673-503X", cn: "21-1531/P", field: "大气科学", url: "http://www.jme1984.net.cn/" },
+      { category: "大气科学", tier: "T2", name: "热带气象学报", issn: "1004-4965", cn: "44-1326/P", field: "大气科学", url: "https://rdqxxb.itmm.org.cn/" },
+      { category: "大气科学", tier: "T2", name: "沙漠与绿洲气象", issn: "1002-0799", cn: "65-1265/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T2", name: "应用气象学报", issn: "1001-7313", cn: "11-2690/P", field: "大气科学", url: "https://qikan.camscma.cn/ch/index.aspx" },
+      { category: "大气科学", tier: "T2", name: "中低纬山地气象", issn: "2096-5389", cn: "52-1171/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T2", name: "中国农业气象", issn: "1000-6362", cn: "11-1999/S", field: "大气科学", url: "https://zgnyqx.ieda.org.cn/" },
+      { category: "大气科学", tier: "T3", name: "Tropical Cyclone Research and Review 热带气旋研究与评论(英文版)", issn: "2225-6032", cn: "无", field: "大气科学", url: "https://www.sciencedirect.com/journal/tropical-cyclone-research-and-review" },
+      { category: "大气科学", tier: "T3", name: "广东气象", issn: "1007-6190", cn: "44-1353/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "海洋气象学报", issn: "2096-3599", cn: "37-1512/P", field: "大气科学", url: "http://hyqx.cnjournals.org/" },
+      { category: "大气科学", tier: "T3", name: "黑龙江气象", issn: "1002-252X", cn: "23-1019/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "解放军理工大学学报（自然科学版）", issn: "1009-3443", cn: "32-1902/E", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "内蒙古气象", issn: "1005-8656", cn: "15-1116/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "气象科技进展", issn: "2095-1973", cn: "10-1000/P", field: "大气科学", url: "http://www.qxkjjz.com/" },
+      { category: "大气科学", tier: "T3", name: "气象研究与应用", issn: "1673-8411", cn: "45-1356/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "气象与减灾研究", issn: "1007-9033", cn: "36-1290/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "气象灾害防御", issn: "1006-5229", cn: "22-1412/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "陕西气象", issn: "1006-4354", cn: "61-1282/P", field: "大气科学", url: "" },
+      { category: "大气科学", tier: "T3", name: "浙江气象", issn: "1004-5953", cn: "33-1281/P", field: "大气科学", url: "" },
+      { category: "海洋科学", tier: "T1", name: "Acta Oceanologica Sinica 海洋学报(英文版)", issn: "0253-505X", cn: "11-2056/P", field: "海洋科学、水文学", url: "https://www.hyxb.org.cn/aosen/" },
+      { category: "海洋科学", tier: "T1", name: "China Ocean Engineering 中国海洋工程(英文版)", issn: "0890-5487", cn: "32-1441/P", field: "海洋科学、水文学", url: "https://www.chinaoceanengin.cn/" },
+      { category: "海洋科学", tier: "T1", name: "Journal of Ocean University of China 中国海洋大学学报(英文版)", issn: "1672-5182", cn: "37-1415/P", field: "海洋科学、水文学", url: "https://jouc.ouc.edu.cn/" },
+      { category: "海洋科学", tier: "T1", name: "Journal of Oceanology and Limnology 海洋湖沼学报(英文)", issn: "2096-5508", cn: "37-1518/P", field: "海洋科学、水文学", url: "https://www.jol343.com/" },
+      { category: "海洋科学", tier: "T1", name: "海洋学报", issn: "0253-4193", cn: "11-2055/P", field: "海洋科学、水文学", url: "https://www.hyxb.org.cn/" },
+      { category: "海洋科学", tier: "T1", name: "海洋与湖沼", issn: "0029-814X", cn: "37-1149/P", field: "海洋科学、水文学", url: "http://www.hyyhz.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "Advances in Polar Science 极地科学进展（英文）", issn: "1674-9928", cn: "31-2050/P", field: "海洋科学、水文学、矿物、岩石、矿床学", url: "https://www.aps-polar.org/" },
+      { category: "海洋科学", tier: "T2", name: "Journal of Marine Science and Application 哈尔滨工程大学学报(英文版)", issn: "1671-9433", cn: "23-1505/T", field: "海洋科学、水文学", url: "https://www.jmsaocean.com/" },
+      { category: "海洋科学", tier: "T2", name: "海洋地质前沿", issn: "1009-2722", cn: "37-1475/P", field: "海洋科学、水文学", url: "http://www.jhyqy.com.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋地质与第四纪地质", issn: "0256-1492", cn: "37-1117/P", field: "海洋科学、水文学", url: "https://jhydz.com.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋工程", issn: "1005-9865", cn: "32-1423/P", field: "海洋科学、水文学", url: "http://www.theoceaneng.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋环境科学", issn: "1007-6336", cn: "21-1168/X", field: "海洋科学、水文学", url: "http://hyhjkx.nmemc.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋科学", issn: "1000-3096", cn: "37-1151/P", field: "海洋科学、水文学", url: "http://www.marinejournal.cn/hykx/" },
+      { category: "海洋科学", tier: "T2", name: "海洋科学进展", issn: "1671-6647", cn: "37-1387/P", field: "海洋科学、水文学", url: "http://www.hykxjz.com.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋通报", issn: "1001-6392", cn: "12-1076/P", field: "海洋科学、水文学", url: "http://www.hytb.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋学研究", issn: "1001-909X", cn: "33-1330/P", field: "海洋科学、水文学", url: "https://hyxyj.sio.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "海洋预报", issn: "1003-0239", cn: "11-1837/P", field: "海洋科学、水文学", url: "http://www.hyyb.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "湖泊科学", issn: "1003-5427", cn: "32-1331/P", field: "海洋科学、水文学", url: "http://www.jlakes.org/" },
+      { category: "海洋科学", tier: "T2", name: "极地研究", issn: "1007-7073", cn: "31-1744/P", field: "海洋科学、水文学", url: "https://journal.chinare.org.cn/" },
+      { category: "海洋科学", tier: "T2", name: "热带海洋学报", issn: "1009-5470", cn: "44-1500/P", field: "海洋科学、水文学", url: "http://www.jto.ac.cn/" },
+      { category: "海洋科学", tier: "T2", name: "应用海洋学学报", issn: "2095-4972", cn: "35-1319/P", field: "海洋科学、水文学", url: "http://yyhyxb.xml-journal.net/" },
+      { category: "海洋科学", tier: "T2", name: "中国海洋大学学报（自然科学版）", issn: "1672-5174", cn: "37-1414/P", field: "海洋科学、水文学", url: "http://www.ouc.edu.cn/xbywb/" },
+      { category: "海洋科学", tier: "T3", name: "Anthropocene Coasts 人新世海岸(英文)", issn: "2561-4150", cn: "无", field: "海洋科学、水文学", url: "https://www.springer.com/journal/44218" },
+      { category: "海洋科学", tier: "T3", name: "Marine Science Bulletin 海洋通报(英文版)", issn: "1000-9620", cn: "12-1271/N", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "船舶与海洋工程", issn: "2095-4065", cn: "31-2076/U", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "大连海洋大学学报", issn: "2095-1388", cn: "21-1575/S", field: "海洋科学、水文学", url: "http://xuebao.dlou.edu.cn/" },
+      { category: "海洋科学", tier: "T3", name: "广东海洋大学学报", issn: "1673-9159", cn: "44-1635/N", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋测绘", issn: "1671-3044", cn: "12-1343/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋工程装备与技术", issn: "2095-7297", cn: "31-2088/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋湖沼通报", issn: "1003-6482", cn: "37-1141/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋技术学报", issn: "1003-2029", cn: "12-1435/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋经济", issn: "2095-1647", cn: "12-1424/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋开发与管理", issn: "1005-9857", cn: "11-3525/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋石油", issn: "1008-2336", cn: "31-1760/TE", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋信息技术与应用", issn: "2097-0307", cn: "12-1469/P", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋渔业", issn: "1004-2490", cn: "31-1341/S", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "海洋与渔业", issn: "1672-4046", cn: "44-1582/S", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "江苏海洋大学学报（自然科学版）", issn: "2096-8248", cn: "32-1892/N", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "气象水文海洋仪器", issn: "1006-009X", cn: "22-1135/TH", field: "海洋科学、水文学、气象学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "上海海洋大学学报", issn: "1674-5566", cn: "31-2024/S", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "数字海洋与水下攻防", issn: "2096-5753", cn: "42-1901/TJ", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "浙江海洋大学学报（自然科学版）", issn: "2096-4730", cn: "33-1404/P", field: "海洋科学、水文学", url: "http://xuebao.zjou.edu.cn/" },
+      { category: "海洋科学", tier: "T3", name: "中国海洋平台", issn: "1001-4500", cn: "31-1546/TE", field: "海洋科学、水文学", url: "" },
+      { category: "海洋科学", tier: "T3", name: "中国海洋药物", issn: "1002-3461", cn: "37-1155/R", field: "海洋科学、水文学", url: "" }
     ];
 
     const recommendations = [
@@ -1525,9 +1578,6 @@
       document.getElementById("saveGistSettingsBtn").addEventListener("click", saveGistSettings);
       document.getElementById("uploadGistBtn").addEventListener("click", uploadGistData);
       document.getElementById("downloadGistBtn").addEventListener("click", downloadGistData);
-      document.getElementById("exportDataBtn").addEventListener("click", exportData);
-      document.getElementById("importDataBtn").addEventListener("click", () => document.getElementById("importFile").click());
-      document.getElementById("importFile").addEventListener("change", importData);
 
       document.querySelectorAll(".modal").forEach((modal) => {
         modal.addEventListener("click", (event) => {
@@ -1773,14 +1823,19 @@
     }
 
     function renderResearch() {
-      const list = [...data.research].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
+      const paperIndex = buildPaperIndex();
+      const readItems = (data.readPapers || []).map((entry) => ({ ...entry, status: "已读", ...(paperIndex.get(entry.id) || {}) }));
+      const favoriteItems = (data.favoritePapers || []).map((entry) => ({ ...entry, status: "收藏", ...(paperIndex.get(entry.id) || {}) }));
+      const list = [...favoriteItems, ...readItems]
+        .filter((item, index, arr) => arr.findIndex((entry) => entry.id === item.id && entry.status === item.status) === index)
+        .sort((a, b) => String(b.savedAt || "").localeCompare(String(a.savedAt || "")));
       els.researchList.innerHTML = "";
       if (!list.length) {
-        els.researchList.innerHTML = "<div class=\"empty\">暂无科研进展</div>";
+        els.researchList.innerHTML = "<div class=\"empty\">暂无已读或收藏论文</div>";
         return;
       }
       list.forEach((item) => {
-        els.researchList.appendChild(renderItem(item, "research"));
+        els.researchList.appendChild(renderPaperLibraryItem(item));
       });
     }
 
@@ -1916,6 +1971,9 @@
         : displayedPapers.filter((paper) => paper.topic === activePaperTopic);
       els.hotPaperList.innerHTML = "";
       papers.forEach((paper) => {
+        const id = getPaperId(paper);
+        const isRead = hasPaperState("readPapers", id);
+        const isFavorite = hasPaperState("favoritePapers", id);
         const card = document.createElement("article");
         card.className = "paper-card";
         card.innerHTML = `
@@ -1925,8 +1983,12 @@
           <p>${escapeHtml(paper.note)}</p>
           <div class="toolbar">
             <a href="${paper.url}" target="_blank" rel="noreferrer">查看论文</a>
+            <button type="button" data-paper-action="read">${isRead ? "取消已读" : "已读"}</button>
+            <button type="button" data-paper-action="favorite">${isFavorite ? "取消收藏" : "收藏"}</button>
           </div>
         `;
+        card.querySelector("[data-paper-action='read']").addEventListener("click", () => togglePaperState("readPapers", paper));
+        card.querySelector("[data-paper-action='favorite']").addEventListener("click", () => togglePaperState("favoritePapers", paper));
         els.hotPaperList.appendChild(card);
       });
     }
@@ -2013,17 +2075,105 @@
 
     function renderJournals() {
       els.journalList.innerHTML = "";
-      journalSites.forEach((journal) => {
-        const card = document.createElement("article");
-        card.className = "journal-card";
-        card.innerHTML = `
-          <strong>${escapeHtml(journal.name)}</strong>
-          <p>${escapeHtml(journal.publisher)}</p>
-          <p>${escapeHtml(journal.tags)}</p>
-          <a href="${journal.url}" target="_blank" rel="noreferrer">进入官网</a>
+      const groups = [
+        ["大气科学", journalSites.filter((journal) => journal.category === "大气科学")],
+        ["海洋科学", journalSites.filter((journal) => journal.category === "海洋科学")]
+      ];
+      groups.forEach(([label, journals]) => {
+        const group = document.createElement("details");
+        group.className = "item";
+        group.open = label === "大气科学";
+        group.innerHTML = `
+          <summary class="item-title">
+            <strong>${label}</strong>
+            <span class="badge">${journals.length} 种</span>
+          </summary>
+          <div class="journal-grid"></div>
         `;
-        els.journalList.appendChild(card);
+        const grid = group.querySelector(".journal-grid");
+        journals.forEach((journal) => {
+          const card = document.createElement("article");
+          card.className = "journal-card";
+          card.innerHTML = `
+            <span class="badge">${escapeHtml(journal.tier)}</span>
+            <strong>${escapeHtml(journal.name)}</strong>
+            <p>${escapeHtml(journal.issn || "")} ${escapeHtml(journal.cn || "")}</p>
+            <p>${escapeHtml(journal.field)}</p>
+            ${journal.url ? `<a href="${journal.url}" target="_blank" rel="noreferrer">进入官网</a>` : "<span class=\"badge\">官网待核对</span>"}
+          `;
+          grid.appendChild(card);
+        });
+        els.journalList.appendChild(group);
       });
+    }
+
+    function getPaperId(paper) {
+      return btoa(unescape(encodeURIComponent(`${paper.url || ""}|${paper.title || ""}`))).replace(/=+$/g, "");
+    }
+
+    function hasPaperState(collection, id) {
+      return (data[collection] || []).some((entry) => entry.id === id);
+    }
+
+    function togglePaperState(collection, paper) {
+      const id = getPaperId(paper);
+      data[collection] ||= [];
+      const exists = hasPaperState(collection, id);
+      if (exists) {
+        data[collection] = data[collection].filter((entry) => entry.id !== id);
+      } else {
+        data[collection].push({
+          id,
+          title: paper.title,
+          journal: paper.journal,
+          year: paper.year,
+          topic: paper.topic,
+          note: paper.note,
+          url: paper.url,
+          savedAt: new Date().toISOString()
+        });
+      }
+      saveData();
+      renderHotPapers();
+      renderResearch();
+      renderStats();
+      showToast(exists ? "已取消" : "已保存到项目列表");
+    }
+
+    function buildPaperIndex() {
+      return new Map(displayedPapers.map((paper) => [getPaperId(paper), paper]));
+    }
+
+    function renderPaperLibraryItem(item) {
+      const div = document.createElement("details");
+      div.className = "item";
+      div.innerHTML = `
+        <summary class="item-title">
+          <strong>${escapeHtml(item.title || "未命名论文")}</strong>
+          <span class="badge">${escapeHtml(item.status)}</span>
+        </summary>
+        <div class="item-meta">
+          <span>${escapeHtml(item.journal || "")}</span>
+          <span>${escapeHtml(item.year || "")}</span>
+          <span>${escapeHtml(item.topic || "")}</span>
+          <span>${item.savedAt ? new Date(item.savedAt).toLocaleString() : ""}</span>
+        </div>
+        <p>${escapeHtml(item.note || "")}</p>
+        <div class="mini-actions">
+          ${item.url ? `<a class="btn-like" href="${item.url}" target="_blank" rel="noreferrer">查看论文</a>` : ""}
+          <button type="button">移除</button>
+        </div>
+      `;
+      div.querySelector("button").addEventListener("click", () => {
+        const collection = item.status === "收藏" ? "favoritePapers" : "readPapers";
+        data[collection] = (data[collection] || []).filter((entry) => entry.id !== item.id);
+        saveData();
+        renderHotPapers();
+        renderResearch();
+        renderStats();
+        showToast("已从项目列表移除");
+      });
+      return div;
     }
 
     function renderItem(item, type) {
@@ -2085,38 +2235,7 @@
       const todayTasks = todayData.duty ? (defaultTasks[todayData.duty] || []).length + todayData.extraTasks.length : 0;
       els.statDuty.textContent = String(monthDuty);
       els.statTasks.textContent = String(todayTasks);
-      els.statResearch.textContent = String(data.research.length);
-    }
-
-    function exportData() {
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `personal-workbench-${toDateKey(new Date())}.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-    }
-
-    function importData(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          const imported = JSON.parse(reader.result);
-          data.days = imported.days || {};
-          data.hotspots = imported.hotspots || [];
-          data.research = imported.research || [];
-          saveData();
-          renderAll();
-          showToast("数据已导入");
-        } catch (error) {
-          showToast("导入失败，请检查 JSON 文件");
-        }
-      };
-      reader.readAsText(file, "utf-8");
-      event.target.value = "";
+      els.statResearch.textContent = String((data.readPapers || []).length + (data.favoritePapers || []).length);
     }
 
     function loadGistSettings() {
@@ -2221,6 +2340,8 @@
         data.days = imported.days || {};
         data.hotspots = imported.hotspots || [];
         data.research = imported.research || [];
+        data.readPapers = imported.readPapers || [];
+        data.favoritePapers = imported.favoritePapers || [];
         data._meta = imported._meta || { updatedAt: new Date().toISOString() };
         saveData();
         isApplyingRemoteData = false;
@@ -2254,9 +2375,12 @@
     }
 
     function loadData() {
-      const fallback = { days: {}, hotspots: [], research: [] };
+      const fallback = { days: {}, hotspots: [], research: [], readPapers: [], favoritePapers: [] };
       try {
-        return { ...fallback, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
+        const loaded = { ...fallback, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
+        loaded.readPapers ||= [];
+        loaded.favoritePapers ||= [];
+        return loaded;
       } catch (error) {
         return fallback;
       }
