@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T14:15:11Z",
+  "updatedAt": "2026-07-31T00:15:42Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -324,10 +324,82 @@
       "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260103"
     }
   ],
+  "statuses": [
+    {
+      "source": "应用气象学报",
+      "ok": true,
+      "count": 5,
+      "url": "https://qikan.camscma.cn/ch/index.aspx",
+      "message": "成功"
+    },
+    {
+      "source": "气象",
+      "ok": true,
+      "count": 5,
+      "url": "http://qxqk.nmc.cn/qx/ch/index.aspx",
+      "message": "成功"
+    },
+    {
+      "source": "气象学报",
+      "ok": true,
+      "count": 5,
+      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/index.aspx",
+      "message": "成功"
+    },
+    {
+      "source": "大气科学",
+      "ok": true,
+      "count": 5,
+      "url": "https://www.iapjournals.ac.cn/dqkx/",
+      "message": "成功"
+    },
+    {
+      "source": "气候与环境研究",
+      "ok": true,
+      "count": 5,
+      "url": "https://www.iapjournals.ac.cn/qhhj/",
+      "message": "成功"
+    },
+    {
+      "source": "高原气象",
+      "ok": false,
+      "count": 0,
+      "url": "http://www.gyqx.ac.cn/",
+      "message": "未采集到论文"
+    },
+    {
+      "source": "热带气象学报",
+      "ok": true,
+      "count": 5,
+      "url": "https://rdqxxb.itmm.org.cn/",
+      "message": "成功"
+    },
+    {
+      "source": "暴雨灾害",
+      "ok": true,
+      "count": 5,
+      "url": "http://byzh.org.cn/",
+      "message": "成功"
+    },
+    {
+      "source": "气象科技",
+      "ok": true,
+      "count": 5,
+      "url": "http://www.qxkj.net.cn/",
+      "message": "成功"
+    },
+    {
+      "source": "中国农业气象",
+      "ok": false,
+      "count": 0,
+      "url": "https://zgnyqx.ieda.org.cn/",
+      "message": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
+    }
+  ],
   "errors": [
     {
       "source": "中国农业气象",
-      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1010)>"
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
     }
   ]
 }
