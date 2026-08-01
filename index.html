@@ -981,6 +981,7 @@
                 <button type="button" id="addImportantTaskBtn">新增重要流程</button>
               </div>
             </div>
+            <div id="dutyReminders" class="compact-list" style="margin-bottom: 12px;"></div>
             <div id="tasks" class="task-list"></div>
           </div>
 
@@ -1039,8 +1040,8 @@
             </div>
             <div class="toolbar">
               <button type="button" id="gistSyncBtn">云同步设置</button>
-              <a class="btn-like" href="reading-list.html" target="_blank" rel="noreferrer">阅读清单</a>
-              <a class="btn-like" href="weekly-research-report.md" target="_blank" rel="noreferrer">周报</a>
+              <button type="button" id="readingListBtn">阅读清单</button>
+              <button type="button" id="weeklyReportBtn">周报</button>
             </div>
           </summary>
           <div id="recommendList" class="journal-grid"></div>
@@ -1066,6 +1067,16 @@
                 <p id="keywordStatus">自动筛选强对流、台风、雷达、AI天气预报等相关内容。</p>
               </div>
             </summary>
+            <div class="form-grid" style="margin-bottom: 12px;">
+              <label>新增关键词
+                <input id="keywordInput" placeholder="例如：海雾、港航气象、雷达外推">
+              </label>
+              <div class="toolbar" style="align-self: end;">
+                <button type="button" class="primary" id="addKeywordBtn">添加订阅</button>
+                <button type="button" id="refreshKeywordsBtn">更新命中</button>
+              </div>
+            </div>
+            <div id="keywordChips" class="topic-row"></div>
             <div id="keywordList" class="compact-list"></div>
           </details>
 
@@ -1130,20 +1141,26 @@
       <div class="panel-header">
         <div>
           <h2 id="favoritesTitle">收藏夹</h2>
-          <p>低频但有用的资料入口和业务参考表。</p>
+          <p>可以新增、编辑、删除链接，并随 Gist 一起同步。</p>
         </div>
         <button type="button" id="closeFavoritesBtn">关闭</button>
       </div>
-      <div class="link-list" style="margin-bottom: 16px;">
-        <a class="link-card" href="https://mp.weixin.qq.com/s/VwEGJ8d-sXXvXBxIrxdoxg" target="_blank" rel="noreferrer">
-          <strong>气象数据</strong>
-          <span>微信公众号资料</span>
-        </a>
-        <a class="link-card" href="https://www.cnblogs.com/Mount256/p/18353230#%E9%9B%B7%E8%BE%BE%E8%B5%84%E6%96%99" target="_blank" rel="noreferrer">
-          <strong>雷达资料</strong>
-          <span>cnblogs.com/Mount256</span>
-        </a>
+      <div class="form-grid" style="margin-bottom: 12px;">
+        <label>名称
+          <input id="favoriteNameInput" placeholder="例如：雷达资料">
+        </label>
+        <label>链接
+          <input id="favoriteUrlInput" placeholder="https://...">
+        </label>
+        <label class="full">说明
+          <input id="favoriteDescInput" placeholder="简单写一下用途">
+        </label>
+        <div class="toolbar full">
+          <button type="button" class="primary" id="saveFavoriteLinkBtn">保存链接</button>
+          <button type="button" id="cancelFavoriteEditBtn">取消编辑</button>
+        </div>
       </div>
+      <div id="favoriteLinkList" class="link-list" style="margin-bottom: 16px;"></div>
       <h3>资料 1：分区等级认定表</h3>
       <div class="table-wrap">
         <table>
@@ -1209,6 +1226,66 @@
         <button type="button" id="closeStatBtn">关闭</button>
       </div>
       <div id="monthStats" class="quick-stats"></div>
+    </div>
+  </div>
+
+  <div id="readingListModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="readingListTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="readingListTitle">阅读清单</h2>
+          <p>由每日论文、关键词命中和 GitHub 项目自动整理。</p>
+        </div>
+        <button type="button" id="closeReadingListBtn">关闭</button>
+      </div>
+      <div id="readingListBody" class="compact-list"></div>
+    </div>
+  </div>
+
+  <div id="weeklyReportModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="weeklyReportTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="weeklyReportTitle">科研周报</h2>
+          <p>汇总值得精读、关键词命中和 GitHub 气象工具。</p>
+        </div>
+        <button type="button" id="closeWeeklyReportBtn">关闭</button>
+      </div>
+      <div id="weeklyReportBody" class="compact-list"></div>
+    </div>
+  </div>
+
+  <div id="paperNoteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="paperNoteTitle">
+    <div class="modal-card">
+      <div class="panel-header">
+        <div>
+          <h2 id="paperNoteTitle">论文笔记</h2>
+          <p id="paperNoteMeta"></p>
+        </div>
+        <button type="button" id="closePaperNoteBtn">关闭</button>
+      </div>
+      <div class="form-grid">
+        <label class="full">一句话结论
+          <textarea id="noteConclusion" placeholder="这篇论文最重要的结论是什么？"></textarea>
+        </label>
+        <label class="full">方法
+          <textarea id="noteMethod" placeholder="用了什么方法、模型、诊断思路？"></textarea>
+        </label>
+        <label class="full">数据
+          <textarea id="noteData" placeholder="用到了哪些资料、时段、区域或个例？"></textarea>
+        </label>
+        <label class="full">可借鉴点
+          <textarea id="noteValue" placeholder="哪些图表、流程、表达或技术路线值得借鉴？"></textarea>
+        </label>
+        <label class="full">和舟山业务的关系
+          <textarea id="noteZhoushan" placeholder="对舟山港航、海上大风、强对流、台风服务有什么启发？"></textarea>
+        </label>
+      </div>
+      <div class="toolbar" style="margin-top: 12px;">
+        <button type="button" id="generatePaperNoteBtn">自动生成草稿</button>
+        <button type="button" class="primary" id="savePaperNoteBtn">保存笔记</button>
+        <button type="button" id="deletePaperNoteBtn">删除笔记</button>
+      </div>
     </div>
   </div>
 
@@ -1441,6 +1518,30 @@
 
     const recommendations = [
       {
+        name: "书童",
+        type: "AI 工具",
+        desc: "适合日常阅读、写作和资料处理时作为辅助入口。",
+        url: "https://3.shutong2.com/"
+      },
+      {
+        name: "可梦",
+        type: "AI 工具",
+        desc: "可作为备用 AI 助手入口，适合移动端快速打开。",
+        url: "https://banana.onai.im"
+      },
+      {
+        name: "ChatGPT",
+        type: "AI 工具",
+        desc: "用于论文阅读、代码辅助、材料整理、想法推演和英文润色。",
+        url: "https://chatgpt.com/"
+      },
+      {
+        name: "谷歌学术",
+        type: "论文检索",
+        desc: "适合查论文题名、作者、引用、相关文献和多个来源入口。",
+        url: "https://scholar.google.com/"
+      },
+      {
         name: "GitHub Trending",
         type: "开源趋势",
         desc: "每天查看 GitHub 热门项目，可用搜索词关注 weather、meteorology、climate、radar。",
@@ -1457,6 +1558,30 @@
         type: "中文论坛",
         desc: "中文气象论坛，适合浏览业务讨论、资料线索和气象爱好者社区动态。",
         url: "http://bbs.06climate.com/"
+      },
+      {
+        name: "Semantic Scholar",
+        type: "AI 论文检索",
+        desc: "适合快速看论文影响力、相关文献、引用脉络和摘要信息。",
+        url: "https://www.semanticscholar.org/"
+      },
+      {
+        name: "OpenAlex",
+        type: "开放学术索引",
+        desc: "开放的全球学术作品索引，适合查论文、作者、机构、期刊和引用网络。",
+        url: "https://explore.openalex.org/"
+      },
+      {
+        name: "arXiv",
+        type: "预印本",
+        desc: "适合跟踪 AI 气象、地球系统建模、遥感和机器学习方向的新论文。",
+        url: "https://arxiv.org/"
+      },
+      {
+        name: "中国科技论文在线",
+        type: "中文免费全文",
+        desc: "中文科技论文和免费全文期刊入口，适合补充国内论文检索。",
+        url: "https://www.paper.edu.cn/journal/index.shtml"
       }
     ];
 
@@ -1466,6 +1591,24 @@
     let syncSettings = { token: "", gistId: "", autoSync: false };
     let isApplyingRemoteData = false;
     let syncTimer = null;
+    let editingFavoriteId = "";
+    let currentNotePaperId = "";
+    let currentNotePaper = null;
+
+    const defaultFavoriteLinks = [
+      {
+        id: "weather-data",
+        name: "气象数据",
+        url: "https://mp.weixin.qq.com/s/VwEGJ8d-sXXvXBxIrxdoxg",
+        desc: "微信公众号资料"
+      },
+      {
+        id: "radar-docs",
+        name: "雷达资料",
+        url: "https://www.cnblogs.com/Mount256/p/18353230#%E9%9B%B7%E8%BE%BE%E8%B5%84%E6%96%99",
+        desc: "cnblogs.com/Mount256"
+      }
+    ];
 
     const data = loadData();
 
@@ -1483,6 +1626,7 @@
       monthSelect: document.getElementById("monthSelect"),
       workflowTitle: document.getElementById("workflowTitle"),
       workflowHint: document.getElementById("workflowHint"),
+      dutyReminders: document.getElementById("dutyReminders"),
       tasks: document.getElementById("tasks"),
       weatherBox: document.getElementById("weatherBox"),
       weatherTips: document.getElementById("weatherTips"),
@@ -1505,13 +1649,31 @@
       paperUpdateStatus: document.getElementById("paperUpdateStatus"),
       recommendStatus: document.getElementById("recommendStatus"),
       keywordStatus: document.getElementById("keywordStatus"),
+      keywordInput: document.getElementById("keywordInput"),
+      keywordChips: document.getElementById("keywordChips"),
       keywordList: document.getElementById("keywordList"),
       journalStatusList: document.getElementById("journalStatusList"),
       gistModal: document.getElementById("gistModal"),
       gistToken: document.getElementById("gistToken"),
       gistId: document.getElementById("gistId"),
       gistAutoSync: document.getElementById("gistAutoSync"),
-      syncStatus: document.getElementById("syncStatus")
+      syncStatus: document.getElementById("syncStatus"),
+      readingListModal: document.getElementById("readingListModal"),
+      readingListBody: document.getElementById("readingListBody"),
+      weeklyReportModal: document.getElementById("weeklyReportModal"),
+      weeklyReportBody: document.getElementById("weeklyReportBody"),
+      favoriteNameInput: document.getElementById("favoriteNameInput"),
+      favoriteUrlInput: document.getElementById("favoriteUrlInput"),
+      favoriteDescInput: document.getElementById("favoriteDescInput"),
+      favoriteLinkList: document.getElementById("favoriteLinkList"),
+      paperNoteModal: document.getElementById("paperNoteModal"),
+      paperNoteTitle: document.getElementById("paperNoteTitle"),
+      paperNoteMeta: document.getElementById("paperNoteMeta"),
+      noteConclusion: document.getElementById("noteConclusion"),
+      noteMethod: document.getElementById("noteMethod"),
+      noteData: document.getElementById("noteData"),
+      noteValue: document.getElementById("noteValue"),
+      noteZhoushan: document.getElementById("noteZhoushan")
     };
 
     init();
@@ -1530,6 +1692,7 @@
       renderAll();
       loadResearchDashboard();
       updateDailyPapers(false);
+      updateKeywordSubscriptionResults(false);
       autoDownloadGistData();
     }
 
@@ -1558,8 +1721,13 @@
         renderAll();
       });
 
-      document.getElementById("favoritesBtn").addEventListener("click", () => openModal(els.favoritesModal));
+      document.getElementById("favoritesBtn").addEventListener("click", () => {
+        renderFavoriteLinks();
+        openModal(els.favoritesModal);
+      });
       document.getElementById("closeFavoritesBtn").addEventListener("click", () => closeModal(els.favoritesModal));
+      document.getElementById("saveFavoriteLinkBtn").addEventListener("click", saveFavoriteLink);
+      document.getElementById("cancelFavoriteEditBtn").addEventListener("click", clearFavoriteForm);
       document.getElementById("closeReferenceBtn").addEventListener("click", () => closeModal(els.referenceModal));
       document.getElementById("closeDutyModalBtn").addEventListener("click", () => closeModal(els.dutyModal));
       document.getElementById("saveDutyBtn").addEventListener("click", saveDuty);
@@ -1573,6 +1741,16 @@
       document.getElementById("monthStatBtn").addEventListener("click", openMonthStats);
       document.getElementById("closeStatBtn").addEventListener("click", () => closeModal(els.statModal));
       document.getElementById("refreshPapersBtn").addEventListener("click", () => updateDailyPapers(true));
+      document.getElementById("addKeywordBtn").addEventListener("click", addKeywordSubscription);
+      document.getElementById("refreshKeywordsBtn").addEventListener("click", () => updateKeywordSubscriptionResults(true));
+      document.getElementById("readingListBtn").addEventListener("click", openReadingList);
+      document.getElementById("weeklyReportBtn").addEventListener("click", openWeeklyReport);
+      document.getElementById("closeReadingListBtn").addEventListener("click", () => closeModal(els.readingListModal));
+      document.getElementById("closeWeeklyReportBtn").addEventListener("click", () => closeModal(els.weeklyReportModal));
+      document.getElementById("closePaperNoteBtn").addEventListener("click", () => closeModal(els.paperNoteModal));
+      document.getElementById("generatePaperNoteBtn").addEventListener("click", generatePaperNoteDraft);
+      document.getElementById("savePaperNoteBtn").addEventListener("click", savePaperNote);
+      document.getElementById("deletePaperNoteBtn").addEventListener("click", deletePaperNote);
       document.getElementById("gistSyncBtn").addEventListener("click", () => openModal(els.gistModal));
       document.getElementById("closeGistBtn").addEventListener("click", () => closeModal(els.gistModal));
       document.getElementById("saveGistSettingsBtn").addEventListener("click", saveGistSettings);
@@ -1618,6 +1796,8 @@
       renderCalendar();
       renderWorkflowDay();
       renderWeather();
+      renderKeywordSubscriptions();
+      renderFavoriteLinks();
       renderRecommendations();
       renderHotPapers();
       renderJournals();
@@ -1715,6 +1895,7 @@
       const duty = dayData.duty;
       els.workflowTitle.textContent = `${selectedDate} ${duty || "未排班"}`;
       els.workflowHint.textContent = duty ? "流程会按当前时间标记已过和下一项。" : "先在月历中为当天选择班次。";
+      renderDutyReminders(dayData);
 
       const base = duty ? (defaultTasks[duty] || []) : [];
       const merged = [
@@ -1771,6 +1952,35 @@
 
         row.append(check, name, actions);
         els.tasks.appendChild(row);
+      });
+    }
+
+    function renderDutyReminders(dayData) {
+      els.dutyReminders.innerHTML = "";
+      const reminders = [];
+      if (todayKey(selectedDate)) {
+        if (dayData.duty) reminders.push(`今天${dayData.duty}`);
+        const nowMinutes = new Date().getHours() * 60 + new Date().getMinutes();
+        const tasks = [
+          ...(dayData.duty ? (defaultTasks[dayData.duty] || []) : []),
+          ...dayData.extraTasks.map((task) => task.name)
+        ];
+        tasks.forEach((task) => {
+          const minutes = extractMinutes(task);
+          if (minutes !== null && minutes >= nowMinutes && minutes <= nowMinutes + 30) {
+            reminders.push(`还有 ${minutes - nowMinutes} 分钟：${stripTaskPrefix(task)}`);
+          }
+        });
+      } else if (dayData.duty) {
+        reminders.push(`${selectedDate} 是${dayData.duty}`);
+      }
+
+      if (!reminders.length) return;
+      reminders.forEach((message) => {
+        const row = document.createElement("div");
+        row.className = "notice";
+        row.textContent = message;
+        els.dutyReminders.appendChild(row);
       });
     }
 
@@ -1900,13 +2110,14 @@
     }
 
     function renderKeywordHits() {
-      const hits = dashboardData?.keywordHits || [];
+      renderKeywordSubscriptions();
+      const hits = data.keywordHits || [];
       els.keywordList.innerHTML = "";
       if (!hits.length) {
-        els.keywordList.innerHTML = "<div class=\"empty\">暂无关键词命中数据</div>";
+        els.keywordList.innerHTML = "<div class=\"empty\">暂无中文核心期刊关键词命中，点“更新命中”后会按订阅词重新筛选。</div>";
         return;
       }
-      els.keywordStatus.textContent = `已命中 ${hits.length} 条，关键词：${(dashboardData.keywords || []).join("、")}`;
+      els.keywordStatus.textContent = `已命中 ${hits.length} 条，来源：中文核心气象期刊每日更新 + 谷歌学术检索入口。`;
       hits.slice(0, 12).forEach((hit) => {
         const row = document.createElement("div");
         row.className = "compact-row";
@@ -1920,6 +2131,83 @@
         `;
         els.keywordList.appendChild(row);
       });
+    }
+
+    function renderKeywordSubscriptions() {
+      els.keywordChips.innerHTML = "";
+      (data.keywordSubscriptions || []).forEach((keyword) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = `${keyword} ×`;
+        button.addEventListener("click", () => {
+          data.keywordSubscriptions = data.keywordSubscriptions.filter((item) => item !== keyword);
+          saveData();
+          renderKeywordHits();
+        });
+        els.keywordChips.appendChild(button);
+      });
+    }
+
+    function addKeywordSubscription() {
+      const values = els.keywordInput.value.split(/[、,\s]+/).map((item) => item.trim()).filter(Boolean);
+      if (!values.length) return;
+      data.keywordSubscriptions ||= [];
+      values.forEach((value) => {
+        if (!data.keywordSubscriptions.includes(value)) data.keywordSubscriptions.push(value);
+      });
+      els.keywordInput.value = "";
+      saveData();
+      renderKeywordSubscriptions();
+      updateKeywordSubscriptionResults(true);
+    }
+
+    async function updateKeywordSubscriptionResults(manual) {
+      const keywords = (data.keywordSubscriptions || []).slice(0, 8);
+      if (!keywords.length) return;
+      if (manual) els.keywordStatus.textContent = "正在从中文核心气象期刊每日数据中筛选关键词...";
+      const results = [];
+      try {
+        const response = await fetch(`data/chinese-weather-papers.json?t=${Date.now()}`, {
+          cache: "no-store",
+          headers: { "Accept": "application/json" }
+        });
+        if (!response.ok) throw new Error(`papers ${response.status}`);
+        const payload = await response.json();
+        const papers = Array.isArray(payload.papers) ? payload.papers : [];
+        papers.forEach((paper) => {
+          const text = `${paper.title || ""} ${paper.journal || ""} ${paper.note || ""} ${paper.topic || ""}`;
+          const matched = keywords.filter((keyword) => text.includes(keyword));
+          if (!matched.length) return;
+          results.push({
+            title: paper.title,
+            source: paper.journal,
+            type: "中文核心期刊",
+            url: paper.url,
+            keywords: matched
+          });
+        });
+      } catch (error) {
+        if (manual) showToast("中文期刊数据暂不可用");
+      }
+      keywords.forEach((keyword) => {
+        results.push({
+          title: `${keyword} - 谷歌学术检索`,
+          source: "Google Scholar",
+          type: "检索入口",
+          url: `https://scholar.google.com/scholar?q=${encodeURIComponent(keyword + " 气象")}`,
+          keywords: [keyword]
+        });
+      });
+      const seen = new Set();
+      data.keywordHits = results.filter((item) => {
+        const key = `${item.title}|${item.url}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      }).slice(0, 30);
+      saveData({ preserveMeta: true });
+      renderKeywordHits();
+      if (manual) showToast("关键词命中已更新");
     }
 
     async function renderJournalStatuses() {
@@ -1985,10 +2273,12 @@
             <a href="${paper.url}" target="_blank" rel="noreferrer">查看论文</a>
             <button type="button" data-paper-action="read">${isRead ? "取消已读" : "已读"}</button>
             <button type="button" data-paper-action="favorite">${isFavorite ? "取消收藏" : "收藏"}</button>
+            <button type="button" data-paper-action="note">笔记</button>
           </div>
         `;
         card.querySelector("[data-paper-action='read']").addEventListener("click", () => togglePaperState("readPapers", paper));
         card.querySelector("[data-paper-action='favorite']").addEventListener("click", () => togglePaperState("favoritePapers", paper));
+        card.querySelector("[data-paper-action='note']").addEventListener("click", () => openPaperNote(paper));
         els.hotPaperList.appendChild(card);
       });
     }
@@ -2107,6 +2397,75 @@
       });
     }
 
+    function openReadingList() {
+      const items = dashboardData?.readingList?.length
+        ? dashboardData.readingList
+        : displayedPapers.slice(0, 12).map((paper) => ({
+          title: paper.title,
+          source: paper.journal,
+          type: paper.topic,
+          url: paper.url,
+          reason: paper.note
+        }));
+      els.readingListBody.innerHTML = "";
+      items.slice(0, 30).forEach((item) => {
+        els.readingListBody.appendChild(renderReportRow(item));
+      });
+      if (!items.length) els.readingListBody.innerHTML = "<div class=\"empty\">暂无阅读清单</div>";
+      openModal(els.readingListModal);
+    }
+
+    function openWeeklyReport() {
+      const blocks = [];
+      blocks.push(["值得精读", dashboardData?.readingList || []]);
+      blocks.push(["关键词命中", dashboardData?.keywordHits || []]);
+      blocks.push(["GitHub 气象工具", dashboardData?.githubTrending || []]);
+      els.weeklyReportBody.innerHTML = "";
+      blocks.forEach(([title, items]) => {
+        const group = document.createElement("details");
+        group.className = "item";
+        group.open = title === "值得精读";
+        group.innerHTML = `
+          <summary class="item-title">
+            <strong>${escapeHtml(title)}</strong>
+            <span class="badge">${items.length} 条</span>
+          </summary>
+          <div class="compact-list"></div>
+        `;
+        const list = group.querySelector(".compact-list");
+        items.slice(0, 20).forEach((item) => {
+          list.appendChild(renderReportRow(normalizeReportItem(item)));
+        });
+        if (!items.length) list.innerHTML = "<div class=\"empty\">暂无数据</div>";
+        els.weeklyReportBody.appendChild(group);
+      });
+      openModal(els.weeklyReportModal);
+    }
+
+    function normalizeReportItem(item) {
+      return {
+        title: item.title || item.name || "未命名",
+        source: item.source || item.journal || item.language || "",
+        type: item.type || item.query || "推荐",
+        url: item.url,
+        reason: item.reason || item.description || (item.keywords || []).join("、")
+      };
+    }
+
+    function renderReportRow(item) {
+      const row = document.createElement("div");
+      row.className = "compact-row";
+      row.innerHTML = `
+        <a href="${item.url || "#"}" target="_blank" rel="noreferrer">${escapeHtml(item.title || "未命名")}</a>
+        <div class="item-meta">
+          <span>${escapeHtml(item.type || "")}</span>
+          <span>${escapeHtml(item.source || "")}</span>
+        </div>
+        <p>${escapeHtml(item.reason || "")}</p>
+      `;
+      return row;
+    }
+
     function getPaperId(paper) {
       return btoa(unescape(encodeURIComponent(`${paper.url || ""}|${paper.title || ""}`))).replace(/=+$/g, "");
     }
@@ -2147,6 +2506,7 @@
     function renderPaperLibraryItem(item) {
       const div = document.createElement("details");
       div.className = "item";
+      const note = data.paperNotes?.[item.id];
       div.innerHTML = `
         <summary class="item-title">
           <strong>${escapeHtml(item.title || "未命名论文")}</strong>
@@ -2159,12 +2519,15 @@
           <span>${item.savedAt ? new Date(item.savedAt).toLocaleString() : ""}</span>
         </div>
         <p>${escapeHtml(item.note || "")}</p>
+        ${note?.conclusion ? `<p><strong>一句话结论：</strong>${escapeHtml(note.conclusion)}</p>` : ""}
         <div class="mini-actions">
           ${item.url ? `<a class="btn-like" href="${item.url}" target="_blank" rel="noreferrer">查看论文</a>` : ""}
+          <button type="button" data-action="note">笔记</button>
           <button type="button">移除</button>
         </div>
       `;
-      div.querySelector("button").addEventListener("click", () => {
+      div.querySelector("[data-action='note']").addEventListener("click", () => openPaperNote(item));
+      div.querySelector(".mini-actions button:not([data-action])").addEventListener("click", () => {
         const collection = item.status === "收藏" ? "favoritePapers" : "readPapers";
         data[collection] = (data[collection] || []).filter((entry) => entry.id !== item.id);
         saveData();
@@ -2174,6 +2537,151 @@
         showToast("已从项目列表移除");
       });
       return div;
+    }
+
+    function openPaperNote(paper) {
+      currentNotePaper = paper;
+      currentNotePaperId = paper.id || getPaperId(paper);
+      const note = data.paperNotes?.[currentNotePaperId] || {};
+      els.paperNoteTitle.textContent = paper.title || "论文笔记";
+      els.paperNoteMeta.textContent = [paper.journal, paper.year, paper.topic].filter(Boolean).join(" · ");
+      els.noteConclusion.value = note.conclusion || "";
+      els.noteMethod.value = note.method || "";
+      els.noteData.value = note.data || "";
+      els.noteValue.value = note.value || "";
+      els.noteZhoushan.value = note.zhoushan || "";
+      openModal(els.paperNoteModal);
+    }
+
+    function generatePaperNoteDraft() {
+      if (!currentNotePaper) return;
+      const title = currentNotePaper.title || "";
+      const topic = `${currentNotePaper.topic || ""} ${currentNotePaper.note || ""}`;
+      const text = `${title} ${topic}`;
+      const matched = [];
+      ["台风", "强对流", "雷达", "海雾", "海上大风", "暴雨", "AI", "预报", "港航"].forEach((keyword) => {
+        if (text.includes(keyword)) matched.push(keyword);
+      });
+      const subject = matched.length ? matched.join("、") : (currentNotePaper.topic || "气象业务");
+      if (!els.noteConclusion.value.trim()) {
+        els.noteConclusion.value = `围绕“${title}”，重点关注其对${subject}监测、预报或服务的启发。`;
+      }
+      if (!els.noteMethod.value.trim()) {
+        els.noteMethod.value = `建议精读时提取：研究对象、诊断指标、资料处理流程、模型或统计方法，以及结论验证方式。`;
+      }
+      if (!els.noteData.value.trim()) {
+        els.noteData.value = `待从正文核对：使用的数据源、时间范围、空间范围、个例过程、观测或再分析资料。`;
+      }
+      if (!els.noteValue.value.trim()) {
+        els.noteValue.value = `可重点借鉴论文中的个例分析框架、图表组织方式、关键物理量诊断和业务化表达。`;
+      }
+      if (!els.noteZhoushan.value.trim()) {
+        els.noteZhoushan.value = `结合舟山业务，可重点思考其对港航气象、海上大风、台风、强对流或海雾服务的可迁移做法。`;
+      }
+      showToast("已生成可编辑的笔记草稿");
+    }
+
+    function savePaperNote() {
+      if (!currentNotePaperId) return;
+      data.paperNotes ||= {};
+      data.paperNotes[currentNotePaperId] = {
+        paper: {
+          id: currentNotePaperId,
+          title: currentNotePaper?.title || "",
+          journal: currentNotePaper?.journal || "",
+          year: currentNotePaper?.year || "",
+          topic: currentNotePaper?.topic || "",
+          url: currentNotePaper?.url || ""
+        },
+        conclusion: els.noteConclusion.value.trim(),
+        method: els.noteMethod.value.trim(),
+        data: els.noteData.value.trim(),
+        value: els.noteValue.value.trim(),
+        zhoushan: els.noteZhoushan.value.trim(),
+        updatedAt: new Date().toISOString()
+      };
+      saveData();
+      closeModal(els.paperNoteModal);
+      renderResearch();
+      showToast("论文笔记已保存");
+    }
+
+    function deletePaperNote() {
+      if (!currentNotePaperId || !data.paperNotes?.[currentNotePaperId]) return;
+      delete data.paperNotes[currentNotePaperId];
+      saveData();
+      closeModal(els.paperNoteModal);
+      renderResearch();
+      showToast("论文笔记已删除");
+    }
+
+    function renderFavoriteLinks() {
+      els.favoriteLinkList.innerHTML = "";
+      const links = data.favoriteLinks || [];
+      if (!links.length) {
+        els.favoriteLinkList.innerHTML = "<div class=\"empty\">暂无收藏链接</div>";
+        return;
+      }
+      links.forEach((link) => {
+        const card = document.createElement("article");
+        card.className = "link-card";
+        card.innerHTML = `
+          <strong>${escapeHtml(link.name)}</strong>
+          <span>${escapeHtml(link.desc || link.url)}</span>
+          <div class="mini-actions">
+            <a class="btn-like" href="${link.url}" target="_blank" rel="noreferrer">打开</a>
+            <button type="button" data-action="edit">编辑</button>
+            <button type="button" data-action="delete">删除</button>
+          </div>
+        `;
+        card.querySelector("[data-action='edit']").addEventListener("click", () => editFavoriteLink(link));
+        card.querySelector("[data-action='delete']").addEventListener("click", () => deleteFavoriteLink(link.id));
+        els.favoriteLinkList.appendChild(card);
+      });
+    }
+
+    function saveFavoriteLink() {
+      const name = els.favoriteNameInput.value.trim();
+      const url = els.favoriteUrlInput.value.trim();
+      const desc = els.favoriteDescInput.value.trim();
+      if (!name || !url) {
+        showToast("请填写收藏名称和链接");
+        return;
+      }
+      data.favoriteLinks ||= [];
+      if (editingFavoriteId) {
+        data.favoriteLinks = data.favoriteLinks.map((link) => (
+          link.id === editingFavoriteId ? { ...link, name, url, desc } : link
+        ));
+      } else {
+        data.favoriteLinks.push({ id: cryptoId(), name, url, desc });
+      }
+      clearFavoriteForm();
+      saveData();
+      renderFavoriteLinks();
+      showToast("收藏链接已保存");
+    }
+
+    function editFavoriteLink(link) {
+      editingFavoriteId = link.id;
+      els.favoriteNameInput.value = link.name || "";
+      els.favoriteUrlInput.value = link.url || "";
+      els.favoriteDescInput.value = link.desc || "";
+    }
+
+    function deleteFavoriteLink(id) {
+      data.favoriteLinks = (data.favoriteLinks || []).filter((link) => link.id !== id);
+      if (editingFavoriteId === id) clearFavoriteForm();
+      saveData();
+      renderFavoriteLinks();
+      showToast("收藏链接已删除");
+    }
+
+    function clearFavoriteForm() {
+      editingFavoriteId = "";
+      els.favoriteNameInput.value = "";
+      els.favoriteUrlInput.value = "";
+      els.favoriteDescInput.value = "";
     }
 
     function renderItem(item, type) {
@@ -2342,6 +2850,10 @@
         data.research = imported.research || [];
         data.readPapers = imported.readPapers || [];
         data.favoritePapers = imported.favoritePapers || [];
+        data.paperNotes = imported.paperNotes || {};
+        data.keywordSubscriptions = imported.keywordSubscriptions || defaultKeywordSubscriptions();
+        data.keywordHits = imported.keywordHits || [];
+        data.favoriteLinks = imported.favoriteLinks || defaultFavoriteLinks;
         data._meta = imported._meta || { updatedAt: new Date().toISOString() };
         saveData();
         isApplyingRemoteData = false;
@@ -2375,15 +2887,33 @@
     }
 
     function loadData() {
-      const fallback = { days: {}, hotspots: [], research: [], readPapers: [], favoritePapers: [] };
+      const fallback = {
+        days: {},
+        hotspots: [],
+        research: [],
+        readPapers: [],
+        favoritePapers: [],
+        paperNotes: {},
+        keywordSubscriptions: defaultKeywordSubscriptions(),
+        keywordHits: [],
+        favoriteLinks: defaultFavoriteLinks
+      };
       try {
         const loaded = { ...fallback, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
         loaded.readPapers ||= [];
         loaded.favoritePapers ||= [];
+        loaded.paperNotes ||= {};
+        loaded.keywordSubscriptions ||= defaultKeywordSubscriptions();
+        loaded.keywordHits ||= [];
+        loaded.favoriteLinks ||= defaultFavoriteLinks;
         return loaded;
       } catch (error) {
         return fallback;
       }
+    }
+
+    function defaultKeywordSubscriptions() {
+      return ["海雾", "海上大风", "港航气象", "强对流", "雷达外推", "AI预报", "台风路径"];
     }
 
     function saveData(options = {}) {
