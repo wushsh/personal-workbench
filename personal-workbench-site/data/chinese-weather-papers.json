@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T00:15:42Z",
+  "updatedAt": "2026-08-01T00:11:30Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,43 +245,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "基于风云三号F星被动微波观测的水凝物反演",
+      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
     },
     {
       "topic": "中文期刊",
-      "title": "武汉X波段双偏振相控阵雷达定量降水估测产品质量评估",
+      "title": "基于GR4J与LSTM耦合的清江流域径流模拟对比分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-227"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-006"
     },
     {
       "topic": "中文期刊",
-      "title": "湘中地区夏季极端小时降水和极端降水事件的时空分布及其环流特征",
+      "title": "2024年浙江梅雨期降水的典型与非典型时空特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-220"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-040"
     },
     {
       "topic": "中文期刊",
-      "title": "光流融合方法在复杂地形区分钟级降水临近预报中的应用",
+      "title": "安徽省ADTD闪电定位系统监测数据质量评估",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-197"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-205"
     },
     {
       "topic": "中文期刊",
-      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
+      "title": "湖北省对流初生时空分布特征及其与地形关系",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-267"
     },
     {
       "topic": "中文期刊",
