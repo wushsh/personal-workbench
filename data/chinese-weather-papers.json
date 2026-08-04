@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T00:10:33Z",
+  "updatedAt": "2026-08-04T00:16:28Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,19 +245,27 @@
     },
     {
       "topic": "中文期刊",
-      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
+      "title": "青藏高原东南部色季拉山夏季小时降水特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-019"
     },
     {
       "topic": "中文期刊",
-      "title": "基于GR4J与LSTM耦合的清江流域径流模拟对比分析",
+      "title": "基于两类地面观测仪器对比的微雨雷达降水探测能力评估",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-006"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-191"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
     },
     {
       "topic": "中文期刊",
@@ -269,19 +277,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "安徽省ADTD闪电定位系统监测数据质量评估",
+      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-205"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "湖北省对流初生时空分布特征及其与地形关系",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-267"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
     },
     {
       "topic": "中文期刊",
