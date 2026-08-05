@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T00:16:28Z",
+  "updatedAt": "2026-08-05T00:14:29Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于朴素贝叶斯方法的浙江省夏季短时强降水潜势预报模型研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-113"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "两次登闽台风后部相似LMCS雨带降水差异对比分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-031"
+    },
+    {
+      "topic": "中文期刊",
       "title": "青藏高原东南部色季拉山夏季小时降水特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "2024年浙江梅雨期降水的典型与非典型时空特征分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-040"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
     },
     {
       "topic": "中文期刊",
