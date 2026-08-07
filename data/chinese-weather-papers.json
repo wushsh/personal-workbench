@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T00:10:29Z",
+  "updatedAt": "2026-08-07T01:44:38Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于不同微物理方案的一次复杂飞机结冰环境模拟性能评估",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-064"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "猫儿山风场演变特征及对桂林前汛期暴雨强度与落区的指示作用",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-126"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于朴素贝叶斯方法的浙江省夏季短时强降水潜势预报模型研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-019"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于两类地面观测仪器对比的微雨雷达降水探测能力评估",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-191"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
     },
     {
       "topic": "中文期刊",
