@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T23:45:37Z",
+  "updatedAt": "2026-08-10T23:49:27Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,43 +245,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "武汉X波段双偏振相控阵雷达定量降水估测产品质量评估",
+      "title": "昆明市夏季夜间冰雹天气分型及其环境参数特征",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-227"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-046"
     },
     {
       "topic": "中文期刊",
-      "title": "甘肃榆中2025年“8·7”暴雨事件极端性特征和环境条件研究",
+      "title": "鲁南两次黄淮低涡大暴雨特征及雨强差异成因对比分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-230"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-051"
     },
     {
       "topic": "中文期刊",
-      "title": "安徽省ADTD闪电定位系统监测数据质量评估",
+      "title": "基于GR4J与LSTM耦合的清江流域径流模拟对比分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-205"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-006"
     },
     {
       "topic": "中文期刊",
-      "title": "2024年浙江梅雨期降水的典型与非典型时空特征分析",
+      "title": "“6·20”浙江西北部梅汛期极端暴雨过程特征与成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-040"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-060"
     },
     {
       "topic": "中文期刊",
-      "title": "湖北省对流初生时空分布特征及其与地形关系",
+      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-267"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
     },
     {
       "topic": "中文期刊",
@@ -393,13 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
+      "message": "<urlopen error [Errno 111] Connection refused>"
     }
   ],
   "errors": [
     {
       "source": "中国农业气象",
-      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
+      "error": "<urlopen error [Errno 111] Connection refused>"
     }
   ]
 }
