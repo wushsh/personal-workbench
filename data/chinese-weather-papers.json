@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T23:49:27Z",
+  "updatedAt": "2026-08-11T23:57:40Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "模式物理参数影响东亚冬季风气候态模拟的机制分析：基于CAS-FGOALS-PPE",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2603.25143"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "我国南方两次极端湿冷天气的多尺度能量转换特征及其对水汽输送的作用差异",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.26049"
+    },
+    {
+      "topic": "中文期刊",
       "title": "库布齐沙漠植被恢复对局地对流活动的影响研究",
       "journal": "大气科学",
       "year": "最新目录",
@@ -146,22 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2602.25181"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于CRA大气再分析资料的中国云水资源评估及结果对比",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25184"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于复合气象特征和代价敏感学习的道路结冰预警模型研究",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26025"
     },
     {
       "topic": "中文期刊",
@@ -245,11 +245,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "昆明市夏季夜间冰雹天气分型及其环境参数特征",
+      "title": "连续两次Derecho事件中江西宜春12级大风事件特征和成因对比",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-046"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-188"
     },
     {
       "topic": "中文期刊",
@@ -261,27 +261,27 @@
     },
     {
       "topic": "中文期刊",
-      "title": "基于GR4J与LSTM耦合的清江流域径流模拟对比分析",
+      "title": "北京城市下垫面形态对强降水过程的影响及作用机制研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-006"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-127"
     },
     {
       "topic": "中文期刊",
-      "title": "“6·20”浙江西北部梅汛期极端暴雨过程特征与成因分析",
+      "title": "长株潭大风特征与成因分析及对低空无人机飞行的影响",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-060"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-003"
     },
     {
       "topic": "中文期刊",
-      "title": "一次对流单体风暴合并造成的下击暴流成因分析",
+      "title": "基于不同微物理方案的一次复杂飞机结冰环境模拟性能评估",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-138"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-064"
     },
     {
       "topic": "中文期刊",
@@ -393,13 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "<urlopen error [Errno 111] Connection refused>"
+      "message": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
     }
   ],
   "errors": [
     {
       "source": "中国农业气象",
-      "error": "<urlopen error [Errno 111] Connection refused>"
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
     }
   ]
 }
