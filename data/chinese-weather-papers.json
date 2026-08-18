@@ -1,8 +1,48 @@
 {
-  "updatedAt": "2026-08-17T23:35:03Z",
+  "updatedAt": "2026-08-18T23:34:37Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 35,
+  "count": 40,
   "papers": [
+    {
+      "topic": "中文期刊",
+      "title": "青藏高原大气科学试验回顾",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260401"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院大气成分研究及业务应用进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260402"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院极端天气气候事件研究进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260403"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院气象雷达技术及应用进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260404"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国气象科学研究院近20年台风研究进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260405"
+    },
     {
       "topic": "中文期刊",
       "title": "2026年第52卷7期目录",
@@ -85,6 +125,30 @@
     },
     {
       "topic": "中文期刊",
+      "title": "机载前向散射云粒子谱仪FCDP数据解析与质量控制方法研究",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26051"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于高时间分辨率航测的北京地区VOCs垂直分布特征",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26022"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "“竹节草”（2025）残涡引发苏南强降水的特征分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26036"
+    },
+    {
+      "topic": "中文期刊",
       "title": "江淮地区积层混合云融化层附近微物理特征及粒子谱演变研究",
       "journal": "大气科学",
       "year": "最新目录",
@@ -98,30 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2603.25143"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "我国南方两次极端湿冷天气的多尺度能量转换特征及其对水汽输送的作用差异",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.26049"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "库布齐沙漠植被恢复对局地对流活动的影响研究",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25085"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一次对流触发过程垂直运动分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25148"
     },
     {
       "topic": "中文期刊",
@@ -287,10 +327,10 @@
   "statuses": [
     {
       "source": "应用气象学报",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 5,
       "url": "https://qikan.camscma.cn/ch/index.aspx",
-      "message": "HTTP Error 403: Forbidden"
+      "message": "成功"
     },
     {
       "source": "气象",
@@ -356,10 +396,5 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "应用气象学报",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ]
+  "errors": []
 }
