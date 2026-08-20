@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T23:35:16Z",
+  "updatedAt": "2026-08-20T23:38:39Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 35,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "超强台风 Ragasa 远海近岸异常加强的特征和原因分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26115"
+    },
+    {
+      "topic": "中文期刊",
       "title": "机载前向散射云粒子谱仪FCDP数据解析与质量控制方法研究",
       "journal": "大气科学",
       "year": "最新目录",
@@ -157,22 +165,6 @@
     },
     {
       "topic": "中文期刊",
-      "title": "模式物理参数影响东亚冬季风气候态模拟的机制分析：基于CAS-FGOALS-PPE",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2603.25143"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "沿叶笃正先生开辟的路——从青藏高原气象学到青藏高原气候动力学",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26073"
-    },
-    {
-      "topic": "中文期刊",
       "title": "上世纪80年代以来云南秋季降水的年代际变化及其成因",
       "journal": "气候与环境研究",
       "year": "最新目录",
@@ -202,6 +194,14 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26035"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "面向澜沧江-湄公河流域季节降水预测的深度学习误差订正方法及其检验",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26045"
     },
     {
       "topic": "中文期刊",
