@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-20T23:38:39Z",
+  "updatedAt": "2026-08-21T23:36:54Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 35,
+  "count": 40,
   "papers": [
     {
       "topic": "中文期刊",
@@ -45,43 +45,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷7期目录",
+      "title": "2026年第52卷8期目录",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070101&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026080101&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷7期封面",
+      "title": "2026年第52卷8期封面",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026070102&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026080102&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "2024年西北太平洋夏季和秋季台风活动异常特征的差异对比",
+      "title": "云雷达与FY-4B融合反演云顶高度方法研究",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260701&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260801&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "云南冬春连旱事件的识别标准及环流特征分析",
+      "title": "浙江夏季FY-4A卫星云参数和降水的相关性研究",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260702&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260802&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "基于分钟级降水数据的山东汛期滑动和整点小时强降水差异研究",
+      "title": "基于卫星观测资料对中尺度模式云微物理参数化方案的评估分析",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260703&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260803&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -202,6 +202,46 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26045"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
     },
     {
       "topic": "中文期刊",
@@ -329,10 +369,10 @@
     },
     {
       "source": "热带气象学报",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 5,
       "url": "https://rdqxxb.itmm.org.cn/",
-      "message": "未采集到论文"
+      "message": "成功"
     },
     {
       "source": "暴雨灾害",
