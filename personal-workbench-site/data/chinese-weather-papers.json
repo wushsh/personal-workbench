@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T23:33:39Z",
+  "updatedAt": "2026-08-25T23:36:15Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "双低空急流背景下广西沿海一次暖区暴雨的形成机制",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-176"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "东北地区不同天气型极端短时强降水的时空分布及环境参数特征",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
+    },
+    {
+      "topic": "中文期刊",
       "title": "连续两次Derecho事件中江西宜春12级大风事件特征和成因对比",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-127"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "长株潭大风特征与成因分析及对低空无人机飞行的影响",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-003"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于不同微物理方案的一次复杂飞机结冰环境模拟性能评估",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-064"
     },
     {
       "topic": "中文期刊",
