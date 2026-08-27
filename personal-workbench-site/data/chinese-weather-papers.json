@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T23:36:15Z",
+  "updatedAt": "2026-08-27T04:31:16Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "林芝市巴宜区夏季水汽输送轨迹和来源定量分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.25149"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于多模态深度特征融合的FY-4B卫星云底高度反演方法研究",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26028"
+    },
+    {
+      "topic": "中文期刊",
       "title": "超强台风 Ragasa 远海近岸异常加强的特征和原因分析",
       "journal": "大气科学",
       "year": "最新目录",
@@ -149,19 +165,27 @@
     },
     {
       "topic": "中文期刊",
-      "title": "“竹节草”（2025）残涡引发苏南强降水的特征分析",
-      "journal": "大气科学",
+      "title": "RS与GIS支持下的景观生态风险评价及其风险因子探测",
+      "journal": "气候与环境研究",
       "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26036"
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25148"
     },
     {
       "topic": "中文期刊",
-      "title": "江淮地区积层混合云融化层附近微物理特征及粒子谱演变研究",
-      "journal": "大气科学",
+      "title": "基于大气外强迫因子的我国夏季近地面臭氧浓度的统计预测",
+      "journal": "气候与环境研究",
       "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26043"
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25146"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于CMA-CPEFS数值模式的丹江口双机联合增雨作业效果评估研究",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25090"
     },
     {
       "topic": "中文期刊",
@@ -178,30 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26014"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "南方电网区域春季太阳辐射时空变化及其跨季节预测信号研究",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.25136"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "万象GAP模型赋能风光新能源气象服务的技术框架与应用前景",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26035"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "面向澜沧江-湄公河流域季节降水预测的深度学习误差订正方法及其检验",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26045"
     },
     {
       "topic": "中文期刊",
