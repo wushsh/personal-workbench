@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T04:31:16Z",
+  "updatedAt": "2026-08-28T06:56:24Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "攀枝花低温低能型暴雨特征及成因初探",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-253"
+    },
+    {
+      "topic": "中文期刊",
       "title": "双低空急流背景下广西沿海一次暖区暴雨的形成机制",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-051"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "北京城市下垫面形态对强降水过程的影响及作用机制研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-127"
     },
     {
       "topic": "中文期刊",
