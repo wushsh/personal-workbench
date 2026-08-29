@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T06:56:24Z",
+  "updatedAt": "2026-08-29T04:09:04Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "灾害性天气电力系统风险评估算法及试验研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-233"
+    },
+    {
+      "topic": "中文期刊",
       "title": "攀枝花低温低能型暴雨特征及成因初探",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-188"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "鲁南两次黄淮低涡大暴雨特征及雨强差异成因对比分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-051"
     },
     {
       "topic": "中文期刊",
