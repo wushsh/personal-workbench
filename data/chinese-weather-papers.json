@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T01:22:40Z",
+  "updatedAt": "2026-09-01T01:49:37Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于动力降尺度和误差订正的中国区域复合高温干旱模拟评估与未来预估",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26039"
+    },
+    {
+      "topic": "中文期刊",
       "title": "林芝市巴宜区夏季水汽输送轨迹和来源定量分析",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26051"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于高时间分辨率航测的北京地区VOCs垂直分布特征",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26022"
     },
     {
       "topic": "中文期刊",
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于湿C矢量的青海东部春季一次极端降水个例演变过程诊断",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-109"
+    },
+    {
+      "topic": "中文期刊",
       "title": "灾害性天气电力系统风险评估算法及试验研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "连续两次Derecho事件中江西宜春12级大风事件特征和成因对比",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-188"
     },
     {
       "topic": "中文期刊",
@@ -393,8 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "未采集到论文"
+      "message": "<urlopen error [Errno 111] Connection refused>"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "中国农业气象",
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  ]
 }
