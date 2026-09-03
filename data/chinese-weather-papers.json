@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T01:01:27Z",
+  "updatedAt": "2026-09-03T01:07:56Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,30 @@
     },
     {
       "topic": "中文期刊",
+      "title": "东北地区不同天气型极端短时强降水的时空分布及环境参数特征",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "连续两次Derecho事件中江西宜春12级大风特征和成因对比",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-188"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "昆明市雨季短时强降水特征及主要影响系统分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-213"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于风云三号F星被动微波观测的水凝物反演",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -258,30 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-063"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "近40 a青藏高原地区对流活动研究进展",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-255"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "横断山区南段干湿坝子降水特征差异与成因分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024−221"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于湿C矢量的青海东部春季一次极端降水个例演变过程诊断",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-109"
     },
     {
       "topic": "中文期刊",
