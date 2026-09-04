@@ -1,48 +1,8 @@
 {
-  "updatedAt": "2026-09-03T01:07:56Z",
+  "updatedAt": "2026-09-04T00:58:29Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 35,
   "papers": [
-    {
-      "topic": "中文期刊",
-      "title": "高影响天气下我国交通气象灾害风险评估进展",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260501"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于梯度塔观测的华南暖季强对流冷池精细特征",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260502"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "0221冷季高架雹暴对流结构及微物理特征",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260503"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "东北冷涡背景下小时极端降水事件多尺度分析",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260504"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国南方暖区暴雨变化特征及环流分型",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260505"
-    },
     {
       "topic": "中文期刊",
       "title": "2026年第52卷8期目录",
@@ -327,10 +287,10 @@
   "statuses": [
     {
       "source": "应用气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://qikan.camscma.cn/ch/index.aspx",
-      "message": "成功"
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "气象",
@@ -396,5 +356,10 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "应用气象学报",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
 }
