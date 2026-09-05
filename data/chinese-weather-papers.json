@@ -1,8 +1,48 @@
 {
-  "updatedAt": "2026-09-04T00:58:29Z",
+  "updatedAt": "2026-09-05T00:56:07Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 35,
   "papers": [
+    {
+      "topic": "中文期刊",
+      "title": "高影响天气下我国交通气象灾害风险评估进展",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260501"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于梯度塔观测的华南暖季强对流冷池精细特征",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260502"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "0221冷季高架雹暴对流结构及微物理特征",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260503"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "东北冷涡背景下小时极端降水事件多尺度分析",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260504"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国南方暖区暴雨变化特征及环流分型",
+      "journal": "应用气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260505"
+    },
     {
       "topic": "中文期刊",
       "title": "2026年第52卷8期目录",
@@ -165,67 +205,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "东北地区不同天气型极端短时强降水的时空分布及环境参数特征",
+      "title": "横断山区南段干湿坝子降水特征差异与成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "连续两次Derecho事件中江西宜春12级大风特征和成因对比",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-188"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "昆明市雨季短时强降水特征及主要影响系统分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-213"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024−221"
     },
     {
       "topic": "中文期刊",
@@ -237,11 +221,27 @@
     },
     {
       "topic": "中文期刊",
-      "title": "基于分级跨级权重评分的短临模式集合降水预报订正技术研究",
+      "title": "基于地面加密降水观测的文山州暴雨特征及天气概念模型研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-063"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-226"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "东北地区不同天气型极端短时强降水的时空分布及环境参数特征",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
     },
     {
       "topic": "中文期刊",
@@ -287,10 +287,10 @@
   "statuses": [
     {
       "source": "应用气象学报",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 5,
       "url": "https://qikan.camscma.cn/ch/index.aspx",
-      "message": "HTTP Error 403: Forbidden"
+      "message": "成功"
     },
     {
       "source": "气象",
@@ -329,10 +329,10 @@
     },
     {
       "source": "热带气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://rdqxxb.itmm.org.cn/",
-      "message": "成功"
+      "message": "未采集到论文"
     },
     {
       "source": "暴雨灾害",
@@ -356,10 +356,5 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "应用气象学报",
-      "error": "HTTP Error 403: Forbidden"
-    }
-  ]
+  "errors": []
 }
