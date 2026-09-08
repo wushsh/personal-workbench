@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-07T01:00:01Z",
+  "updatedAt": "2026-09-08T01:11:05Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 30,
   "papers": [
     {
       "topic": "中文期刊",
@@ -82,46 +82,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
       "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260803&flag=1"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "雷暴与强对流临近天气预报技术进展",
-      "journal": "气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
-      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120301&flag=1"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "苏北地区超级单体风暴环境条件与雷达回波特征",
-      "journal": "气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
-      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20200134&flag=1"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "区域暴雨过程中两次龙卷风事件分析",
-      "journal": "气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
-      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120505&flag=1"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国东北龙卷研究:环境特征分析",
-      "journal": "气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
-      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=2015031&flag=1"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "冬季北大西洋涛动与中国西南地区降水的不对称关系",
-      "journal": "气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象学报》官网最新页面采集。",
-      "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/reader/view_abstract.aspx?file_no=20120609&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -245,83 +205,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "横断山区南段干湿坝子降水特征差异与成因分析",
+      "title": "青藏高原东北侧一次极端暴雨过程的成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024−221"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-038"
     },
     {
       "topic": "中文期刊",
-      "title": "基于风云三号F星被动微波观测的水凝物反演",
+      "title": "近40 a青藏高原地区对流活动研究进展",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-255"
     },
     {
       "topic": "中文期刊",
-      "title": "基于地面加密降水观测的文山州暴雨特征及天气概念模型研究",
+      "title": "攀枝花低温低能型暴雨特征及成因初探",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-226"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-253"
     },
     {
       "topic": "中文期刊",
-      "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
+      "title": "双低空急流背景下广西沿海一次暖区暴雨的形成机制",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-176"
     },
     {
       "topic": "中文期刊",
-      "title": "东北地区不同天气型极端短时强降水的时空分布及环境参数特征",
+      "title": "深圳“9·7”极端特大暴雨过程雨滴谱特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于WRF-Fire的山地林火气象-火场耦合数值模拟研究",
-      "journal": "气象科技",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
-      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260311"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于机器学习的中国未来极端高温预测",
-      "journal": "气象科技",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
-      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260304"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "融合多源信息的龙卷爆发事件灾情调查方法研究",
-      "journal": "气象科技",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
-      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260109"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "多参量云体追踪识别技术在人工增雨作业效果评估中的应用",
-      "journal": "气象科技",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
-      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260108"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "高空大型无人机机载下投探空资料与加密探空资料对比分析",
-      "journal": "气象科技",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气象科技》官网最新页面采集。",
-      "url": "http://www.qxkj.net.cn/qxkj/article/abstract/20260103"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-014"
     }
   ],
   "statuses": [
@@ -341,10 +261,10 @@
     },
     {
       "source": "气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "http://qxxb.ijournals.cn/qxxb_cn/ch/index.aspx",
-      "message": "成功"
+      "message": "timed out"
     },
     {
       "source": "大气科学",
@@ -383,10 +303,10 @@
     },
     {
       "source": "气象科技",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "http://www.qxkj.net.cn/",
-      "message": "成功"
+      "message": "timed out"
     },
     {
       "source": "中国农业气象",
@@ -396,5 +316,14 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "气象学报",
+      "error": "timed out"
+    },
+    {
+      "source": "气象科技",
+      "error": "timed out"
+    }
+  ]
 }
