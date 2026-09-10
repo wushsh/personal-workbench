@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T01:15:15Z",
+  "updatedAt": "2026-09-10T01:03:16Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,19 +245,19 @@
     },
     {
       "topic": "中文期刊",
-      "title": "广西一次强降水过程对流系统不同时段的宏微观特征分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-176"
-    },
-    {
-      "topic": "中文期刊",
       "title": "中国龙卷灾情调查研究进展",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "广西一次强降水过程对流系统不同时段的宏微观特征分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-176"
     },
     {
       "topic": "中文期刊",
