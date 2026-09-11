@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T01:03:16Z",
+  "updatedAt": "2026-09-11T01:02:41Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -393,8 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "未采集到论文"
+      "message": "<urlopen error [Errno 111] Connection refused>"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "中国农业气象",
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  ]
 }
