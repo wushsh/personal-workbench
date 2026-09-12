@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-11T01:02:41Z",
+  "updatedAt": "2026-09-12T01:05:45Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 35,
   "papers": [
     {
       "topic": "中文期刊",
@@ -205,43 +205,19 @@
     },
     {
       "topic": "中文期刊",
-      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
-      "journal": "热带气象学报",
+      "title": "1990－2022年暖季（5－9月）黄淮气旋及暴雨天气特征",
+      "journal": "暴雨灾害",
       "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-131"
     },
     {
       "topic": "中文期刊",
-      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
-      "journal": "热带气象学报",
+      "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
+      "journal": "暴雨灾害",
       "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
     },
     {
       "topic": "中文期刊",
@@ -266,22 +242,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-255"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "青藏高原东北侧一次极端暴雨过程的成因分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-038"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "攀枝花低温低能型暴雨特征及成因初探",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-253"
     },
     {
       "topic": "中文期刊",
@@ -369,10 +329,10 @@
     },
     {
       "source": "热带气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://rdqxxb.itmm.org.cn/",
-      "message": "成功"
+      "message": "未采集到论文"
     },
     {
       "source": "暴雨灾害",
@@ -393,13 +353,8 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "<urlopen error [Errno 111] Connection refused>"
+      "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "中国农业气象",
-      "error": "<urlopen error [Errno 111] Connection refused>"
-    }
-  ]
+  "errors": []
 }
