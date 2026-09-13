@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T01:05:45Z",
+  "updatedAt": "2026-09-13T00:58:24Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 35,
   "papers": [
@@ -205,6 +205,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "台风“美莎克”(2610)在北部湾近岸增强成因",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-203"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于经验正交分解的短临降水预报订正方法检验评估",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-016"
+    },
+    {
+      "topic": "中文期刊",
       "title": "1990－2022年暖季（5－9月）黄淮气旋及暴雨天气特征",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -226,22 +242,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "广西一次强降水过程对流系统不同时段的宏微观特征分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-176"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "近40 a青藏高原地区对流活动研究进展",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-255"
     },
     {
       "topic": "中文期刊",
