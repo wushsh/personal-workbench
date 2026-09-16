@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T01:25:50Z",
+  "updatedAt": "2026-09-16T01:24:19Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,11 +245,27 @@
     },
     {
       "topic": "中文期刊",
-      "title": "台风“美莎克”(2610)在北部湾近岸增强成因",
+      "title": "台风“美莎克”(2610)在广西北部湾近岸增强成因",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-203"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "中国龙卷灾情调查研究进展",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
     },
     {
       "topic": "中文期刊",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-131"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国龙卷灾情调查研究进展",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
     },
     {
       "topic": "中文期刊",
