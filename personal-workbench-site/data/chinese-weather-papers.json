@@ -1,48 +1,8 @@
 {
-  "updatedAt": "2026-09-16T01:24:19Z",
+  "updatedAt": "2026-09-17T01:22:30Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 35,
   "papers": [
-    {
-      "topic": "中文期刊",
-      "title": "高影响天气下我国交通气象灾害风险评估进展",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260501"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于梯度塔观测的华南暖季强对流冷池精细特征",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260502"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "0221冷季高架雹暴对流结构及微物理特征",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260503"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "东北冷涡背景下小时极端降水事件多尺度分析",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260504"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国南方暖区暴雨变化特征及环流分型",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260505"
-    },
     {
       "topic": "中文期刊",
       "title": "2026年第52卷8期目录",
@@ -245,6 +205,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "灾害性天气电力系统风险评估算法及试验研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-233"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "攀枝花低温低能型暴雨特征及成因初探",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-253"
+    },
+    {
+      "topic": "中文期刊",
       "title": "台风“美莎克”(2610)在广西北部湾近岸增强成因",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +242,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-163"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于经验正交分解的短临降水预报订正方法检验评估",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-016"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "1990－2022年暖季（5－9月）黄淮气旋及暴雨天气特征",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-131"
     },
     {
       "topic": "中文期刊",
@@ -327,10 +287,10 @@
   "statuses": [
     {
       "source": "应用气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://qikan.camscma.cn/ch/index.aspx",
-      "message": "成功"
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "气象",
@@ -393,8 +353,17 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "未采集到论文"
+      "message": "<urlopen error [Errno 104] Connection reset by peer>"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "应用气象学报",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "中国农业气象",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+    }
+  ]
 }
