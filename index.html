@@ -722,6 +722,18 @@
       word-break: break-word;
     }
 
+    .journal-table-wrap { overflow-x: auto; border: 2px solid rgba(111, 135, 105, 0.38); border-radius: 12px; background: rgba(255, 248, 223, 0.62); }
+    .journal-table { width: 100%; min-width: 820px; border-collapse: collapse; font-size: 14px; }
+    .journal-table th, .journal-table td { padding: 11px 12px; border-bottom: 1px solid rgba(111, 135, 105, 0.28); text-align: left; vertical-align: top; }
+    .journal-table th { background: rgba(218, 205, 232, 0.45); color: var(--ink); font-weight: 700; white-space: nowrap; }
+    .journal-table tr:last-child td { border-bottom: 0; }
+    .journal-table details summary { cursor: pointer; color: var(--purple); font-weight: 700; }
+    .journal-table .issue-list { display: grid; gap: 6px; margin-top: 8px; padding-left: 16px; }
+    .journal-table .issue-list a { color: var(--purple); font-weight: 500; }
+    .journal-status-btn { min-width: 72px; padding: 5px 8px; font-size: 12px; white-space: nowrap; }
+    .journal-status-btn.active { background: var(--purple-soft); border-color: var(--line-dark); color: var(--purple); }
+    .journal-requirement { color: var(--muted); line-height: 1.5; }
+
     .topic-row {
       display: flex;
       gap: 8px;
@@ -1032,11 +1044,11 @@
       </section>
 
       <section id="research" class="section">
-        <details class="panel research-panel" open>
+        <details class="panel research-panel">
           <summary class="panel-header">
             <div>
               <h2>推荐</h2>
-              <p id="recommendStatus">日常刷 GitHub 趋势和气象家园论坛。</p>
+              <p id="recommendStatus">科研工具、论文检索与气象论坛入口。</p>
             </div>
             <div class="toolbar">
               <button type="button" id="gistSyncBtn">云同步设置</button>
@@ -1090,6 +1102,16 @@
             <div id="journalStatusList" class="compact-list"></div>
           </details>
         </div>
+
+        <details class="panel research-panel">
+          <summary class="panel-header">
+            <div>
+              <h2>期刊详情</h2>
+              <p>按投稿状态、注册状态和 T1/T2/T3 自动排序，点开期刊名查看最新一期文章。</p>
+            </div>
+          </summary>
+          <div id="journalDetailsList"></div>
+        </details>
 
         <details class="panel research-panel">
           <summary class="panel-header">
@@ -1542,16 +1564,10 @@
         url: "https://scholar.google.com/"
       },
       {
-        name: "GitHub Trending",
-        type: "开源趋势",
-        desc: "每天查看 GitHub 热门项目，可用搜索词关注 weather、meteorology、climate、radar。",
-        url: "https://github.com/trending"
-      },
-      {
-        name: "GitHub 气象项目搜索",
-        type: "开源检索",
-        desc: "直接搜索 meteorology 相关仓库，适合发现数据处理、雷达、卫星、AI 预报工具。",
-        url: "https://github.com/search?q=meteorology&type=repositories&s=updated&o=desc"
+        name: "GitHub",
+        type: "开源平台",
+        desc: "统一保留一个 GitHub 入口，用于查看趋势、搜索气象项目和维护本工作台。",
+        url: "https://github.com/"
       },
       {
         name: "气象家园",
@@ -1645,6 +1661,7 @@
       paperTopics: document.getElementById("paperTopics"),
       hotPaperList: document.getElementById("hotPaperList"),
       journalList: document.getElementById("journalList"),
+      journalDetailsList: document.getElementById("journalDetailsList"),
       recommendList: document.getElementById("recommendList"),
       paperUpdateStatus: document.getElementById("paperUpdateStatus"),
       recommendStatus: document.getElementById("recommendStatus"),
@@ -1801,6 +1818,7 @@
       renderRecommendations();
       renderHotPapers();
       renderJournals();
+      renderJournalDetails();
       renderKeywordHits();
       renderJournalStatuses();
       renderResearch();
@@ -2051,22 +2069,7 @@
 
     function renderRecommendations() {
       els.recommendList.innerHTML = "";
-      const dynamicRepos = dashboardData?.githubTrending || [];
-      if (dynamicRepos.length) {
-        els.recommendStatus.textContent = `GitHub 气象开源榜已更新：${dynamicRepos.length} 个项目。`;
-        dynamicRepos.slice(0, 9).forEach((repo) => {
-          const card = document.createElement("article");
-          card.className = "journal-card";
-          card.innerHTML = `
-            <span class="badge">${escapeHtml(repo.language || "GitHub")}</span>
-            <strong>${escapeHtml(repo.name)}</strong>
-            <p>${escapeHtml(repo.description || "暂无说明")}</p>
-            <p>${Number(repo.stars || 0).toLocaleString()} stars · ${escapeHtml(repo.query || "weather")}</p>
-            <a href="${repo.url}" target="_blank" rel="noreferrer">打开</a>
-          `;
-          els.recommendList.appendChild(card);
-        });
-      }
+      els.recommendStatus.textContent = "科研工具、论文检索与气象论坛入口。";
       recommendations.forEach((item) => {
         const card = document.createElement("article");
         card.className = "journal-card";
@@ -2105,7 +2108,7 @@
           renderHotPapers();
         }
       } catch (error) {
-        els.recommendStatus.textContent = "GitHub 自动榜单暂不可用，显示固定推荐入口。";
+        els.recommendStatus.textContent = "科研工具、论文检索与气象论坛入口。";
       }
     }
 
@@ -2336,11 +2339,14 @@
         const payload = await response.json();
         const papers = Array.isArray(payload.papers) ? payload.papers.filter((paper) => paper.title && paper.url) : [];
         if (!papers.length) throw new Error("中文期刊数据为空");
+        dashboardData ||= {};
+        dashboardData.chinesePapers = papers;
         displayedPapers = [...papers.slice(0, 20), ...hotPapers];
         activePaperTopic = "全部";
         const updated = payload.updatedAt ? payload.updatedAt.replace("T", " ").replace("Z", " UTC") : "未知时间";
         els.paperUpdateStatus.textContent = `中文期刊每日更新已加载：${papers.length} 条，更新时间 ${updated}。`;
         renderHotPapers();
+        renderJournalDetails();
         return true;
       } catch (error) {
         return false;
@@ -2361,6 +2367,11 @@
         note: "来自 OpenAlex 的近 30 天气象与大气科学相关论文，按发表日期排序。",
         url: landing
       };
+    }
+
+    function getJournalUrl(journal) {
+      const url = journal?.url || "";
+      return url.startsWith("http://") ? `https://${url.slice(7)}` : url;
     }
 
     function renderJournals() {
@@ -2389,12 +2400,84 @@
             <strong>${escapeHtml(journal.name)}</strong>
             <p>${escapeHtml(journal.issn || "")} ${escapeHtml(journal.cn || "")}</p>
             <p>${escapeHtml(journal.field)}</p>
-            ${journal.url ? `<a href="${journal.url}" target="_blank" rel="noreferrer">进入官网</a>` : "<span class=\"badge\">官网待核对</span>"}
+            ${getJournalUrl(journal) ? `<a href="${escapeHtml(getJournalUrl(journal))}" target="_blank" rel="noreferrer">进入官网</a>` : "<span class=\"badge\">官网待核对</span>"}
           `;
           grid.appendChild(card);
         });
         els.journalList.appendChild(group);
       });
+    }
+
+    function journalTierRank(tier) {
+      return ({ T1: 1, T2: 2, T3: 3 }[tier] || 9);
+    }
+
+    function getJournalRecord(name) {
+      data.journalRecords ||= {};
+      data.journalRecords[name] ||= { registered: false, submitted: false };
+      return data.journalRecords[name];
+    }
+
+    function getJournalArticles(journalName) {
+      const papers = dashboardData?.chinesePapers || [];
+      const fallback = displayedPapers.filter((paper) => paper.journal === journalName);
+      return [...papers.filter((paper) => paper.journal === journalName), ...fallback]
+        .filter((paper, index, list) => list.findIndex((item) => item.title === paper.title) === index)
+        .slice(0, 8);
+    }
+
+    function getJournalUnit(journalName) {
+      const article = getJournalArticles(journalName)[0];
+      return article?.firstAuthorUnit || article?.first_author_unit || article?.authors?.[0]?.affiliation || "待数据源提供";
+    }
+
+    function renderJournalDetails() {
+      const sorted = [...journalSites].sort((a, b) => {
+        const ar = getJournalRecord(a.name);
+        const br = getJournalRecord(b.name);
+        return Number(br.submitted) - Number(ar.submitted)
+          || Number(br.registered) - Number(ar.registered)
+          || journalTierRank(a.tier) - journalTierRank(b.tier)
+          || a.name.localeCompare(b.name, "zh-CN");
+      });
+      const wrap = document.createElement("div");
+      wrap.className = "journal-table-wrap";
+      wrap.innerHTML = `
+        <table class="journal-table">
+          <thead><tr><th>期刊名 / 最新一期论文</th><th>第一作者单位</th><th>投稿要求</th><th>已注册</th><th>已投稿</th><th>分级</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      `;
+      const body = wrap.querySelector("tbody");
+      sorted.forEach((journal) => {
+        const record = getJournalRecord(journal.name);
+        const articles = getJournalArticles(journal.name);
+        const articleHtml = articles.length
+          ? articles.map((paper) => `<a href="${escapeHtml(paper.url || getJournalUrl(journal) || "#")}" target="_blank" rel="noreferrer">${escapeHtml(paper.title || "未命名文章")}</a>`).join("")
+          : `<span class="muted">暂无每日抓取到的最新文章</span>`;
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><details><summary>${escapeHtml(journal.name)}</summary><div class="issue-list">${articleHtml}</div></details></td>
+          <td><span class="muted">${escapeHtml(getJournalUnit(journal.name))}</span></td>
+          <td class="journal-requirement">官网投稿指南、格式模板和版权声明为准。<br>${getJournalUrl(journal) ? `<a href="${escapeHtml(getJournalUrl(journal))}" target="_blank" rel="noreferrer">打开官网投稿入口</a>` : "官网待核验"}</td>
+          <td><button type="button" class="journal-status-btn ${record.registered ? "active" : ""}" data-journal-status="registered">${record.registered ? "已注册" : "未注册"}</button></td>
+          <td><button type="button" class="journal-status-btn ${record.submitted ? "active" : ""}" data-journal-status="submitted">${record.submitted ? "已投稿" : "未投稿"}</button></td>
+          <td><span class="badge">${escapeHtml(journal.tier)}</span></td>
+        `;
+        row.querySelectorAll("[data-journal-status]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const field = button.dataset.journalStatus;
+            const current = getJournalRecord(journal.name);
+            current[field] = !current[field];
+            saveData();
+            renderJournalDetails();
+            showToast(`${journal.name}：${current[field] ? "已标记" : "已取消"}`);
+          });
+        });
+        body.appendChild(row);
+      });
+      els.journalDetailsList.innerHTML = "";
+      els.journalDetailsList.appendChild(wrap);
     }
 
     function openReadingList() {
@@ -2854,6 +2937,7 @@
         data.keywordSubscriptions = imported.keywordSubscriptions || defaultKeywordSubscriptions();
         data.keywordHits = imported.keywordHits || [];
         data.favoriteLinks = imported.favoriteLinks || defaultFavoriteLinks;
+        data.journalRecords = imported.journalRecords || {};
         data._meta = imported._meta || { updatedAt: new Date().toISOString() };
         saveData();
         isApplyingRemoteData = false;
@@ -2896,7 +2980,8 @@
         paperNotes: {},
         keywordSubscriptions: defaultKeywordSubscriptions(),
         keywordHits: [],
-        favoriteLinks: defaultFavoriteLinks
+        favoriteLinks: defaultFavoriteLinks,
+        journalRecords: {}
       };
       try {
         const loaded = { ...fallback, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
@@ -2906,6 +2991,7 @@
         loaded.keywordSubscriptions ||= defaultKeywordSubscriptions();
         loaded.keywordHits ||= [];
         loaded.favoriteLinks ||= defaultFavoriteLinks;
+        loaded.journalRecords ||= {};
         return loaded;
       } catch (error) {
         return fallback;
