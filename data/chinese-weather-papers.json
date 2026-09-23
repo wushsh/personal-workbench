@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T01:36:16Z",
+  "updatedAt": "2026-09-23T01:29:42Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,30 @@
     },
     {
       "topic": "中文期刊",
+      "title": "中国龙卷灾情调查研究进展",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "广西一次强降水过程的区域水汽特征差异分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-095"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "四川盆地夏季短时强降水的多尺度特征及其天气型配置",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-085"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于模式模拟的台风“竹节草”影响江都暴雨特征和机制研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -258,30 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-185"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "国家级多源融合降水产品在汉江航道的适用性研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-087"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "灾害性天气电力系统风险评估算法及试验研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-233"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "攀枝花低温低能型暴雨特征及成因初探",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-253"
     },
     {
       "topic": "中文期刊",
