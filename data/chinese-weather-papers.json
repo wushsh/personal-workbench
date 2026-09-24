@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T01:29:42Z",
+  "updatedAt": "2026-09-24T01:22:15Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "台风“海葵”降水非对称性特征的多模式预报检验及偏差原因分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-054"
+    },
+    {
+      "topic": "中文期刊",
       "title": "中国龙卷灾情调查研究进展",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-224"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "湖南一次弱天气强迫背景下极端暖区暴雨的γ中尺度涡旋特征",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-185"
     },
     {
       "topic": "中文期刊",
