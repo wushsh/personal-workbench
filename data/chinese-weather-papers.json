@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T01:38:32Z",
+  "updatedAt": "2026-09-29T02:35:32Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -45,43 +45,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷8期目录",
+      "title": "2026年第52卷9期目录",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026080101&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026090101&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷8期封面",
+      "title": "2026年第52卷9期封面",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026080102&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026090102&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "云雷达与FY-4B融合反演云顶高度方法研究",
+      "title": "北京暴雨过程的高空比湿统计特征分析",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260801&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260901&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "浙江夏季FY-4A卫星云参数和降水的相关性研究",
+      "title": "海温对一次上岸对流风暴降水强度影响的数值模拟研究",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260802&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260902&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "基于卫星观测资料对中尺度模式云微物理参数化方案的评估分析",
+      "title": "一次左移超级单体的双偏振雷达观测分析",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260803&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260903&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于LightGBM算法和欠采样技术的武汉能见度预报研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-035"
+    },
+    {
+      "topic": "中文期刊",
       "title": "台风“海葵”降水非对称性特征的多模式预报检验及偏差原因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-085"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于模式模拟的台风“竹节草”影响江都暴雨特征和机制研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-224"
     },
     {
       "topic": "中文期刊",
