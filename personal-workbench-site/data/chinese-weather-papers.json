@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T02:35:32Z",
+  "updatedAt": "2026-09-30T02:05:41Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,43 +125,43 @@
     },
     {
       "topic": "中文期刊",
+      "title": "23.7暴雨过程中低空急流的演变机理分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26007"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "1981-2023年中国牧草数据集的研制",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26027"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "长江流域日际温升与次日降水的联系及其长期变化趋势",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26058"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "曲靖双偏振雷达探测冰雹云及对防雹作业微物理响应",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26096"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于动力降尺度和误差订正的中国区域复合高温干旱模拟评估与未来预估",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26039"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "林芝市巴宜区夏季水汽输送轨迹和来源定量分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.25149"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于多模态深度特征融合的FY-4B卫星云底高度反演方法研究",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26028"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "超强台风 Ragasa 远海近岸异常加强的特征和原因分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26115"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "机载前向散射云粒子谱仪FCDP数据解析与质量控制方法研究",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26051"
     },
     {
       "topic": "中文期刊",
