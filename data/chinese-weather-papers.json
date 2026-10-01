@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-30T02:05:41Z",
+  "updatedAt": "2026-10-01T02:07:04Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 35,
   "papers": [
     {
       "topic": "中文期刊",
@@ -125,43 +125,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "23.7暴雨过程中低空急流的演变机理分析",
+      "title": "机器学习与年际增量方法融合的中国西南雨季逐月—季节平均降水实时预测模型",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26007"
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26006"
     },
     {
       "topic": "中文期刊",
-      "title": "1981-2023年中国牧草数据集的研制",
+      "title": "一次飑线过程中冷池影响下的地面大风演变机理",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26027"
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25169"
     },
     {
       "topic": "中文期刊",
-      "title": "长江流域日际温升与次日降水的联系及其长期变化趋势",
+      "title": "1961-2024年洞庭湖流域极端降水变化特征及其对气候增暖的响应",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26058"
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26010"
     },
     {
       "topic": "中文期刊",
-      "title": "曲靖双偏振雷达探测冰雹云及对防雹作业微物理响应",
+      "title": "基于物理引导与加权策略的高原阵风预报及可解释性分析",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26096"
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26083"
     },
     {
       "topic": "中文期刊",
-      "title": "基于动力降尺度和误差订正的中国区域复合高温干旱模拟评估与未来预估",
+      "title": "上海冬春季含碳气溶胶消光特征及其及其演化",
       "journal": "大气科学",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26039"
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26090"
     },
     {
       "topic": "中文期刊",
@@ -202,46 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26014"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
-      "journal": "热带气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
-      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
     },
     {
       "topic": "中文期刊",
@@ -369,10 +329,10 @@
     },
     {
       "source": "热带气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://rdqxxb.itmm.org.cn/",
-      "message": "成功"
+      "message": "未采集到论文"
     },
     {
       "source": "暴雨灾害",
