@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-07T02:22:16Z",
+  "updatedAt": "2026-10-09T02:57:35Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 35,
+  "count": 40,
   "papers": [
     {
       "topic": "中文期刊",
@@ -205,43 +205,83 @@
     },
     {
       "topic": "中文期刊",
+      "title": "一种雷达回波外推的注意力融合和信息回忆的LSTM方法",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/article/doi/10.16032/j.issn.1004-4965.2023.057"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "局地水汽异常引起的非绝热加热对2016/2017年中国南方暖冬的影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.026?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "1822号“山竹”台风龙卷过程观测与预警分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.042?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "资料同化对2017年登陆广东沿海台风的短期降水与路径预报影响",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.052?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "珠江口以西登陆热带气旋引发粤东暴雨的成因和预报着眼点分析",
+      "journal": "热带气象学报",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《热带气象学报》官网最新页面采集。",
+      "url": "https://rdqxxb.itmm.org.cn/cn/article/doi/10.16032/j.issn.1004-4965.2019.002?viewType=HTML"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "台风“暹芭”(2203) 由南海至内陆不同阶段雨滴谱特征分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-175"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2413号台风“贝碧嘉”引发安徽强降水的特征及预报偏差分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-179"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于长江流域降水分析的大模型辅助预警方法研究及跨流域验证",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-078"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于风云三号F星被动微波观测的水凝物反演算法研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于LightGBM算法和欠采样技术的武汉能见度预报研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-035"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "台风“海葵”降水非对称性特征的多模式预报检验及偏差原因分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-054"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国龙卷灾情调查研究进展",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-220"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "广西一次强降水过程的区域水汽特征差异分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-095"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "四川盆地夏季短时强降水的多尺度特征及其天气型配置",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-085"
     },
     {
       "topic": "中文期刊",
@@ -329,10 +369,10 @@
     },
     {
       "source": "热带气象学报",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 5,
       "url": "https://rdqxxb.itmm.org.cn/",
-      "message": "未采集到论文"
+      "message": "成功"
     },
     {
       "source": "暴雨灾害",
