@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T02:57:35Z",
+  "updatedAt": "2026-10-10T02:19:04Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "中国地面自动站小时相对湿度数据集研制",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26021"
+    },
+    {
+      "topic": "中文期刊",
       "title": "机器学习与年际增量方法融合的中国西南雨季逐月—季节平均降水实时预测模型",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26083"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "上海冬春季含碳气溶胶消光特征及其及其演化",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.26090"
     },
     {
       "topic": "中文期刊",
@@ -245,43 +245,43 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于S2S模式的长江中下游夏季降水次季节预报评估与诊断",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-259"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "青藏高原东南部色季拉山地区夏季小时降水特征分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-019"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "河西走廊西部两类极端暴雨过程的水汽输送特征个例对比分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-106"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "造成贵州黔西“5.4”游船倾覆事件的极端大风观测分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-173"
+    },
+    {
+      "topic": "中文期刊",
       "title": "台风“暹芭”(2203) 由南海至内陆不同阶段雨滴谱特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-175"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "2413号台风“贝碧嘉”引发安徽强降水的特征及预报偏差分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-179"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于长江流域降水分析的大模型辅助预警方法研究及跨流域验证",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-078"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于风云三号F星被动微波观测的水凝物反演算法研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-063"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于LightGBM算法和欠采样技术的武汉能见度预报研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-035"
     },
     {
       "topic": "中文期刊",
