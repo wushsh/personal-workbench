@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T02:19:04Z",
+  "updatedAt": "2026-10-11T01:51:06Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,11 +245,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "基于S2S模式的长江中下游夏季降水次季节预报评估与诊断",
+      "title": "太湖地区雷暴过程识别及闪电活动时空特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-259"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-071"
     },
     {
       "topic": "中文期刊",
@@ -269,19 +269,19 @@
     },
     {
       "topic": "中文期刊",
-      "title": "造成贵州黔西“5.4”游船倾覆事件的极端大风观测分析",
+      "title": "两次登闽台风后部相似LMCS雨带降水差异对比分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-173"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-031"
     },
     {
       "topic": "中文期刊",
-      "title": "台风“暹芭”(2203) 由南海至内陆不同阶段雨滴谱特征分析",
+      "title": "基于S2S模式的长江中下游夏季降水次季节预报评估与诊断",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-175"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-259"
     },
     {
       "topic": "中文期刊",
@@ -393,8 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "未采集到论文"
+      "message": "Remote end closed connection without response"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "中国农业气象",
+      "error": "Remote end closed connection without response"
+    }
+  ]
 }
