@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T02:21:29Z",
+  "updatedAt": "2026-10-13T03:33:08Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,43 +245,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "太湖地区雷暴过程识别及闪电活动时空特征分析",
+      "title": "基于区域站的昆明市雨季短时强降水特征及天气系统分型",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-071"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-213"
     },
     {
       "topic": "中文期刊",
-      "title": "青藏高原东南部色季拉山地区夏季小时降水特征分析",
+      "title": "基于分级跨级权重评分的快速更新数值模式集合降水预报订正技术研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-019"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-063"
     },
     {
       "topic": "中文期刊",
-      "title": "河西走廊西部两类极端暴雨过程的水汽输送特征个例对比分析",
+      "title": "横断山区南部干湿坝子降水特征差异与成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-106"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024−221"
     },
     {
       "topic": "中文期刊",
-      "title": "两次登闽台风后部相似LMCS雨带降水差异对比分析",
+      "title": "东北地区不同类型极端短时强降水的时空分布及环境参数特征",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-031"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-212"
     },
     {
       "topic": "中文期刊",
-      "title": "基于S2S模式的长江中下游夏季降水次季节预报评估与诊断",
+      "title": "四川盆地春季一次罕见区域性大风过程特征及成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-259"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-118"
     },
     {
       "topic": "中文期刊",
@@ -393,13 +393,8 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "<urlopen error [Errno 111] Connection refused>"
+      "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "中国农业气象",
-      "error": "<urlopen error [Errno 111] Connection refused>"
-    }
-  ]
+  "errors": []
 }
