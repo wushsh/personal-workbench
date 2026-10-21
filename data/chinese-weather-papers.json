@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T01:48:01Z",
+  "updatedAt": "2026-10-21T01:33:19Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -165,6 +165,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "不同数据集中亚洲大气CO?浓度时空演变格局的比较",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26037"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "湖南昼夜复合高温变化特征及其对应大气环流和海温异常",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26009"
+    },
+    {
+      "topic": "中文期刊",
       "title": "RS与GIS支持下的景观生态风险评价及其风险因子探测",
       "journal": "气候与环境研究",
       "year": "最新目录",
@@ -186,22 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25090"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "上世纪80年代以来云南秋季降水的年代际变化及其成因",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2025.25098"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于多个排放源清单模拟京津冀冬季和夏季典型月份的二次无机气溶胶",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26014"
     },
     {
       "topic": "中文期刊",
