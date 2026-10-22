@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T01:33:19Z",
+  "updatedAt": "2026-10-22T01:29:20Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "最优消空阈值和频率匹配相结合的宁夏降水预报客观订正技术研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-190"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于脆弱性曲线的深圳市暴雨灾害社会经济风险评估",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-098"
+    },
+    {
+      "topic": "中文期刊",
       "title": "国家级多源融合降水产品在汉江航道的适用性研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-213"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于分级跨级权重评分的快速更新数值模式集合降水预报订正技术研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-063"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "横断山区南部干湿坝子降水特征差异与成因分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024−221"
     },
     {
       "topic": "中文期刊",
