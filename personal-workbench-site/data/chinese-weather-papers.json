@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T02:02:09Z",
+  "updatedAt": "2026-10-28T02:12:18Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "近40 a青藏高原地区对流活动研究进展",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-255"
+    },
+    {
+      "topic": "中文期刊",
       "title": "2026年湘西北一次极端暖区暴雨成因及多源观测特征分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-087"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于LightGBM算法和欠采样技术的武汉能见度预报研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-035"
     },
     {
       "topic": "中文期刊",
