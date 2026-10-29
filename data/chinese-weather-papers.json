@@ -1,47 +1,47 @@
 {
-  "updatedAt": "2026-10-28T02:12:18Z",
+  "updatedAt": "2026-10-29T02:25:07Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
     {
       "topic": "中文期刊",
-      "title": "高影响天气下我国交通气象灾害风险评估进展",
+      "title": "CMA国家级中尺度业务模式预报性能评估",
       "journal": "应用气象学报",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260501"
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260601"
     },
     {
       "topic": "中文期刊",
-      "title": "基于梯度塔观测的华南暖季强对流冷池精细特征",
+      "title": "我国茶叶品质气象估算及时空演变特征",
       "journal": "应用气象学报",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260502"
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260602"
     },
     {
       "topic": "中文期刊",
-      "title": "0221冷季高架雹暴对流结构及微物理特征",
+      "title": "基于SIF的东北地区大豆干旱监测指标构建",
       "journal": "应用气象学报",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260503"
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260603"
     },
     {
       "topic": "中文期刊",
-      "title": "东北冷涡背景下小时极端降水事件多尺度分析",
+      "title": "东北典型生态系统蒸散模拟的机器学习方法对比",
       "journal": "应用气象学报",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260504"
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260604"
     },
     {
       "topic": "中文期刊",
-      "title": "中国南方暖区暴雨变化特征及环流分型",
+      "title": "人工引雷中金属氧化物避雷器响应特性",
       "journal": "应用气象学报",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260505"
+      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260605"
     },
     {
       "topic": "中文期刊",
@@ -165,6 +165,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "川西高原大渡河流域上游一次暴雨过程的数值模拟和动力因子演变特征分析",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26022"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "气候变化背景下北京城市渗面率及雨水调蓄能力探讨",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26015"
+    },
+    {
+      "topic": "中文期刊",
       "title": "贵州中部地区电线积冰过程的边界层温湿风结构观测研究",
       "journal": "气候与环境研究",
       "year": "最新目录",
@@ -186,22 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26098"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国东部7月高温高湿日数时空变化特征及机理",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26002"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "不同数据集中亚洲大气CO?浓度时空演变格局的比较",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26037"
     },
     {
       "topic": "中文期刊",
