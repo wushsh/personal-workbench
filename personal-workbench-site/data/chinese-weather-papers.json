@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T02:25:07Z",
+  "updatedAt": "2026-10-30T02:37:32Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "偏南风背景下秦巴山区致灾性大暴雨特征及成因分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-115"
+    },
+    {
+      "topic": "中文期刊",
       "title": "近40 a青藏高原地区对流活动研究进展",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-098"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "国家级多源融合降水产品在汉江航道的适用性研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-087"
     },
     {
       "topic": "中文期刊",
