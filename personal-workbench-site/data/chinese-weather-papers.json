@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T02:37:32Z",
+  "updatedAt": "2026-10-31T02:19:59Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -45,43 +45,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷9期目录",
+      "title": "2026年第52卷10期目录",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026090101&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100101&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷9期封面",
+      "title": "2026年第52卷10期封面",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026090102&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100102&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "北京暴雨过程的高空比湿统计特征分析",
+      "title": "山东触发对流天气的干线特征研究",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260901&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261001&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "海温对一次上岸对流风暴降水强度影响的数值模拟研究",
+      "title": "宁夏北部暖季不同盛行风向下对流风暴雷达气候学特征",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260902&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261002&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "一次左移超级单体的双偏振雷达观测分析",
+      "title": "基于多种深度学习算法融合的中国西北地区东部夏季降水客观预测方法研究",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20260903&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261003&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -165,6 +165,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "中国低空飞行高影响云时空分布特征",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26036"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "平流层注入对青藏高原大气本底站地面臭氧的影响",
+      "journal": "气候与环境研究",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26030"
+    },
+    {
+      "topic": "中文期刊",
       "title": "川西高原大渡河流域上游一次暴雨过程的数值模拟和动力因子演变特征分析",
       "journal": "气候与环境研究",
       "year": "最新目录",
@@ -186,22 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26032"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国大陆低空气温特征及其对低空飞行的影响",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26028"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国大陆低视程天气发生频次的气候特征",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26098"
     },
     {
       "topic": "中文期刊",
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "湖南冰雹天气环流背景与大小冰雹环境条件对比",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-052"
+    },
+    {
+      "topic": "中文期刊",
       "title": "偏南风背景下秦巴山区致灾性大暴雨特征及成因分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-190"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于脆弱性曲线的深圳市暴雨灾害社会经济风险评估",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2024-098"
     },
     {
       "topic": "中文期刊",
