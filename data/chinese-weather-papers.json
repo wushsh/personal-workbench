@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T02:46:04Z",
+  "updatedAt": "2026-11-12T03:48:22Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于双75 m3膨胀云室实验的吸湿性催化剂消雾效能与机制对比研究",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26030"
+    },
+    {
+      "topic": "中文期刊",
       "title": "中国地面自动站小时相对湿度数据集研制",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26010"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于物理引导与加权策略的高原阵风预报及可解释性分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.26083"
     },
     {
       "topic": "中文期刊",
@@ -245,11 +245,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "“21•6”东北冷涡暴雨多尺度作用与水汽源区定量贡献分析",
+      "title": "长江流域逐时快速循环同化预报系统的评估检验",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-178"
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-077"
     },
     {
       "topic": "中文期刊",
@@ -258,6 +258,14 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-237"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "“21•6”东北冷涡暴雨多尺度作用与水汽源区定量贡献分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-178"
     },
     {
       "topic": "中文期刊",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-055"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "湖南冰雹天气环流背景与大小冰雹环境条件对比",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-052"
     },
     {
       "topic": "中文期刊",
