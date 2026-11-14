@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T03:24:44Z",
+  "updatedAt": "2026-11-14T03:10:09Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,30 @@
     },
     {
       "topic": "中文期刊",
+      "title": "大别山不同地形区边界层环流与地形相互作用对强降水的调制机制",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2611.26061"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "一次“高可预报性”北京冬季降水事件中期时效空报原因分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2610.26065"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "CMIP6模式模拟大湄公河次区域土壤湿度-蒸散发耦合的模式间差异分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.25170"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于双75 m3膨胀云室实验的吸湿性催化剂消雾效能与机制对比研究",
       "journal": "大气科学",
       "year": "最新目录",
@@ -138,30 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26021"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "机器学习与年际增量方法融合的中国西南雨季逐月—季节平均降水实时预测模型",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26006"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一次飑线过程中冷池影响下的地面大风演变机理",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2605.25169"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "1961-2024年洞庭湖流域极端降水变化特征及其对气候增暖的响应",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26010"
     },
     {
       "topic": "中文期刊",
