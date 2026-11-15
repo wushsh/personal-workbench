@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T03:10:09Z",
+  "updatedAt": "2026-11-15T02:37:58Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "过去60年海河流域强降水事件时空特征与成因机制分析",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.25175"
+    },
+    {
+      "topic": "中文期刊",
       "title": "大别山不同地形区边界层环流与地形相互作用对强降水的调制机制",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2606.26030"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国地面自动站小时相对湿度数据集研制",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26021"
     },
     {
       "topic": "中文期刊",
