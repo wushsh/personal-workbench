@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-16T02:44:09Z",
+  "updatedAt": "2026-11-17T05:05:01Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 35,
+  "count": 40,
   "papers": [
     {
       "topic": "中文期刊",
@@ -42,6 +42,46 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
       "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260605"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年第52卷10期目录",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100101&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "2026年第52卷10期封面",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100102&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "山东触发对流天气的干线特征研究",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261001&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "宁夏北部暖季不同盛行风向下对流风暴雷达气候学特征",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261002&flag=1"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于多种深度学习算法融合的中国西北地区东部夏季降水客观预测方法研究",
+      "journal": "气象",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261003&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -205,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "台风“美莎克”广西极端暴雨过程特征与成因初探",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-237"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "一次暴雨过程陆面方案单参数的随机扰动集合预报试验",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-097"
+    },
+    {
+      "topic": "中文期刊",
       "title": "台风“美莎克”(2610)在广西北部湾近岸增强成因",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -221,27 +277,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "台风“美莎克”广西极端暴雨过程特征与成因初探",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-237"
-    },
-    {
-      "topic": "中文期刊",
       "title": "“21•6”东北冷涡暴雨多尺度作用与水汽源区定量贡献分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-178"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "2026年7月6日鄂东超级单体龙卷观测特征分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-258"
     },
     {
       "topic": "中文期刊",
@@ -294,10 +334,10 @@
     },
     {
       "source": "气象",
-      "ok": false,
-      "count": 0,
+      "ok": true,
+      "count": 5,
       "url": "http://qxqk.nmc.cn/qx/ch/index.aspx",
-      "message": "timed out"
+      "message": "成功"
     },
     {
       "source": "气象学报",
@@ -356,10 +396,5 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "气象",
-      "error": "timed out"
-    }
-  ]
+  "errors": []
 }
