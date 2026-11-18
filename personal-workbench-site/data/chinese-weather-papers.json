@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T05:05:01Z",
+  "updatedAt": "2026-11-18T04:15:10Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "东北冷涡多时间尺度变化特征及其机理研究进展",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2611.26201"
+    },
+    {
+      "topic": "中文期刊",
       "title": "重庆仙女山机场一次无人机人工消暖雾试验效果研究",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2610.26065"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "CMIP6模式模拟大湄公河次区域土壤湿度-蒸散发耦合的模式间差异分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2608.25170"
     },
     {
       "topic": "中文期刊",
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于长江流域降水分析的大模型辅助预警方法研究及跨流域验证",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-078"
+    },
+    {
+      "topic": "中文期刊",
       "title": "台风“美莎克”广西极端暴雨过程特征与成因初探",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-077"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "“21•6”东北冷涡暴雨多尺度作用与水汽源区定量贡献分析",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-178"
     },
     {
       "topic": "中文期刊",
