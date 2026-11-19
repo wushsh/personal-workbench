@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T04:15:10Z",
+  "updatedAt": "2026-11-19T04:08:24Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,22 @@
     },
     {
       "topic": "中文期刊",
+      "title": "FY-4B AGRI全空同化对“23•7”华北特大暴雨预报的影响研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-107"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "湖北分级雷暴大风多源观测特征及随机森林识别",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-233"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于长江流域降水分析的大模型辅助预警方法研究及跨流域验证",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -266,22 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-097"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "台风“美莎克”(2610)在广西北部湾近岸增强成因",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-203"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "长江流域逐时快速循环同化预报系统的评估检验",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-077"
     },
     {
       "topic": "中文期刊",
