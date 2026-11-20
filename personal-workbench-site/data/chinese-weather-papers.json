@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T04:08:24Z",
+  "updatedAt": "2026-11-20T03:57:54Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "海洋盐度层结影响近海台风降水分布的敏感性试验",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.25167"
+    },
+    {
+      "topic": "中文期刊",
       "title": "东北冷涡多时间尺度变化特征及其机理研究进展",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +162,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2611.26061"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一次“高可预报性”北京冬季降水事件中期时效空报原因分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2610.26065"
     },
     {
       "topic": "中文期刊",
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "河北一次秋季暴雨过程的偏东风特征及对称不稳定性分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-182"
+    },
+    {
+      "topic": "中文期刊",
       "title": "FY-4B AGRI全空同化对“23•7”华北特大暴雨预报的影响研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-237"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "一次暴雨过程陆面方案单参数的随机扰动集合预报试验",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-097"
     },
     {
       "topic": "中文期刊",
