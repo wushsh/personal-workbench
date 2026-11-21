@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T03:57:54Z",
+  "updatedAt": "2026-11-21T03:56:33Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,43 +245,43 @@
     },
     {
       "topic": "中文期刊",
+      "title": "最优消空阈值和频率匹配相结合的宁夏降水预报客观订正技术研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-190"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "青藏高原东北侧一次极端暴雨过程的成因分析",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-038"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "基于MLP方法对CMA-MESO模式在华中地区夏季降水预报的订正研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-249"
+    },
+    {
+      "topic": "中文期刊",
+      "title": "长江流域逐时快速循环同化预报系统的评估检验",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-077"
+    },
+    {
+      "topic": "中文期刊",
       "title": "河北一次秋季暴雨过程的偏东风特征及对称不稳定性分析",
       "journal": "暴雨灾害",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-182"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "FY-4B AGRI全空同化对“23•7”华北特大暴雨预报的影响研究",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-107"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "湖北分级雷暴大风多源观测特征及随机森林识别",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-233"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于长江流域降水分析的大模型辅助预警方法研究及跨流域验证",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-078"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "台风“美莎克”广西极端暴雨过程特征与成因初探",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-237"
     },
     {
       "topic": "中文期刊",
