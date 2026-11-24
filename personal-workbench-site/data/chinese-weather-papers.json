@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T03:42:37Z",
+  "updatedAt": "2026-11-24T06:56:36Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -245,6 +245,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于深度学习的X波段雷达回波衰减订正研究",
+      "journal": "暴雨灾害",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
+      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-139"
+    },
+    {
+      "topic": "中文期刊",
       "title": "国家级多源融合降水产品在汉江航道的适用性研究",
       "journal": "暴雨灾害",
       "year": "最新目录",
@@ -274,14 +282,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
       "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2025-249"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "长江流域逐时快速循环同化预报系统的评估检验",
-      "journal": "暴雨灾害",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《暴雨灾害》官网最新页面采集。",
-      "url": "http://byzh.org.cn/article/doi/10.12406/byzh.2026-077"
     },
     {
       "topic": "中文期刊",
