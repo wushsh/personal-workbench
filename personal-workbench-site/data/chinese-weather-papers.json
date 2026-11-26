@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T05:24:41Z",
+  "updatedAt": "2026-11-26T04:59:21Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -125,6 +125,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "基于雷达与缓冲区的烤烟人工防雹年度风险减量效益评估——以贵州为例",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2610.26089"
+    },
+    {
+      "topic": "中文期刊",
       "title": "海洋盐度层结影响近海台风降水分布的敏感性试验",
       "journal": "大气科学",
       "year": "最新目录",
@@ -157,11 +165,11 @@
     },
     {
       "topic": "中文期刊",
-      "title": "大别山不同地形区边界层环流与地形相互作用对强降水的调制机制",
-      "journal": "大气科学",
+      "title": "珠江流域小时极端降水时空分布特征及其可能成因",
+      "journal": "气候与环境研究",
       "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2611.26061"
+      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.25129"
     },
     {
       "topic": "中文期刊",
@@ -194,14 +202,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26040"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "中国低空飞行高影响云时空分布特征",
-      "journal": "气候与环境研究",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《气候与环境研究》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/qhhj/article/doi/10.3878/j.issn.1006-9585.2026.26036"
     },
     {
       "topic": "中文期刊",
@@ -393,8 +393,13 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "未采集到论文"
+      "message": "<urlopen error [Errno 111] Connection refused>"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "中国农业气象",
+      "error": "<urlopen error [Errno 111] Connection refused>"
+    }
+  ]
 }
