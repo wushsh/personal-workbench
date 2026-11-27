@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:59:21Z",
+  "updatedAt": "2026-11-27T05:00:16Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
   "count": 40,
   "papers": [
@@ -45,43 +45,43 @@
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷10期目录",
+      "title": "2026年第52卷11期目录",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100101&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026110101&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "2026年第52卷10期封面",
+      "title": "2026年第52卷11期封面",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026100102&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=2026110102&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "山东触发对流天气的干线特征研究",
+      "title": "CMA-CPSv3和ECMWF-S2S模式对安徽省夏季降水的次季节预测能力评估",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261001&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261101&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "宁夏北部暖季不同盛行风向下对流风暴雷达气候学特征",
+      "title": "沈阳两次雨雪过程降水相态转换的多源观测特征分析",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261002&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261102&flag=1"
     },
     {
       "topic": "中文期刊",
-      "title": "基于多种深度学习算法融合的中国西北地区东部夏季降水客观预测方法研究",
+      "title": "广西一次区域性暴雨前后阶段的热力和动力及地形作用差异",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
-      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261003&flag=1"
+      "url": "http://qxqk.nmc.cn/qx/ch/reader/view_abstract.aspx?file_no=20261103&flag=1"
     },
     {
       "topic": "中文期刊",
@@ -393,13 +393,8 @@
       "ok": false,
       "count": 0,
       "url": "https://zgnyqx.ieda.org.cn/",
-      "message": "<urlopen error [Errno 111] Connection refused>"
+      "message": "未采集到论文"
     }
   ],
-  "errors": [
-    {
-      "source": "中国农业气象",
-      "error": "<urlopen error [Errno 111] Connection refused>"
-    }
-  ]
+  "errors": []
 }
