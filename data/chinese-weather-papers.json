@@ -1,48 +1,8 @@
 {
-  "updatedAt": "2026-11-27T05:00:16Z",
+  "updatedAt": "2026-11-28T04:43:32Z",
   "source": "GitHub Actions: public Chinese meteorology journal pages",
-  "count": 40,
+  "count": 35,
   "papers": [
-    {
-      "topic": "中文期刊",
-      "title": "CMA国家级中尺度业务模式预报性能评估",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260601"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "我国茶叶品质气象估算及时空演变特征",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260602"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "基于SIF的东北地区大豆干旱监测指标构建",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260603"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "东北典型生态系统蒸散模拟的机器学习方法对比",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260604"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "人工引雷中金属氧化物避雷器响应特性",
-      "journal": "应用气象学报",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《应用气象学报》官网最新页面采集。",
-      "url": "https://qikan.camscma.cn/article/doi/10.11898/1001-7313.20260605"
-    },
     {
       "topic": "中文期刊",
       "title": "2026年第52卷11期目录",
@@ -61,7 +21,7 @@
     },
     {
       "topic": "中文期刊",
-      "title": "CMA-CPSv3和ECMWF-S2S模式对安徽省夏季降水的次季节预测能力评估",
+      "title": "一次春季极端雨雪天气相态构成及云微物理成因分析",
       "journal": "气象",
       "year": "最新目录",
       "note": "由 GitHub Actions 从《气象》官网最新页面采集。",
@@ -125,6 +85,14 @@
     },
     {
       "topic": "中文期刊",
+      "title": "北大西洋和太平洋年代际变率（AMV / PDV）研究进展",
+      "journal": "大气科学",
+      "year": "最新目录",
+      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
+      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2609.26046"
+    },
+    {
+      "topic": "中文期刊",
       "title": "基于雷达与缓冲区的烤烟人工防雹年度风险减量效益评估——以贵州为例",
       "journal": "大气科学",
       "year": "最新目录",
@@ -154,14 +122,6 @@
       "year": "最新目录",
       "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
       "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2610.26047"
-    },
-    {
-      "topic": "中文期刊",
-      "title": "过去60年海河流域强降水事件时空特征与成因机制分析",
-      "journal": "大气科学",
-      "year": "最新目录",
-      "note": "由 GitHub Actions 从《大气科学》官网最新页面采集。",
-      "url": "https://www.iapjournals.ac.cn/dqkx/article/doi/10.3878/j.issn.1006-9895.2607.25175"
     },
     {
       "topic": "中文期刊",
@@ -327,10 +287,10 @@
   "statuses": [
     {
       "source": "应用气象学报",
-      "ok": true,
-      "count": 5,
+      "ok": false,
+      "count": 0,
       "url": "https://qikan.camscma.cn/ch/index.aspx",
-      "message": "成功"
+      "message": "HTTP Error 403: Forbidden"
     },
     {
       "source": "气象",
@@ -396,5 +356,10 @@
       "message": "未采集到论文"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "应用气象学报",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
 }
